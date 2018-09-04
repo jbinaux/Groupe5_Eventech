@@ -1045,7 +1045,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFln+UctSnGmoo="
 							},
-							"name": "nom",
+							"name": "nom_event",
 							"type": "VARCHAR",
 							"length": 0
 						},
