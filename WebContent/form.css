@@ -33,11 +33,15 @@ table {
 	padding-bottom: 50px;
 	
 }
-h2 {
-	color: red;
+#form table tr td h2 {
+	color: navy;
+	font-size: 1.5em;
+	text-align: center;
+	padding-bottom: 50px;
 }
-td {
-	line-height: 50px;
+#form table tr td p {
+	color: aqua;
 }
+
 
 

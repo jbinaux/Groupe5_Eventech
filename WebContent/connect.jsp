@@ -33,11 +33,11 @@
 					<br />
 
 					<tr>
-						<td>Email :</td>
+						<td><p>Email :</p></td>
 						<td><input type="text" name="email"></td>
 					</tr>
 					<tr>
-						<td>Mot de passe :</td>
+						<td><p>Mot de passe :</p></td>
 						<td><input type="password" name="pwd"></td>
 					</tr>
 
@@ -61,18 +61,23 @@
 				<br />
 				<br />
 				<tr>
-					<td>Nom:</td>
+					<td><p>Nom:</p></td>
 					<td><input type="text" name="nom"></td>
 				</tr>
 				<tr>
-					<td>Prénom:</td>
+					<td><p>Prénom:</p></td>
 					<td><input type="text" name="prenom"></td>
 				</tr>
 
 				<tr>
-					<td>Email:</td>
+					<td><p>Email:</p></td>
 					<td><input type="text" name="email"></td>
 				</tr>
+				
+				<tr>
+						<td><p>Mot de passe :</p></td>
+						<td><input type="password" name="pwd"></td>
+					</tr>
 
 				<tr>
 				    <td></td>
