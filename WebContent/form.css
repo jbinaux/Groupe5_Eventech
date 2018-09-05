@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+/* Général ------------------------------------------------------------------------------------- */
+
+body {
+	background-image:url(img/1.jpg)
+}
+
+#form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#first {
+	background-color: rgba(0, 0, 255, 0.3);
+	padding: 10 10 10 10;
+}
+#second {
+	background-color: rgba(0, 0, 255, 0.3);
+	
+}
