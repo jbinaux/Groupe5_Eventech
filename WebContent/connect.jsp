@@ -31,7 +31,7 @@
 					</tr>
 					<br />
 					<br />
-					
+
 					<tr>
 						<td>Email :</td>
 						<td><input type="text" name="email"></td>
@@ -40,8 +40,9 @@
 						<td>Mot de passe :</td>
 						<td><input type="password" name="pwd"></td>
 					</tr>
-					
+
 					<tr>
+					    <td></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>
@@ -67,13 +68,14 @@
 					<td>Prénom:</td>
 					<td><input type="text" name="prenom"></td>
 				</tr>
-				
+
 				<tr>
 					<td>Email:</td>
 					<td><input type="text" name="email"></td>
 				</tr>
-	
+
 				<tr>
+				    <td></td>
 					<td><input type="submit" value="Envoyer"></td>
 				</tr>
 			</table>
