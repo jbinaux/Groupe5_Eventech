@@ -18,7 +18,7 @@
 	<br />
 	<br />
 
-	<form action="contactSave.jsp">
+	<form action="LoginUserServlet">
 
 
 		<div id="form">
@@ -48,7 +48,7 @@
 			</div>
 	</form>
 
-	<form action="contactSave.jsp">
+	<form action="RegisterUserServlet">
 
 		<div id="second">
 			<table>
