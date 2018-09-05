@@ -10,7 +10,12 @@ public class UserController {
 
 	User model;
 	
-	public int InsertUser()
+	/**
+	 * this method do a insert on the table "users" using the model's values.
+	 * 
+	 * @return the number of rows affected by the query, or 0 if something went wrong
+	 */
+	public int insertUser()
 	{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
