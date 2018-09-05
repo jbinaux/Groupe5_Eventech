@@ -12,7 +12,7 @@ import password.Password;
 
 public class UserController {
 
-	User model;
+	User model = new User();
 	
 	/**
 	 * this method do a insert on the table "users" using the model's values.
@@ -79,7 +79,7 @@ public class UserController {
 			
 			cn = DriverManager.getConnection(url, user, pwd);
 			st = cn.createStatement();
-			String sql = "SELECT * FROM eventech_db.users WHERE email = '" + email + "'";
+			String sql = "SELECT * FROM eventech_db.users WHERE mail = '" + email + "'";
 			ResultSet result = st.executeQuery(sql);
 
 			if (result.next()) 
