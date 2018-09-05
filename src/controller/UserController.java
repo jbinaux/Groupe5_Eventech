@@ -3,6 +3,10 @@ package controller;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import model.User;
 import password.Password;
 
@@ -17,6 +21,9 @@ public class UserController {
 	 */
 	public int insertUser()
 	{
+		Connection cn = null;
+		PreparedStatement ps = null;
+		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 
@@ -25,9 +32,8 @@ public class UserController {
 			String user = "root";
 			String pwd = password.getPassword();
 
-			Connection con = DriverManager.getConnection(url, user, pwd);
-
-			PreparedStatement ps = con.prepareStatement("insert into users(`nom`,`prenom`,`mail`,`mot_de_passe`"
+			cn = DriverManager.getConnection(url, user, pwd);
+			ps = cn.prepareStatement("insert into users(`nom`,`prenom`,`mail`,`mot_de_passe`"
 					+ ",`domaine_activite`) values(?,?,?,?,?)");
 			ps.setString(1, model.getNom());
 			ps.setString(2, model.getPrenom());
@@ -37,10 +43,92 @@ public class UserController {
 
 			int s = ps.executeUpdate();
 			return s;
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
-			return 0;
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
+		return 0;
+	}
+	
+	/**
+	 * this method does a select on the "users" table with the email, and store its data in the model
+	 * 
+	 * @param email of the desired user
+	 * @return 1 if the operation was successful, or 0 if it wasn't
+	 */
+	public int retrieveUser(String email)
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		Statement st = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			st = cn.createStatement();
+			String sql = "SELECT * FROM eventech_db.users WHERE email = '" + email + "'";
+			ResultSet result = st.executeQuery(sql);
+
+			if (result.next()) 
+			{
+				model.setAdmin(result.getBoolean("is_admin"));
+				model.setDomaineActivite(result.getString("domaine_activite"));
+				model.setIdUser(result.getInt("id_user"));
+				model.setMail(result.getString("mail"));
+				model.setMotDePasse(result.getString("mot_de_passe"));
+				model.setNom(result.getString("nom"));
+				model.setPrenom(result.getString("prenom"));
+				model.setNumEmploye(result.getInt("num_employe"));
+				return 1;
+			}
+			else
+			{
+				model = null;
+				return 0;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return 0;
+	}
+	
+	/**
+	 * this method compare the password of the model to the password submitted
+	 * 
+	 * @param password to verify
+	 * @return true if the password match, false if it doesn't
+	 */
+	public boolean validatePassword(String password)
+	{
+		if(model.getMotDePasse().equals(password))
+		{
+			return true;
+		}
+		return false;
 	}
 	
 	public int getUserId() {
