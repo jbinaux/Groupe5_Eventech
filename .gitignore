@@ -1,2 +1,4 @@
 /build/
 /.classpath
+/bin/
+/src/password/

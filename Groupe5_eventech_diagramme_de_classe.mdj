@@ -2023,23 +2023,6 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAFlpN7gvvs7pBk=",
-											"_parent": {
-												"$ref": "AAAAAAFlpNdoZ/pFlyc="
-											},
-											"model": {
-												"$ref": "AAAAAAFlpN7gjfs4Poo="
-											},
-											"font": "Arial;13;0",
-											"left": 37,
-											"top": 562,
-											"width": 231,
-											"height": 13,
-											"text": "+activerAdmin()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAFlpOnE/v3TPKg=",
 											"_parent": {
 												"$ref": "AAAAAAFlpNdoZ/pFlyc="
@@ -2049,7 +2032,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 577,
+											"top": 562,
 											"width": 231,
 											"height": 13,
 											"text": "+getIdUser(): int",
@@ -2066,7 +2049,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 592,
+											"top": 577,
 											"width": 231,
 											"height": 13,
 											"text": "+setIdUser(value: int)",
@@ -2083,7 +2066,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 607,
+											"top": 592,
 											"width": 231,
 											"height": 13,
 											"text": "+getNumEmploye(): int",
@@ -2100,7 +2083,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 622,
+											"top": 607,
 											"width": 231,
 											"height": 13,
 											"text": "+setNumEmploye(value: int)",
@@ -2117,7 +2100,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 637,
+											"top": 622,
 											"width": 231,
 											"height": 13,
 											"text": "+getNom(): String",
@@ -2134,7 +2117,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 652,
+											"top": 637,
 											"width": 231,
 											"height": 13,
 											"text": "+setNom(value: String)",
@@ -2151,7 +2134,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 667,
+											"top": 652,
 											"width": 231,
 											"height": 13,
 											"text": "+getPrenom(): String",
@@ -2168,7 +2151,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 682,
+											"top": 667,
 											"width": 231,
 											"height": 13,
 											"text": "+setPrenom(value: String)",
@@ -2185,7 +2168,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 697,
+											"top": 682,
 											"width": 231,
 											"height": 13,
 											"text": "+getMail(): String",
@@ -2202,7 +2185,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 712,
+											"top": 697,
 											"width": 231,
 											"height": 13,
 											"text": "+setMail(value: String)",
@@ -2219,7 +2202,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 727,
+											"top": 712,
 											"width": 231,
 											"height": 13,
 											"text": "+getMotDePasse(): String",
@@ -2236,7 +2219,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 742,
+											"top": 727,
 											"width": 231,
 											"height": 13,
 											"text": "+setMotDePasse(value: String)",
@@ -2253,7 +2236,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 757,
+											"top": 742,
 											"width": 231,
 											"height": 13,
 											"text": "+getIsAdmin(): boolean",
@@ -2270,7 +2253,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 772,
+											"top": 757,
 											"width": 231,
 											"height": 13,
 											"text": "+setIsAdmin(value: boolean)",
@@ -2287,7 +2270,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 787,
+											"top": 772,
 											"width": 231,
 											"height": 13,
 											"text": "+getDomaineActivite(): String",
@@ -2304,7 +2287,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 37,
-											"top": 802,
+											"top": 787,
 											"width": 231,
 											"height": 13,
 											"text": "+setDomaineActivite(value: String)",
@@ -2315,7 +2298,7 @@
 									"left": 32,
 									"top": 512,
 									"width": 241,
-									"height": 308
+									"height": 293
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -4703,14 +4686,6 @@
 								"$ref": "AAAAAAFlpNdoZfo8/2s="
 							},
 							"name": "supprimerInfoUser"
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFlpN7gjfs4Poo=",
-							"_parent": {
-								"$ref": "AAAAAAFlpNdoZfo8/2s="
-							},
-							"name": "activerAdmin"
 						},
 						{
 							"_type": "UMLOperation",
