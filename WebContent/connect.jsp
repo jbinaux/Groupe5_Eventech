@@ -17,11 +17,11 @@
 	<br />
 	<br />
 	<br />
-
+<div id="form">
 	<form action="LoginUserServlet">
 
 
-		<div id="form">
+
 			<div id="first">
 				<table>
 					<tr>
@@ -42,11 +42,12 @@
 					</tr>
 
 					<tr>
-					    <td></td>
+						<td></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>
 			</div>
+
 	</form>
 
 	<form action="RegisterUserServlet">
@@ -75,14 +76,14 @@
 				</tr>
 
 				<tr>
-				    <td></td>
+					<td></td>
 					<td><input type="submit" value="Envoyer"></td>
 				</tr>
 			</table>
 		</div>
-		</div>
 
 	</form>
+	</div>
 
 	<br />
 	<br />
