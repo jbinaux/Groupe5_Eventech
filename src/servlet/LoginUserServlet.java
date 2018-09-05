@@ -18,16 +18,26 @@ public class LoginUserServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		String email= request.getParameter("email");
-		String password = request.getParameter("password");
+		String password = request.getParameter("pwd");
 		UserController user = new UserController();
-		user.retrieveUser(email);
 		
-		boolean status = user.validatePassword(password);
+		if(user.retrieveUser(email) > 0)
+		{
+			boolean status = user.validatePassword(password);
 
-		if (status) {
-			RequestDispatcher rd = request.getRequestDispatcher("login-success.jsp");
-			rd.forward(request, response);
-		} else {
+			if (status) 
+			{
+				RequestDispatcher rd = request.getRequestDispatcher("profil.jsp");
+				rd.forward(request, response);
+			} 
+			else 
+			{
+				RequestDispatcher rd = request.getRequestDispatcher("login-error.jsp");
+				rd.forward(request, response);
+			}
+		}
+		else
+		{
 			RequestDispatcher rd = request.getRequestDispatcher("login-error.jsp");
 			rd.forward(request, response);
 		}
