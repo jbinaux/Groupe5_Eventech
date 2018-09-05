@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+#end {	
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 1;
+}
+#header {
+	width: 100%;
+	height: 600px;
+}
