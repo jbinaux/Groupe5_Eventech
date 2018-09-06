@@ -35,7 +35,7 @@ public class RegisterUserServlet extends HttpServlet {
 			
 			int s = user.insertUser();
 			if (s > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("inscription.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("connect.jsp");
 				rd.forward(request, response);
 			} else {
 				out.print("sorry!please fill correct detail and try again");

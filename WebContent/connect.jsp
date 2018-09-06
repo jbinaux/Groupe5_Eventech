@@ -83,7 +83,7 @@
 
 					<tr>
 						<td><p>Domaine d'activité:</p></td>
-						<td><select name="choix">
+						<td><select name="domaineActivite">
 								<option>Autre</option>
 								<option>marketing</option>
 								<option>communication</option>
