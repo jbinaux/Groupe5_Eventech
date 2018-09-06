@@ -17,6 +17,16 @@
 	<br />
 	<br />
 	<br />
+	<%
+	if(request.getParameter("error") != null)
+	{
+		if (request.getParameter("error").equals("1")) {
+			out.print("wrong email");
+		} else if (request.getParameter("error").equals("2")) {
+			out.print("wrong password");
+		}
+	}
+	%>
 	<br />
 	<br />
 	<br />
