@@ -6,9 +6,13 @@
  width: 100%;
  z-index: 1;
 }
-#header {
-	width: 100%;
-	height: 600px;
+#header
+{
+  height: 600px;
+  background-image: url(img/imgH.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .inv {
 	opacity: 0;

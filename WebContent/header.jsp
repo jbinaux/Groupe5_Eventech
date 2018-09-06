@@ -54,11 +54,20 @@
 						placeholder="bienvenue" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
 				</form>
+				<% 
+				if (session.getAttribute("user") != null)
+					{
+					out.print("<a class=\"inv\">se</a>");
+					out.print("<form action=\"LogoutUserServlet\">");
+					out.print("<button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Deconnexion</button>");
+					out.print("</form>");
+					}
+				%>
 			</div>
 		</nav>
 	</div>
 
-	<IMG id="header" SRC="img/imgH.jpg">
+	<div id="header"></div>
 
 
 </body>

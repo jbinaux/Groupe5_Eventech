@@ -78,9 +78,6 @@
 
 	</div>
 
-	<form action="LogoutUserServlet">
-		<input type="submit" value="deconnexion">
-	</form>
 
 	<br />
 	<br />
