@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,7 +11,7 @@
 </head>
 <body>
 
-	<jsp:include page="navbar.html"></jsp:include>
+	<jsp:include page="navbar.jsp"></jsp:include>
 
 	<br />
 	<br />
@@ -84,12 +83,12 @@
 
 					<tr>
 						<td><p>Domaine d'activité:</p></td>
-						<td><select name="choix">
+						<td><select name="domaineActivite">
+								<option>Marketing</option>
+								<option>Communication</option>
+								<option>Développement</option>
+								<option>Réseau</option>
 								<option>Autre</option>
-								<option>marketing</option>
-								<option>communication</option>
-								<option>réseau</option>
-								<option>développement</option>
 						</select> <br /></td>
 					</tr>
 

@@ -49,10 +49,10 @@
 					<tr>
 						<td><p>Sujet:</p></td>
 						<td><select name="choix">
+								<option>Espace presse</option>
+								<option>Recrutement</option>
+								<option>Demande event</option>
 								<option>Autre</option>
-								<option>espace presse</option>
-								<option>recrutement</option>
-								<option>demande event</option>
 						</select> <br /></td>
 					</tr>
                 <tr> <td><p>Message:</p></td><td><textarea name="message"></textarea></td></tr>

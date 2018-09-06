@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<jsp:include page="navbar.html"></jsp:include>
+	<jsp:include page="navbar.jsp"></jsp:include>
 
 	<H1>Pour proposer un événement à vos collaborateurs</H1>
 
@@ -47,7 +47,7 @@
 			</tr>
 			<tr>
 				<td><p>Domaine d'activité:</p></td>
-				<td><select name="choix">
+				<td><select name="domaineActivite">
 						<option>Marketing</option>
 						<option>Communication</option>
 						<option>Développement</option>
