@@ -27,9 +27,13 @@
 					<li><a class="inv">septembre is well done yeah ... </a></li>
 					<li class="nav-item"><a class="nav-link" href="eventsPU.jsp">Evénements</a>
 					</li>
-					<li><a class="inv">sept</a></li>
-					<li class="nav-item"><a class="nav-link" href="connect.jsp">Connection</a>
-					</li>
+					<%
+					if (session.getAttribute("user") == null)
+					{
+						out.print("<li><a class=\"inv\">sept</a></li>");
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\"href=\"connect.jsp\">Connection</a></li>");
+					}
+					%>
 					<li><a class="inv">sept</a></li>
 					<li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a>
 					</li>

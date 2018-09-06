@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -57,13 +57,13 @@
 					</tr>
                 <tr> <td><p>Message:</p></td><td><textarea name="message"></textarea></td></tr>
 					<tr>
-						<td><a class="inv"><p>Mot de passe :</p></a></td>
+						<td><a class="inv">Mot de passe :</a></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>
 			</div>
+			</div>
 	</form>
-	</div>
 	
 	<br />
 	<br />
