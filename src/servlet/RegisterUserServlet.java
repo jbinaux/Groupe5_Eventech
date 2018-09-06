@@ -8,6 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import controller.UserController;
 
 
@@ -29,16 +31,27 @@ public class RegisterUserServlet extends HttpServlet {
 			user.setUserNom(request.getParameter("nom"));
 			user.setUserPrenom(request.getParameter("prenom"));
 			
-			int s = user.insertUser();
-			if (s > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("connect.jsp");
-				rd.forward(request, response);
-			} else {
-				out.print("sorry!please fill correct detail and try again");
+			if(!user.userExist(user.getUserMail()))
+			{
+				int s = user.insertUser();
+				if (s > 0) {
+					user.retrieveUser(user.getUserMail());
+					HttpSession session1 = request.getSession();
+					session1.setAttribute("user", user);
+					RequestDispatcher rd = request.getRequestDispatcher("profil.jsp");
+					rd.forward(request, response);
+				} else {
+					out.print("sorry!please fill correct detail and try again");
+				}
+			}
+			else
+			{
+				user = null;
+				out.print("Account with this email already exist");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			out.print("sorry!please fill correct detail and try again");
+			out.print("sorry!please fill correct detail and try again 2");
 		}
 
 	}

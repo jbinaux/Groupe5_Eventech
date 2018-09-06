@@ -14,12 +14,12 @@
 	<H1>Pour proposer un événement à vos collaborateurs</H1>
 
 	<P>Rentrez toutes les informations ici
-	<form action=" ">
+	<form action="CreateEventServlet">
 
 		<table>
 			<tr>
 				<td>Nom de l'événement:</td>
-				<td><input type="text" name="nom_event"></td>
+				<td><input type="text" name="nomEvent"></td>
 			</tr>
 			<tr>
 				<td>Lieu:</td>
@@ -27,19 +27,15 @@
 			</tr>
 			<tr>
 				<td>Date:</td>
-				<td><input type="date" name="date_event"></td>
+				<td><input type="date" name="dateEvent" value="yyyy-mm-dd"></td>
 			</tr>
 			<tr>
 				<td>Heure:</td>
-				<td><input type="time" name="heure_event"></td>
-			</tr>
-			<tr>
-				<td>Type d'événement:</td>
-				<td><input type="text" name="type_event"></td>
+				<td><input type="time" name="heureEvent" value="hh-mm"></td>
 			</tr>
 			<tr>
 				<td>Description de l'événement:</td>
-				<td><input type="text" name="description_event"></td>
+				<td><input type="text" name="descriptionEvent"></td>
 			</tr>
 			<tr>
 				<td>Prix:</td>

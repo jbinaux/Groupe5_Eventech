@@ -132,6 +132,55 @@ public class UserController {
 		return false;
 	}
 	
+	/**
+	 * this method check if a user already exist at the specified email
+	 * 
+	 * @param email to verify
+	 * @return true if the email is linked to an account, false if it doesn't
+	 */
+	public boolean userExist(String email)
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		Statement st = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			st = cn.createStatement();
+			String sql = "SELECT * FROM eventech_db.users WHERE mail = '" + email + "'";
+			ResultSet result = st.executeQuery(sql);
+
+			if (result.next()) 
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return false;
+	}
+	
 	public int getUserId() {
 		return model.getIdUser();
 	}

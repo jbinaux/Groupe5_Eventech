@@ -11,7 +11,7 @@ public class Event {
 	Date dateEvent;
 	Time heureEvent;
 	String typeEvent;
-	int idUser;
+	int idCreator;
 	String description;
 	int nbPersonnes;
 	double moyenneNote;
@@ -54,11 +54,11 @@ public class Event {
 	public void setTypeEvent(String typeEvent) {
 		this.typeEvent = typeEvent;
 	}
-	public int getIdUser() {
-		return idUser;
+	public int getIdCreator() {
+		return idCreator;
 	}
-	public void setIdUser(int idUser) {
-		this.idUser = idUser;
+	public void setIdCreator(int idCreator) {
+		this.idCreator = idCreator;
 	}
 	public String getDescription() {
 		return description;
