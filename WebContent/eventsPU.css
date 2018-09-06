@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+body {
+	
+	background-size: cover;
+}
+#event1 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: grey;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#columnF {
+	width: 30%;
+	margin-left: 30px;
+}
+#columnS {
+	width: 50%;
+	padding-left: 80px;
+	padding-right: 30px;
+}
+#event1 p {
+	color: white;
+}
+body h2 {
+	color: navy;
+}
+

@@ -9,9 +9,10 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 #first {
-	background-color: rgba(0, 0, 255, 0.3); 
+	background-color: rgba(0, 0, 255, 0.2); 
 	box-shadow: 6px 6px 20px grey;
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -20,7 +21,7 @@ body {
 	font-size: 1.2em;
 }
 #second {
-	background-color: rgba(0, 0, 255, 0.3);
+	background-color: rgba(0, 0, 255, 0.2);
 	box-shadow: 6px 6px 20px grey;
 	padding-right: 20px;
 	padding-bottom: 30px;
@@ -34,13 +35,16 @@ table {
 	
 }
 #form table tr td h2 {
-	color: navy;
-	font-size: 1.5em;
+	color: lime;
+	font-size: 1.2em;
 	text-align: center;
 	padding-bottom: 50px;
 }
 #form table tr td p {
 	color: aqua;
+}
+.sil {
+	text-align: center;
 }
 
 

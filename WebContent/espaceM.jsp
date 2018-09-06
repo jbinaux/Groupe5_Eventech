@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>espace membres</title>
 <link rel="stylesheet" type="text/css" href="form.css" />
-<title>contact</title>
 </head>
 <body>
 
 	<jsp:include page="navbar.html"></jsp:include>
-	
+
+	<br />
+	<br />
 	<br />
 	<br />
 	<br />
@@ -26,36 +28,21 @@
 				<table>
 					<tr>
 						<td><h2>
-								<strong>POUR NOUS CONTACTER :</strong>
+								<strong>POUR ACCÉDER A NOTRE ESPACE PRIVÉ :</strong>
 							</h2></td>
 					</tr>
 					<br />
 					<br />
 
 					<tr>
-					<td><p>Nom:</p></td>
-					<td><input type="text" name="nom"></td>
-				</tr>
-				<tr>
-					<td><p>Prénom:</p></td>
-					<td><input type="text" name="prenom"></td>
-				</tr>
-
-				<tr>
-					<td><p>Email:</p></td>
-					<td><input type="text" name="email"></td>
-				</tr>
-
-					<tr>
-						<td><p>Sujet:</p></td>
-						<td><select name="choix">
-								<option>Autre</option>
-								<option>espace presse</option>
-								<option>recrutement</option>
-								<option>demande event</option>
-						</select> <br /></td>
+						<td><p>Email :</p></td>
+						<td><input type="text" name="email"></td>
 					</tr>
-                <tr> <td><p>Message:</p></td><td><textarea name="message"></textarea></td></tr>
+					<tr>
+						<td><p>Mot de passe :</p></td>
+						<td><input type="password" name="pwd"></td>
+					</tr>
+
 					<tr>
 						<td><a class="inv"><p>Mot de passe :</p></a></td>
 						<td><input type="submit" value="Envoyer"></td>
@@ -64,13 +51,17 @@
 			</div>
 	</form>
 	</div>
-	
 	<br />
 	<br />
 	<br />
 	<br />
-	
+	<br />
+	<br />
+	<br />
+	<br />
+
 	<jsp:include page="footer.html"></jsp:include>
+
 
 </body>
 </html>

@@ -17,6 +17,10 @@
 	<br />
 	<br />
 	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 
 	<form action="LoginUserServlet">
 
@@ -26,7 +30,7 @@
 				<table>
 					<tr>
 						<td><h2>
-								<strong>Pour vous identifier :</strong>
+								<strong>POUR VOUS IDENTIFIER :</strong>
 							</h2></td>
 					</tr>
 					<br />
@@ -42,7 +46,7 @@
 					</tr>
 
 					<tr>
-					    <td></td>
+						<td><a class="inv"><p>Mot de passe :</p></a></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>
@@ -55,11 +59,13 @@
 			<table>
 				<tr>
 					<td><h2>
-							<strong>Pour vous inscrire :</strong>
+							<strong>POUR VOUS INSCRIRE :</strong>
 						</h2></td>
 				</tr>
+
 				<br />
 				<br />
+
 				<tr>
 					<td><p>Nom:</p></td>
 					<td><input type="text" name="nom"></td>
@@ -68,19 +74,30 @@
 					<td><p>Prénom:</p></td>
 					<td><input type="text" name="prenom"></td>
 				</tr>
+				
+				<tr>
+						<td><p>Domaine d'activité:</p></td>
+						<td><select name="choix">
+								<option>Autre</option>
+								<option>marketing</option>
+								<option>communication</option>
+								<option>réseau</option>
+								<option>développement</option>
+						</select> <br /></td>
+					</tr>
 
 				<tr>
 					<td><p>Email:</p></td>
 					<td><input type="text" name="email"></td>
 				</tr>
-				
-				<tr>
-						<td><p>Mot de passe :</p></td>
-						<td><input type="password" name="pwd"></td>
-					</tr>
 
 				<tr>
-				    <td></td>
+					<td><p>Mot de passe :</p></td>
+					<td><input type="password" name="pwd"></td>
+				</tr>
+
+				<tr>
+					<td><a class="inv"><p>Mot de passe :</p></a></td>
 					<td><input type="submit" value="Envoyer"></td>
 				</tr>
 			</table>
