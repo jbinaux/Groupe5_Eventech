@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import controller.UserController;
 
 @WebServlet("/LoginUserServlet")
@@ -27,18 +29,20 @@ public class LoginUserServlet extends HttpServlet {
 
 			if (status) 
 			{
+				HttpSession session1 = request.getSession();
+				session1.setAttribute("user", user);
 				RequestDispatcher rd = request.getRequestDispatcher("profil.jsp");
 				rd.forward(request, response);
 			} 
 			else 
 			{
-				RequestDispatcher rd = request.getRequestDispatcher("login-error.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("connect.jsp?error=2");
 				rd.forward(request, response);
 			}
 		}
 		else
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("login-error.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("connect.jsp?error=1");
 			rd.forward(request, response);
 		}
 

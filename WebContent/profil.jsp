@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="controller.UserController"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,12 +9,17 @@
 <title>profil</title>
 </head>
 <body>
-	<jsp:include page="navbar.html"></jsp:include>
+	<jsp:include page="navbar.jsp"></jsp:include>
 	<br />
 	<br />
 	<br />
 	<br />
-
+	<%
+		UserController user = (UserController) session.getAttribute("user");
+		if (user == null) {
+			response.sendRedirect("connect.jsp");
+		}
+	%>
 	<div id="section">
 		<div id="column1">
 			<div id="photo">
@@ -24,7 +30,14 @@
 			<br /> <br />
 
 			<h2>
-				<strong>{NOM}</strong>
+				<strong> 
+				<%
+			 	if (user != null) 
+			 	{
+			 		out.print(user.getUserNom() + " " + user.getUserPrenom());
+			 	}
+				 %>
+				</strong>
 			</h2>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
@@ -61,13 +74,17 @@
 			<p>blabla</p>
 
 		</div>
-		
+
 
 	</div>
-	
+
+	<form action="LogoutUserServlet">
+		<input type="submit" value="deconnexion">
+	</form>
+
 	<br />
 	<br />
-	
+
 	<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>
