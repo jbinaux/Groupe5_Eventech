@@ -22,10 +22,12 @@
 	<br />
 	<br />
 
-	<form action="LoginUserServlet">
+
+	<div id="form">
+		<form action="LoginUserServlet">
 
 
-		<div id="form">
+
 			<div id="first">
 				<table>
 					<tr>
@@ -47,35 +49,39 @@
 
 					<tr>
 						<td><a class="inv"><p>Mot de passe :</p></a></td>
+
+						<td></td>
+
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>
 			</div>
-	</form>
 
-	<form action="RegisterUserServlet">
+		</form>
 
-		<div id="second">
-			<table>
-				<tr>
-					<td><h2>
-							<strong>POUR VOUS INSCRIRE :</strong>
-						</h2></td>
-				</tr>
+		<form action="RegisterUserServlet">
 
-				<br />
-				<br />
+			<div id="second">
+				<table>
+					<tr>
+						<td><h2>
+								<strong>POUR VOUS INSCRIRE :</strong>
+							</h2></td>
+					</tr>
 
-				<tr>
-					<td><p>Nom:</p></td>
-					<td><input type="text" name="nom"></td>
-				</tr>
-				<tr>
-					<td><p>Prénom:</p></td>
-					<td><input type="text" name="prenom"></td>
-				</tr>
-				
-				<tr>
+					<br />
+					<br />
+
+					<tr>
+						<td><p>Nom:</p></td>
+						<td><input type="text" name="nom"></td>
+					</tr>
+					<tr>
+						<td><p>Prénom:</p></td>
+						<td><input type="text" name="prenom"></td>
+					</tr>
+
+					<tr>
 						<td><p>Domaine d'activité:</p></td>
 						<td><select name="choix">
 								<option>Autre</option>
@@ -86,25 +92,26 @@
 						</select> <br /></td>
 					</tr>
 
-				<tr>
-					<td><p>Email:</p></td>
-					<td><input type="text" name="email"></td>
-				</tr>
+					<tr>
+						<td><p>Email:</p></td>
+						<td><input type="text" name="email"></td>
+					</tr>
 
-				<tr>
-					<td><p>Mot de passe :</p></td>
-					<td><input type="password" name="pwd"></td>
-				</tr>
+					<tr>
+						<td><p>Mot de passe :</p></td>
+						<td><input type="password" name="pwd"></td>
+					</tr>
 
-				<tr>
-					<td><a class="inv"><p>Mot de passe :</p></a></td>
-					<td><input type="submit" value="Envoyer"></td>
-				</tr>
-			</table>
-		</div>
-		</div>
+					<tr>
+						<td><a class="inv"><p>Mot de passe :</p></a></td>
+						<td></td>
+						<td><input type="submit" value="Envoyer"></td>
+					</tr>
+				</table>
+			</div>
 
-	</form>
+		</form>
+	</div>
 
 	<br />
 	<br />

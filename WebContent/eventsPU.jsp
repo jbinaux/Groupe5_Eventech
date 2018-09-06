@@ -23,7 +23,7 @@
 			<br /> 
 
 			<h2>
-				<strong>Informations événements:</strong>
+				<strong>Informations événement:</strong>
 			</h2>
             
             <h3>Date: 18/09/2018</h3>

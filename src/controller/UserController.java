@@ -34,12 +34,13 @@ public class UserController {
 
 			cn = DriverManager.getConnection(url, user, pwd);
 			ps = cn.prepareStatement("insert into users(`nom`,`prenom`,`mail`,`mot_de_passe`"
-					+ ",`domaine_activite`) values(?,?,?,?,?)");
+					+ ",`is_admin`,`domaine_activite`) values(?,?,?,?,?,?)");
 			ps.setString(1, model.getNom());
 			ps.setString(2, model.getPrenom());
 			ps.setString(3, model.getMail());
 			ps.setString(4, model.getMotDePasse());
-			ps.setString(5, model.getDomaineActivite());
+			ps.setBoolean(5, model.isAdmin());
+			ps.setString(6, model.getDomaineActivite());
 
 			int s = ps.executeUpdate();
 			return s;
