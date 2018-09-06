@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="profil.css" />
-<title>Insert title here</title>
+<title>profil</title>
 </head>
 <body>
 	<jsp:include page="navbar.html"></jsp:include>
@@ -24,13 +24,13 @@
 			<br /> <br />
 
 			<h2>
-				<strong>Nom:</strong>
+				<strong>{NOM}</strong>
 			</h2>
-			<p>blabla</p>
-			<p>blabla</p>
-			<p>blabla</p>
-			<p>blabla</p>
-			<p>blabla</p>
+			<p>blabla-blabla</p>
+			<p>blabla-blabla</p>
+			<p>blabla-blabla</p>
+			<p>blabla-blabla</p>
+			<p>blabla-blabla</p>
 
 
 		</div>
@@ -38,7 +38,7 @@
 		<div id="column2">
 
 			<h2>
-				<strong>Statut:</strong>
+				<strong>{STATUT}</strong>
 			</h2>
 
 			<br /> <br />
