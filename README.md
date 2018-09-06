@@ -23,4 +23,4 @@ Pour tous les événements internes comme externes, il sera possible de noter et
 
 Voici la V1 de la maquette/prototype du site web Eventech (les boutons sont cliquables et simulent la navigation d'un utilisateur):
 
-                      <a href="https://marvelapp.com/17955546">maquette</a>
+<a href="https://marvelapp.com/17955546">maquette</a>
