@@ -9,7 +9,7 @@
 <title>profil</title>
 </head>
 <body>
-	<jsp:include page="navbar.html"></jsp:include>
+	<jsp:include page="navbar.jsp"></jsp:include>
 	<br />
 	<br />
 	<br />
