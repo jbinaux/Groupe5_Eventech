@@ -82,14 +82,14 @@
 						<td><input type="text" name="prenom"></td>
 					</tr>
 
-					<tr>
+					<tr>     
 						<td><p>Domaine d'activité:</p></td>
 						<td><select name="choix">
+								<option>Marketing</option>
+								<option>Communication</option>
+								<option>Développement</option>
+								<option>Réseau</option>
 								<option>Autre</option>
-								<option>marketing</option>
-								<option>communication</option>
-								<option>réseau</option>
-								<option>développement</option>
 						</select> <br /></td>
 					</tr>
 
