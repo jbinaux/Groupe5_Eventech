@@ -50,14 +50,14 @@
 					<tr>
 						<td><a class="inv"><p>Mot de passe :</p></a></td>
 
-						<td></td>
-
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>
 			</div>
 
 		</form>
+
+
 
 		<form action="RegisterUserServlet">
 
@@ -104,7 +104,6 @@
 
 					<tr>
 						<td><a class="inv"><p>Mot de passe :</p></a></td>
-						<td></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>
