@@ -20,7 +20,7 @@
 			</div>
 
 
-			<br /> <br />
+			<br /> 
 
 			<h2>
 				<strong>Informations événements:</strong>
@@ -50,7 +50,7 @@
 				et contenant du sens est source de distractions, et empêche de se
 				concentrer sur la mise en page elle-même.</p>
 
-			<br /> <br />
+			 
 
 
 
