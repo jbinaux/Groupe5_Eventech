@@ -31,8 +31,11 @@ public class CreateEventServlet extends HttpServlet {
 			UserController user = (UserController)session.getAttribute("user");
 			EventController event = new EventController();
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-			SimpleDateFormat format2 = new SimpleDateFormat("hh:mm");
-			event.setDateEvent((Date)format.parse(request.getParameter("dateEvent")));
+			SimpleDateFormat format2 = new SimpleDateFormat("hh:mm a");
+			java.util.Date utilJava = format.parse(request.getParameter("dateEvent"));
+			java.sql.Date date = new java.sql.Date(utilJava.getTime());
+			out.print("");
+			event.setDateEvent(date);
 			event.setDescriptionEvent(request.getParameter("descriptionEvent"));
 			event.setDomaineEvent(request.getParameter("domaineActivite"));
 			event.setEventIdCreator(user.getUserId());
@@ -41,6 +44,7 @@ public class CreateEventServlet extends HttpServlet {
 			event.setHeureEvent(time);
 			event.setLieuEvent(request.getParameter("lieu"));
 			event.setNomEvent(request.getParameter("nomEvent"));
+			event.setPrixEvent(Double.parseDouble(request.getParameter("prix")));
 
 			int s = event.insertEvent();
 			if (s > 0) {
