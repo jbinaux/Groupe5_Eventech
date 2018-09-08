@@ -38,20 +38,23 @@ public class RegisterUserServlet extends HttpServlet {
 					user.retrieveUser(user.getUserMail());
 					HttpSession session1 = request.getSession();
 					session1.setAttribute("user", user);
-					RequestDispatcher rd = request.getRequestDispatcher("private/profil.jsp");
+					RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/private/profil.jsp");
 					rd.forward(request, response);
 				} else {
-					out.print("sorry!please fill correct detail and try again");
+					RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=1");
+					rd.forward(request, response);
 				}
 			}
 			else
 			{
 				user = null;
-				out.print("Account with this email already exist");
+				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=1");
+				rd.forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			out.print("sorry!please fill correct detail and try again 2");
+			RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=1");
+			rd.forward(request, response);
 		}
 
 	}

@@ -47,16 +47,16 @@ public class CreateEventServlet extends HttpServlet {
 
 			int s = event.insertEvent();
 			if (s > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("profil.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/profil.jsp");
 				rd.forward(request, response);
 			} else {
-				RequestDispatcher rd = request.getRequestDispatcher("formulaireEvenementsInternes.jsp?error=1");
+				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp?error=1");
 				rd.forward(request, response);
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			RequestDispatcher rd = request.getRequestDispatcher("formulaireEvenementsInternes.jsp?error=1");
+			RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp?error=1");
 			rd.forward(request, response);
 		}
 

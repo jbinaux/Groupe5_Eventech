@@ -28,7 +28,8 @@ public class UserController {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			Password password = new Password();
-			String url = "jdbc:mysql://localhost:3306/eventech_db";
+			String url = "jdbc:mysql://localhost:3306/eventech_db"
+					+ "?verifyServerCertificate=false&useSSL=true&requireSSL=true";
 			String user = "root";
 			String pwd = password.getPassword();
 
@@ -68,7 +69,8 @@ public class UserController {
 	public int retrieveUser(String email)
 	{
 		Password password = new Password();
-		String url = "jdbc:mysql://localhost/eventech_db";
+		String url = "jdbc:mysql://localhost/eventech_db"
+				+ "?verifyServerCertificate=false&useSSL=true&requireSSL=true";
 		String user = "root";
 		String pwd = password.getPassword();
 

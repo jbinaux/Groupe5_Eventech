@@ -16,7 +16,7 @@ public class LogoutUserServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.invalidate();
 		
-		response.sendRedirect("connect.jsp");
+		response.sendRedirect("/Groupe5_Eventech/connect.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
