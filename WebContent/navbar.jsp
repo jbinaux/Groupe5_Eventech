@@ -41,11 +41,11 @@
 					if (session.getAttribute("user") != null)
 					{
 						out.print("<li><a class=\"inv\">sept</a></li>");
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"profil.jsp\">Profil</a></li>");
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"private/profil.jsp\">Profil</a></li>");
 					}
 					%>
 					<li><a class="inv">sept</a></li>
-					<li class="nav-item"><a class="nav-link" href="espaceM.jsp">Espace
+					<li class="nav-item"><a class="nav-link" href="private/espaceM.jsp">Espace
 							membres</a></li>
 
 				</ul>

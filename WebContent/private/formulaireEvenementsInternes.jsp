@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<jsp:include page="navbar.jsp"></jsp:include>
+	<jsp:include page="../navbar.jsp"></jsp:include>
 	<br/>
 	<br/>
 	<H1>Pour proposer un événement à vos collaborateurs</H1>
@@ -66,7 +66,7 @@
 	</form>
 
 
-	<jsp:include page="footer.html"></jsp:include>
+	<jsp:include page="../footer.html"></jsp:include>
 
 
 

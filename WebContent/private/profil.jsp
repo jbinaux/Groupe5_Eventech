@@ -9,16 +9,13 @@
 <title>profil</title>
 </head>
 <body>
-	<jsp:include page="navbar.jsp"></jsp:include>
+	<jsp:include page="../navbar.jsp"></jsp:include>
 	<br />
 	<br />
 	<br />
 	<br />
 	<%
 		UserController user = (UserController) session.getAttribute("user");
-		if (user == null) {
-			response.sendRedirect("connect.jsp");
-		}
 	%>
 	<div id="section">
 		<div id="column1">
@@ -73,7 +70,7 @@
 			<p>blabla</p>
 			<p>blabla</p>
 			
-			<a href="formulaireEvenementsInternes.jsp">Créer un évènement</a>
+			<a href="private/formulaireEvenementsInternes.jsp">Créer un évènement</a>
 		</div>
 
 
@@ -83,6 +80,6 @@
 	<br />
 	<br />
 
-	<jsp:include page="footer.html"></jsp:include>
+	<jsp:include page="../footer.html"></jsp:include>
 </body>
 </html>

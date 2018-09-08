@@ -31,7 +31,7 @@ public class LoginUserServlet extends HttpServlet {
 			{
 				HttpSession session1 = request.getSession();
 				session1.setAttribute("user", user);
-				RequestDispatcher rd = request.getRequestDispatcher("profil.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("private/profil.jsp");
 				rd.forward(request, response);
 			} 
 			else 
