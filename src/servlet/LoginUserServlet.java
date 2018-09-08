@@ -31,18 +31,20 @@ public class LoginUserServlet extends HttpServlet {
 			{
 				HttpSession session1 = request.getSession();
 				session1.setAttribute("user", user);
-				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/private/profil.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
 				rd.forward(request, response);
 			} 
 			else 
 			{
-				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=2");
+				request.setAttribute("error", 2);
+				RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
 				rd.forward(request, response);
 			}
 		}
 		else
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=1");
+			request.setAttribute("error", 1);
+			RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
 			rd.forward(request, response);
 		}
 

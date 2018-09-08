@@ -21,7 +21,23 @@
 	<br />
 	<br />
 	<br />
-
+<%
+if(request.getAttribute("error") != null)
+{
+	if(request.getAttribute("error").equals(1))
+	{
+		out.print("Mauvais email");
+	}
+	else if(request.getAttribute("error").equals(2))
+	{
+		out.print("<p>Mauvais mot de passe</p>");
+	}
+	else if(request.getAttribute("error").equals(3))
+	{
+		out.print("<p>Remplissez correctement les information et réessayez.</p>");
+	}
+}
+%>
 
 	<div id="form">
 		<form action="LoginUserServlet">

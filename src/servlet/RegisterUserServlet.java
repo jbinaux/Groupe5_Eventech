@@ -38,22 +38,25 @@ public class RegisterUserServlet extends HttpServlet {
 					user.retrieveUser(user.getUserMail());
 					HttpSession session1 = request.getSession();
 					session1.setAttribute("user", user);
-					RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/private/profil.jsp");
+					RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
 					rd.forward(request, response);
 				} else {
-					RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=1");
+					request.setAttribute("error", 3);
+					RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
 					rd.forward(request, response);
 				}
 			}
 			else
 			{
 				user = null;
-				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=1");
+				request.setAttribute("error", 3);
+				RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
 				rd.forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/connect.jsp?error=1");
+			request.setAttribute("error", 3);
+			RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
 			rd.forward(request, response);
 		}
 

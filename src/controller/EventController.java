@@ -30,7 +30,7 @@ public class EventController {
 
 			Password password = new Password();
 			String url = "jdbc:mysql://localhost:3306/eventech_db"
-					+ "?verifyServerCertificate=false&useSSL=true&requireSSL=true";
+					+ "?verifyServerCertificate=false&useSSL=true";
 			String user = "root";
 			String pwd = password.getPassword();
 
