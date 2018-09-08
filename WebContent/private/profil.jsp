@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="profil.css" />
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/private/profil.css" />
 <title>profil</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
 	<div id="section">
 		<div id="column1">
 			<div id="photo">
-				<img src="img/votre-photo-ici.jpg" width="250" height="250">
+				<img src="/Groupe5_Eventech/img/votre-photo-ici.jpg" width="250" height="250">
 			</div>
 
 

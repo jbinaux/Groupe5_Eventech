@@ -26,23 +26,23 @@
 		<table>
 			<tr>
 				<td>Nom de l'événement:</td>
-				<td><input type="text" name="nomEvent"></td>
+				<td><input type="text" name="nomEvent" required></td>
 			</tr>
 			<tr>
 				<td>Lieu:</td>
-				<td><input type="text" name="lieu"></td>
+				<td><input type="text" name="lieu" required></td>
 			</tr>
 			<tr>
 				<td>Date:</td>
-				<td><input type="date" name="dateEvent" value="yyyy-mm-dd"></td>
+				<td><input type="date" name="dateEvent" value="yyyy-mm-dd" required></td>
 			</tr>
 			<tr>
 				<td>Heure:</td>
-				<td><input type="time" name="heureEvent" value="hh:mm"></td>
+				<td><input type="time" name="heureEvent" value="hh:mm" required></td>
 			</tr>
 			<tr>
 				<td>Description de l'événement:</td>
-				<td><input type="text" name="descriptionEvent"></td>
+				<td><input type="text" name="descriptionEvent" required></td>
 			</tr>
 			<tr>
 				<td>Prix:</td>

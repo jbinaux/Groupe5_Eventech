@@ -8,7 +8,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
 <title>navbar</title>
 </head>
 <body>
@@ -31,21 +31,21 @@
 					if (session.getAttribute("user") == null)
 					{
 						out.print("<li><a class=\"inv\">sept</a></li>");
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\"href=\"connect.jsp\">Connection</a></li>");
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\"href=\"/Groupe5_Eventech/connect.jsp\">Connection</a></li>");
 					}
 					%>
 					<li><a class="inv">sept</a></li>
-					<li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a>
+					<li class="nav-item"><a class="nav-link" href="/Groupe5_Eventech/contact.jsp">Contact</a>
 					</li>
 					<%
 					if (session.getAttribute("user") != null)
 					{
 						out.print("<li><a class=\"inv\">sept</a></li>");
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"private/profil.jsp\">Profil</a></li>");
+						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"/Groupe5_Eventech/private/profil.jsp\">Profil</a></li>");
 					}
 					%>
 					<li><a class="inv">sept</a></li>
-					<li class="nav-item"><a class="nav-link" href="private/espaceM.jsp">Espace
+					<li class="nav-item"><a class="nav-link" href="/Groupe5_Eventech/private/espaceM.jsp">Espace
 							membres</a></li>
 
 				</ul>

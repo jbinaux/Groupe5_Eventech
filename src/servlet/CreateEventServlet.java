@@ -47,7 +47,7 @@ public class CreateEventServlet extends HttpServlet {
 
 			int s = event.insertEvent();
 			if (s > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("formulaireEvenementsInternes.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("profil.jsp");
 				rd.forward(request, response);
 			} else {
 				RequestDispatcher rd = request.getRequestDispatcher("formulaireEvenementsInternes.jsp?error=1");

@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 body {
-	background-image: url("img/backProf.jpeg");
+	background-image: url("/Groupe5_Eventech/img/backProf.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
