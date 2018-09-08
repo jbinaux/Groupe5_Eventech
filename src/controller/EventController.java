@@ -12,7 +12,7 @@ import password.Password;
 
 public class EventController {
 
-	Event model;
+	Event model = new Event();
 	
 	
 	/**
@@ -34,10 +34,10 @@ public class EventController {
 			String pwd = password.getPassword();
 
 			cn = DriverManager.getConnection(url, user, pwd);
-			ps = cn.prepareStatement("insert into users(`id_creator`,`nom_event`"
+			ps = cn.prepareStatement("insert into events(`id_creator`,`nom_event`"
 					+ ",`lieu`,`date_event`,`heure_event`"
 					+ ",`type_event`,`description_event`,`prix`,`domaine`) "
-					+ "values(?,?,?,?,?,?,?,?)");
+					+ "values(?,?,?,?,?,?,?,?,?)");
 			ps.setInt(1, model.getIdCreator());
 			ps.setString(2, model.getNomEvent());
 			ps.setString(3, model.getLieu());

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@page import="controller.UserController" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +11,16 @@
 <body>
 
 	<jsp:include page="navbar.jsp"></jsp:include>
-
+	<br/>
+	<br/>
 	<H1>Pour proposer un événement à vos collaborateurs</H1>
 
-	<P>Rentrez toutes les informations ici
+	<P>Rentrez toutes les informations ici</P>
+	<%
+		if (request.getParameter("error") != null) {
+			out.print("<p>désolé, rentrez des informations correctes !</p>");
+		}
+	%>
 	<form action="CreateEventServlet">
 
 		<table>

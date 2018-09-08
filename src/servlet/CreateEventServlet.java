@@ -27,13 +27,12 @@ public class CreateEventServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		try {
-			HttpSession session = request.getSession();
+			HttpSession session = request.getSession(false);
 			UserController user = (UserController)session.getAttribute("user");
 			EventController event = new EventController();
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-			SimpleDateFormat format2 = new SimpleDateFormat("hh:mm a");
-			java.util.Date utilJava = format.parse(request.getParameter("dateEvent"));
-			java.sql.Date date = new java.sql.Date(utilJava.getTime());
+			SimpleDateFormat format2 = new SimpleDateFormat("hh:mm");
+			Date date = new Date(format.parse(request.getParameter("dateEvent")).getTime());
 			out.print("");
 			event.setDateEvent(date);
 			event.setDescriptionEvent(request.getParameter("descriptionEvent"));
@@ -48,15 +47,17 @@ public class CreateEventServlet extends HttpServlet {
 
 			int s = event.insertEvent();
 			if (s > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("profil.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("formulaireEvenementsInternes.jsp");
 				rd.forward(request, response);
 			} else {
-				out.print("sorry!please fill correct detail and try again");
+				RequestDispatcher rd = request.getRequestDispatcher("formulaireEvenementsInternes.jsp?error=1");
+				rd.forward(request, response);
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			out.print("sorry!please fill correct detail and try again");
+			RequestDispatcher rd = request.getRequestDispatcher("formulaireEvenementsInternes.jsp?error=1");
+			rd.forward(request, response);
 		}
 
 	}
