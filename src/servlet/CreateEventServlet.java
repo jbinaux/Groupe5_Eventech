@@ -28,7 +28,6 @@ public class CreateEventServlet extends HttpServlet {
 
 		try {
 			HttpSession session = request.getSession(false);
-			UserController user = (UserController)session.getAttribute("user");
 			EventController event = new EventController();
 			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 			SimpleDateFormat format2 = new SimpleDateFormat("hh:mm");
@@ -37,7 +36,7 @@ public class CreateEventServlet extends HttpServlet {
 			event.setDateEvent(date);
 			event.setDescriptionEvent(request.getParameter("descriptionEvent"));
 			event.setDomaineEvent(request.getParameter("domaineActivite"));
-			event.setEventIdCreator(user.getUserId());
+			event.setEventIdCreator(((UserController)session.getAttribute("user")).getUserId());
 			event.setTypeEvent("interne");
 			Time time = new Time(format2.parse(request.getParameter("heureEvent")).getTime());
 			event.setHeureEvent(time);
@@ -47,16 +46,18 @@ public class CreateEventServlet extends HttpServlet {
 
 			int s = event.insertEvent();
 			if (s > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/profil.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
 				rd.forward(request, response);
 			} else {
-				RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp?error=1");
+				request.setAttribute("error", 1);
+				RequestDispatcher rd = request.getRequestDispatcher("/private/formulaireEvenementsInternes.jsp");
 				rd.forward(request, response);
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			RequestDispatcher rd = request.getRequestDispatcher("/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp?error=1");
+			request.setAttribute("error", 1);
+			RequestDispatcher rd = request.getRequestDispatcher("/private/formulaireEvenementsInternes.jsp");
 			rd.forward(request, response);
 		}
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,23 +22,11 @@
 	<br />
 	<br />
 	<br />
-<%
-if(request.getAttribute("error") != null)
-{
-	if(request.getAttribute("error").equals(1))
-	{
-		out.print("Mauvais email");
-	}
-	else if(request.getAttribute("error").equals(2))
-	{
-		out.print("<p>Mauvais mot de passe</p>");
-	}
-	else if(request.getAttribute("error").equals(3))
-	{
-		out.print("<p>Remplissez correctement les information et réessayez.</p>");
-	}
-}
-%>
+	<c:choose>
+		<c:when test="${error == 1}"><p>Mauvais email</p></c:when>
+		<c:when test="${error == 2}"><p>Mauvais mot de passe</p></c:when>
+		<c:when test="${error == 3}"><p>Remplissez correctement les information et réessayez.</p></c:when>
+	</c:choose>
 
 	<div id="form">
 		<form action="LoginUserServlet">
@@ -90,11 +79,11 @@ if(request.getAttribute("error") != null)
 
 					<tr>
 						<td><p>Nom:</p></td>
-						<td><input type="text" name="nom"></td>
+						<td><input type="text" name="nom" required></td>
 					</tr>
 					<tr>
 						<td><p>Prénom:</p></td>
-						<td><input type="text" name="prenom"></td>
+						<td><input type="text" name="prenom" required></td>
 					</tr>
 
 					<tr>
@@ -110,12 +99,12 @@ if(request.getAttribute("error") != null)
 
 					<tr>
 						<td><p>Email:</p></td>
-						<td><input type="text" name="email"></td>
+						<td><input type="text" name="email" required></td>
 					</tr>
 
 					<tr>
 						<td><p>Mot de passe :</p></td>
-						<td><input type="password" name="pwd"></td>
+						<td><input type="password" name="pwd" required></td>
 					</tr>
 
 					<tr>

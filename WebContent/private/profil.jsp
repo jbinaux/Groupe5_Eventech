@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="controller.UserController"%>
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,9 +14,6 @@
 	<br />
 	<br />
 	<br />
-	<%
-		UserController user = (UserController) session.getAttribute("user");
-	%>
 	<div id="section">
 		<div id="column1">
 			<div id="photo">
@@ -28,12 +25,9 @@
 
 			<h2>
 				<strong> 
-				<%
-			 	if (user != null) 
-			 	{
-			 		out.print(user.getUserNom() + " " + user.getUserPrenom());
-			 	}
-				 %>
+				<c:if test="${sessionScope.user != null}">
+					<p>${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }</p>
+				</c:if>
 				</strong>
 			</h2>
 			<p>blabla-blabla</p>

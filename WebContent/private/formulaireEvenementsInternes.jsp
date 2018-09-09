@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@page import="controller.UserController" %>
+	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="form.css" />
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/form.css" />
 <title>Formulaire Evénements Internes</title>
 </head>
 <body>
@@ -16,12 +16,10 @@
 	<H1>Pour proposer un événement à vos collaborateurs</H1>
 
 	<P>Rentrez toutes les informations ici</P>
-	<%
-		if (request.getParameter("error") != null) {
-			out.print("<p>désolé, rentrez des informations correctes !</p>");
-		}
-	%>
-	<form action="CreateEventServlet">
+	<c:if test="${error != null}">
+		<p>désolé, rentrez des informations correctes !</p>
+	</c:if>
+	<form action="/Groupe5_Eventech/CreateEventServlet">
 
 		<table>
 			<tr>
@@ -46,7 +44,7 @@
 			</tr>
 			<tr>
 				<td>Prix:</td>
-				<td><input type="double" name="prix"></td>
+				<td><input type="double" name="prix" required></td>
 			</tr>
 			<tr>
 				<td><p>Domaine d'activité:</p></td>

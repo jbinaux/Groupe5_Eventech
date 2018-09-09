@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,26 +28,22 @@
 					<li><a class="inv">septembre is well done yeah ... </a></li>
 					<li class="nav-item"><a class="nav-link" href="eventsPU.jsp">Evénements</a>
 					</li>
-					<%
-					if (session.getAttribute("user") == null)
-					{
-						out.print("<li><a class=\"inv\">sept</a></li>");
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\"href=\"/Groupe5_Eventech/connect.jsp\">Connection</a></li>");
-					}
-					%>
+					<c:if test="${sessionScope.user == null}">
+						<li><a class="inv">sept</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="/Groupe5_Eventech/connect.jsp">Connection</a></li>
+					</c:if>
 					<li><a class="inv">sept</a></li>
-					<li class="nav-item"><a class="nav-link" href="/Groupe5_Eventech/contact.jsp">Contact</a>
-					</li>
-					<%
-					if (session.getAttribute("user") != null)
-					{
-						out.print("<li><a class=\"inv\">sept</a></li>");
-						out.print("<li class=\"nav-item\"><a class=\"nav-link\" href=\"/Groupe5_Eventech/private/profil.jsp\">Profil</a></li>");
-					}
-					%>
+					<li class="nav-item"><a class="nav-link"
+						href="/Groupe5_Eventech/contact.jsp">Contact</a></li>
+					<c:if test="${sessionScope.user != null}">
+						<li><a class="inv">sept</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="/Groupe5_Eventech/private/profil.jsp">Profil</a></li>
+					</c:if>
 					<li><a class="inv">sept</a></li>
-					<li class="nav-item"><a class="nav-link" href="/Groupe5_Eventech/private/espaceM.jsp">Espace
-							membres</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>
 
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
@@ -54,15 +51,12 @@
 						placeholder="bienvenue" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
 				</form>
-				<% 
-				if (session.getAttribute("user") != null)
-					{
-					out.print("<a class=\"inv\">se</a>");
-					out.print("<form action=\"LogoutUserServlet\">");
-					out.print("<button class=\"btn btn-outline-danger my-2 my-sm-0\" type=\"submit\">Deconnexion</button>");
-					out.print("</form>");
-					}
-				%>
+				<c:if test="${sessionScope.user != null}">
+					<a class="inv">se</a>
+					<form action="/Groupe5_Eventech/LogoutUserServlet">
+						<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Deconnexion</button>
+					</form>
+				</c:if>
 			</div>
 		</nav>
 	</div>
