@@ -30,7 +30,7 @@
 				</c:if>
 				</strong>
 			</h2>
-			<a href="private/updateUser.jsp">Modifier mes informations</a>
+			<a href="/Groupe5_Eventech/private/updateUser.jsp">Modifier mes informations</a>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
@@ -64,7 +64,7 @@
 			<p>blabla</p>
 			<p>blabla</p>
 			
-			<a href="private/formulaireEvenementsInternes.jsp">Créer un évènement</a>
+			<a href="formulaireEvenementsInternes.jsp">Créer un évènement</a>
 		</div>
 
 

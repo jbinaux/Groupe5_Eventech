@@ -202,8 +202,8 @@ public class UserController {
 			String pwd = password.getPassword();
 
 			cn = DriverManager.getConnection(url, user, pwd);
-			ps = cn.prepareStatement("UPDATE users SET 'nom' = ?, 'prenom' = ?,"
-					+ " 'mail' = ?, 'domaine_activite' = ? WHERE id_user = ?");
+			ps = cn.prepareStatement("UPDATE `users` SET nom = ?, prenom = ?,"
+					+ " mail = ?, domaine_activite = ? WHERE id_user = ?;");
 			ps.setString(1, model.getNom());
 			ps.setString(2, model.getPrenom());
 			ps.setString(3, model.getMail());
