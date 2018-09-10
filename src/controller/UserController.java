@@ -183,6 +183,50 @@ public class UserController {
 		return false;
 	}
 	
+	/**
+	 * this method update user's information in the database.
+	 * @return 0 if failed >0 otherwise
+	 */
+	public int updateUser()
+	{
+		Connection cn = null;
+		PreparedStatement ps = null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			Password password = new Password();
+			String url = "jdbc:mysql://localhost:3306/eventech_db"
+					+ "?verifyServerCertificate=false&useSSL=true";
+			String user = "root";
+			String pwd = password.getPassword();
+
+			cn = DriverManager.getConnection(url, user, pwd);
+			ps = cn.prepareStatement("UPDATE `users` SET nom = ?, prenom = ?,"
+					+ " mail = ?, domaine_activite = ? WHERE id_user = ?;");
+			ps.setString(1, model.getNom());
+			ps.setString(2, model.getPrenom());
+			ps.setString(3, model.getMail());
+			ps.setString(4, model.getDomaineActivite());
+			ps.setInt(5, model.getIdUser());
+
+			int s = ps.executeUpdate();
+			return s;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+	
 	public int getUserId() {
 		return model.getIdUser();
 	}

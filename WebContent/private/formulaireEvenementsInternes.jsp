@@ -19,7 +19,7 @@
 	<c:if test="${error != null}">
 		<p>désolé, rentrez des informations correctes !</p>
 	</c:if>
-	<form action="/Groupe5_Eventech/CreateEventServlet">
+	<form action="/Groupe5_Eventech/CreateEventServlet" method="post">
 
 		<table>
 			<tr>
