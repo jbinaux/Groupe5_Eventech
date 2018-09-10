@@ -26,7 +26,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li><a class="inv">septembre is well done yeah ... </a></li>
-					<li class="nav-item"><a class="nav-link" href="eventsPU.jsp">Evénements</a>
+					<li class="nav-item"><a class="nav-link" href="eventsPublic.jsp">Evénements</a>
 					</li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
