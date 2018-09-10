@@ -40,18 +40,18 @@ public class UpdateUserServlet extends HttpServlet {
 			if(user.updateUser() == 0)
 			{
 				request.setAttribute("error", 1);
-				RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/updateUser.jsp");
 				rd.forward(request, response);
 			}
 			else
 			{
-				RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/updateUser.jsp");
 				rd.forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("error", 1);
-			RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/updateUser.jsp");
 			rd.forward(request, response);
 		}
 	}
