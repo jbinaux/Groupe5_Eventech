@@ -16,7 +16,7 @@
 	<div id="event1">
 		<div id="columnF">
 			<div id="photo">
-				<img src="img/heads.jpg" width="550" height="400">
+				<img src="img/work10.jpg" width="550" height="400">
 			</div>
 
 
@@ -62,7 +62,7 @@
 	<div id="event2">
 		<div id="columnFO">
 			<div id="photo">
-				<img src="img/heads.jpg" width="550" height="400">
+				<img src="img/work11.jpg" width="550" height="400">
 			</div>
 
 
