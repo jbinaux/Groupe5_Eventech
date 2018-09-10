@@ -26,11 +26,11 @@
 			<h2>
 				<strong> 
 				<c:if test="${sessionScope.user != null}">
-					<p>${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }</p>
+					<strong>${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }</strong>
 				</c:if>
 				</strong>
 			</h2>
-			<p>blabla-blabla</p>
+			<a href="private/updateUser.jsp">Modifier mes informations</a>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
