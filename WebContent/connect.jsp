@@ -54,7 +54,7 @@
 					</tr>
 
 					<tr>
-						<td><a class="inv"><p>Mot de passe :</p></a></td>
+						<td><a class="inv">Mot de passe :</a></td>
 
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
@@ -109,7 +109,7 @@
 					</tr>
 
 					<tr>
-						<td><a class="inv"><p>Mot de passe :</p></a></td>
+						<td><a class="inv">Mot de passe :</a></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
 				</table>

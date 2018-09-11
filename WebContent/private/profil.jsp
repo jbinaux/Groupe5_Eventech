@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/private/profil.css" />
+<link rel="stylesheet" type="text/css"
+	href="/Groupe5_Eventech/private/profil.css" />
 <title>profil</title>
 </head>
 <body>
@@ -17,14 +18,15 @@
 	<div id="section">
 		<div id="column1">
 			<div id="photo">
-				<img src="/Groupe5_Eventech/img/votre-photo-ici.jpg" width="250" height="250">
+				<img src="/Groupe5_Eventech/img/votre-photo-ici.jpg" width="250"
+					height="250">
 			</div>
 
 
 			<br /> <br />
 
 			<h2>
-				<strong> 
+				<strong>
 				<c:if test="${sessionScope.user != null}">
 					${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }
 				</c:if>
@@ -41,11 +43,27 @@
 
 		<div id="column2">
 
+			<br />
+
 			<h2>
-				<strong>{STATUT}</strong>
+				<strong>Evènements créés</strong>
 			</h2>
 
-			<br /> <br />
+			<br />
+
+			<ul>
+				<li>HAKATHON BNP</li>
+				<li>MEETUP SIMPLON</li>
+				<li>CONFERENCE GARNIER</li>
+				<li>ATELIER "LE BIEN ETRE AU TRAVAIL"</li>
+			</ul>
+
+			<br />
+
+			<form action="/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp">
+				<input type="submit" value="Créer un évènement">
+			</form>   
+
 
 			<p>On sait depuis longtemps que travailler avec du texte lisible
 				et contenant du sens est source de distractions, et empêche de se
