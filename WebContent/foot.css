@@ -4,5 +4,7 @@ body {
 	color: white;
 }
 #foot {
-	background-color: black;
+	background-color: black; 
+ bottom: 0;
+ width: 100% !important;
 }

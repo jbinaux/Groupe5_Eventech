@@ -5,8 +5,11 @@
     
     body {
 		padding: 60px 0px;
-		background-color: azure !important;
+		background-color: #fcf6f4 !important;
 	} 
+	#logo {
+	    margin-top: -20px;
+	}
 	#end {
 	    font-size: 1.5em !important;
 	}
@@ -16,6 +19,7 @@
 	h1 {
 	    text-shadow: 0 0 1px black !important;
 	}
+	
     .event-list {
 		list-style: none;
 		font-family: 'Lato', sans-serif;
@@ -171,6 +175,7 @@
 		.event-list > li > .info {
 			position: relative;
 			height: 120px;
+			
 			text-align: left;
 			padding-right: 40px;
 		}	
