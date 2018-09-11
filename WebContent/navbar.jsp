@@ -26,8 +26,8 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li><a class="inv">septembre is well done yeah ... </a></li>
-					<li class="nav-item"><a class="nav-link" href="eventsPublic.jsp">Evénements</a>
-					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="eventsPublic.jsp">Evénements</a></li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
 						<li class="nav-item"><a class="nav-link"
@@ -43,7 +43,7 @@
 					</c:if>
 					<li><a class="inv">sept</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>
+						href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>				
 
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
@@ -54,7 +54,7 @@
 				<c:if test="${sessionScope.user != null}">
 					<a class="inv">se</a>
 					<form action="/Groupe5_Eventech/LogoutUserServlet">
-						<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Deconnexion</button>
+						<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Déconnexion</button>
 					</form>
 				</c:if>
 			</div>
