@@ -26,6 +26,7 @@
 		<c:when test="${error == 1}"><p>Mauvais email</p></c:when>
 		<c:when test="${error == 2}"><p>Mauvais mot de passe</p></c:when>
 		<c:when test="${error == 3}"><p>Remplissez correctement les information et réessayez.</p></c:when>
+		<c:when test="${error == 4}"><p>Cet email existe deja</p></c:when>
 	</c:choose>
 
 	<div id="form">
@@ -99,7 +100,7 @@
 
 					<tr>
 						<td><p>Email:</p></td>
-						<td><input type="text" name="email" required></td>
+						<td><input type="email" name="email" required></td>
 					</tr>
 
 					<tr>

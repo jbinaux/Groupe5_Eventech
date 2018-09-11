@@ -23,7 +23,9 @@ public class RegisterUserServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		try {
+			//cree un nouvel utilisateur
 			UserController user = new UserController();
+			//initialise ses donnees
 			user.setUserAdmin(false);
 			user.setUserDomaineActivite(request.getParameter("domaineActivite"));
 			user.setUserMail(request.getParameter("email"));
@@ -31,12 +33,18 @@ public class RegisterUserServlet extends HttpServlet {
 			user.setUserNom(request.getParameter("nom"));
 			user.setUserPrenom(request.getParameter("prenom"));
 			
+			//si il n'y a pas deja un utilisateur avec cet email, sinon code d'erreur 4
 			if(!user.userExist(user.getUserMail()))
 			{
+				//on l'insert dans la base de donnee
 				int s = user.insertUser();
+				//si ca a reussit
 				if (s > 0) {
+					//on recupere l'utilisateur
 					user.retrieveUser(user.getUserMail());
+					//on cree une session
 					HttpSession session1 = request.getSession();
+					//on set l'attribut user de la session
 					session1.setAttribute("user", user);
 					RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
 					rd.forward(request, response);
@@ -49,7 +57,7 @@ public class RegisterUserServlet extends HttpServlet {
 			else
 			{
 				user = null;
-				request.setAttribute("error", 3);
+				request.setAttribute("error", 4);
 				RequestDispatcher rd = request.getRequestDispatcher("/connect.jsp");
 				rd.forward(request, response);
 			}

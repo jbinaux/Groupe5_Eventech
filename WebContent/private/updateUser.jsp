@@ -33,41 +33,55 @@
 			<tr>
 				<td><p>Domaine d'activité:</p></td>
 				<td><select name="domaineActivite">
-					<c:if test="${sessionScope.user.getUserDomaineActivite().equals(\"Marketing\") }">
-						<option selected="selected">Marketing</option>
-						<option>Communication</option>
-						<option>Développement</option>
-						<option>Réseau</option>
-						<option>Autre</option>
-					</c:if>
-					<c:if test="${sessionScope.user.getUserDomaineActivite().equals(\"Communication\") }">
-						<option>Marketing</option>
-						<option selected="selected">Communication</option>
-						<option>Développement</option>
-						<option>Réseau</option>
-						<option>Autre</option>
-					</c:if>
-					<c:if test="${sessionScope.user.getUserDomaineActivite().equals(\"Développement\") }">
-						<option>Marketing</option>
-						<option>Communication</option>
-						<option selected="selected">Développement</option>
-						<option>Réseau</option>
-						<option>Autre</option>
-					</c:if>
-					<c:if test="${sessionScope.user.getUserDomaineActivite().equals(\"Réseau\") }">
-						<option>Marketing</option>
-						<option>Communication</option>
-						<option>Développement</option>
-						<option selected="selected">Réseau</option>
-						<option>Autre</option>
-					</c:if>
-					<c:if test="${sessionScope.user.getUserDomaineActivite().equals(\"Autre\") }">
-						<option>Marketing</option>
-						<option>Communication</option>
-						<option>Développement</option>
-						<option>Réseau</option>
-						<option selected="selected">Autre</option>
-					</c:if>
+						<c:choose>
+							<c:when
+								test="${sessionScope.user.getUserDomaineActivite().equals(\"Marketing\") }">
+								<option selected="selected">Marketing</option>
+								<option>Communication</option>
+								<option>Développement</option>
+								<option>Réseau</option>
+								<option>Autre</option>
+							</c:when>
+							<c:when
+								test="${sessionScope.user.getUserDomaineActivite().equals(\"Communication\") }">
+								<option>Marketing</option>
+								<option selected="selected">Communication</option>
+								<option>Développement</option>
+								<option>Réseau</option>
+								<option>Autre</option>
+							</c:when>
+							<c:when
+								test="${sessionScope.user.getUserDomaineActivite().equals(\"Développement\") }">
+								<option>Marketing</option>
+								<option>Communication</option>
+								<option selected="selected">Développement</option>
+								<option>Réseau</option>
+								<option>Autre</option>
+							</c:when>
+							<c:when
+								test="${sessionScope.user.getUserDomaineActivite().equals(\"Réseau\") }">
+								<option>Marketing</option>
+								<option>Communication</option>
+								<option>Développement</option>
+								<option selected="selected">Réseau</option>
+								<option>Autre</option>
+							</c:when>
+							<c:when
+								test="${sessionScope.user.getUserDomaineActivite().equals(\"Autre\") }">
+								<option>Marketing</option>
+								<option>Communication</option>
+								<option>Développement</option>
+								<option>Réseau</option>
+								<option selected="selected">Autre</option>
+							</c:when>
+							<c:otherwise>
+								<option>Marketing</option>
+								<option>Communication</option>
+								<option>Développement</option>
+								<option>Réseau</option>
+								<option>Autre</option>
+							</c:otherwise>
+						</c:choose>
 				</select> <br /></td>
 			</tr>
 

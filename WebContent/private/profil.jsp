@@ -26,7 +26,7 @@
 			<h2>
 				<strong> 
 				<c:if test="${sessionScope.user != null}">
-					<strong>${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }</strong>
+					${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }
 				</c:if>
 				</strong>
 			</h2>
