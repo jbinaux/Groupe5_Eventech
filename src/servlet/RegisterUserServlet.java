@@ -38,7 +38,7 @@ public class RegisterUserServlet extends HttpServlet {
 					user.retrieveUser(user.getUserMail());
 					HttpSession session1 = request.getSession();
 					session1.setAttribute("user", user);
-					RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
+					RequestDispatcher rd = request.getRequestDispatcher("/private/profil");
 					rd.forward(request, response);
 				} else {
 					request.setAttribute("error", 3);

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,13 +27,14 @@
 			<br /> <br />
 
 			<h2>
-				<strong>
-				<c:if test="${sessionScope.user != null}">
-					<strong>${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }</strong>
-				</c:if>
+				<strong> <c:if test="${sessionScope.user != null}">
+						<strong>${sessionScope.user.getUserNom() }
+							${sessionScope.user.getUserPrenom() }</strong>
+					</c:if>
 				</strong>
 			</h2>
-			<a href="/Groupe5_Eventech/private/updateUser.jsp">Modifier mes informations</a>
+			<a href="/Groupe5_Eventech/private/updateUser.jsp">Modifier mes
+				informations</a>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
@@ -52,39 +54,21 @@
 			<br />
 
 			<ul>
-				<li>HAKATHON BNP</li>
-				<li>MEETUP SIMPLON</li>
-				<li>CONFERENCE GARNIER</li>
-				<li>ATELIER "LE BIEN ETRE AU TRAVAIL"</li>
+				<c:if test="${Events.size() > 0}">
+					<c:forEach var="i" begin="0" end="${Events.size() -1}">
+						<li>${Events.get(i).getNomEvent()}</li>
+					</c:forEach>
+				</c:if>
 			</ul>
 
 			<br />
 
-			<form action="/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp">
+			<form
+				action="/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp">
 				<input type="submit" value="Créer un évènement">
-			</form>   
+			</form>
 
-
-			<p>On sait depuis longtemps que travailler avec du texte lisible
-				et contenant du sens est source de distractions, et empêche de se
-				concentrer sur la mise en page elle-même.</p>
-			<p>L'avantage du Lorem Ipsum sur un texte générique comme 'Du
-				texte. Du texte. Du texte.' est qu'il possède une distribution de
-				lettres plus ou moins normale, et en tout cas comparable avec celle
-				du français standard.</p>
-			<p>De nombreuses suites logicielles de mise en page ou éditeurs
-				de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et
-				une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux
-				sites qui n'en sont encore qu'à leur phase de construction.
-				Plusieurs versions sont apparues avec le temps, parfois par
-				accident, souvent intentionnellement (histoire d'y rajouter de
-				petits clins d'oeil, voire des phrases embarassantes).</p>
-			<p>blabla</p>
-			<p>blabla</p>
-			
-			<a href="formulaireEvenementsInternes.jsp">Créer un évènement</a>
 		</div>
-
 
 	</div>
 

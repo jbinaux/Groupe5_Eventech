@@ -39,7 +39,7 @@
 					<c:if test="${sessionScope.user != null}">
 						<li><a class="inv">sept</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="/Groupe5_Eventech/private/profil.jsp">Profil</a></li>
+							href="/Groupe5_Eventech/private/profil">Profil</a></li>
 					</c:if>
 					<li><a class="inv">sept</a></li>
 					<li class="nav-item"><a class="nav-link"
