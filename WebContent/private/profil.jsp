@@ -32,7 +32,9 @@
 			</h2>
 			<a href="private/updateUser.jsp">Modifier mes informations</a>
 			<p>blabla-blabla</p>
-			<p>blabla-blabla</p>
+			<c:if test="${sessionScope.user.isUserAdmin() }">
+				<a href="admin/admin.jsp">administrer le site</a>
+			</c:if>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
 

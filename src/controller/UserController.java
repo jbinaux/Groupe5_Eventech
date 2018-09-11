@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import model.User;
 import password.Password;
@@ -181,6 +182,53 @@ public class UserController {
 		}
 		
 		return false;
+	}
+	
+	public ArrayList<User> selectUsers(String email)
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		Statement st = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			st = cn.createStatement();
+			String sql = "SELECT * FROM eventech_db.users WHERE mail LIKE '%" + email + "%'";
+			ResultSet result = st.executeQuery(sql);
+
+			ArrayList<User> listUser = new ArrayList<User>();
+			while(result.next())
+			{
+				User us = new User();
+				us.setDomaineActivite(result.getString("domaine_activite"));
+				us.setIdUser(result.getInt("id_user"));
+				us.setMail(result.getString("mail"));
+				us.setNom(result.getString("nom"));
+				us.setPrenom(result.getString("prenom"));
+				us.setAdmin(result.getBoolean("is_admin"));
+				listUser.add(us);
+			}
+
+			return listUser;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
 	}
 	
 	public int getUserId() {
