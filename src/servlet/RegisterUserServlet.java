@@ -46,7 +46,7 @@ public class RegisterUserServlet extends HttpServlet {
 					HttpSession session1 = request.getSession();
 					//on set l'attribut user de la session
 					session1.setAttribute("user", user);
-					RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
+					RequestDispatcher rd = request.getRequestDispatcher("/private/profil");
 					rd.forward(request, response);
 				} else {
 					request.setAttribute("error", 3);

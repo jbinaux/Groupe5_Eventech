@@ -1,24 +1,41 @@
 @charset "ISO-8859-1";
-body {
-	background-image: url("/Groupe5_Eventech/img/backProf.jpeg");
-	background-repeat: no-repeat;
-	background-size: cover;
+
+/* Déclaration de la police */
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto   ');
 }
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #fcf6f4 !important;
+	color: black;
+}
+
 #section {
 	display: flex;
 	flex-direction: row;
+	color: black;
 }
+
 #column1 {
 	padding-right: 100px;
 	margin-left: 30px;
 }
+
 #column2 {
 	padding-left: 50px;
 	padding-right: 30px;
 }
+
 #section p {
-	color: maroon;
+	color: black;
 }
+
 body h2 {
-	color: purple;
+	color: #C8553D;
+	font-size: 1.8em;
+	text-align: center;
+	padding-bottom: 50px;
+	text-shadow: 0 0 1px black !important;
 }

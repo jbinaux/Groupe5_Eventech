@@ -5,7 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>espace membres</title>
-<link rel="stylesheet" type="text/css" href="form.css" />
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/form.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 
@@ -21,8 +22,6 @@
 	<br />
 
 	<form action="LoginUserServlet">
-
-
 		<div id="form">
 			<div id="first">
 				<table>
@@ -31,6 +30,7 @@
 								<strong>POUR ACCÉDER A NOTRE ESPACE PRIVÉ :</strong>
 							</h2></td>
 					</tr>
+
 					<br />
 					<br />
 
@@ -49,8 +49,9 @@
 					</tr>
 				</table>
 			</div>
+		</div>
 	</form>
-	</div>
+
 	<br />
 	<br />
 	<br />

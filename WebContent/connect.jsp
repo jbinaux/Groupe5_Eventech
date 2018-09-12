@@ -6,8 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="form.css" />
-
-
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>connection</title>
 </head>
 <body>
@@ -23,10 +22,10 @@
 	<br />
 	<br />
 	<c:choose>
-		<c:when test="${error == 1}"><p>Mauvais email</p></c:when>
-		<c:when test="${error == 2}"><p>Mauvais mot de passe</p></c:when>
-		<c:when test="${error == 3}"><p>Remplissez correctement les information et réessayez.</p></c:when>
-		<c:when test="${error == 4}"><p>Cet email existe deja</p></c:when>
+		<c:when test="${error == 1}"><p>Mauvais email.</p></c:when>
+		<c:when test="${error == 2}"><p>Mauvais mot de passe.</p></c:when>
+		<c:when test="${error == 3}"><p>Remplissez correctement les informations et réessayez.</p></c:when>
+		<c:when test="${error == 4}"><p>Cet email existe déjà!</p></c:when>
 	</c:choose>
 
 	<div id="form">

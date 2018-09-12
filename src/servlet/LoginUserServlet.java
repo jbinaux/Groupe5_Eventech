@@ -36,7 +36,7 @@ public class LoginUserServlet extends HttpServlet {
 				HttpSession session1 = request.getSession();
 				//et on set les informations de l'utilisateur en attribut
 				session1.setAttribute("user", user);
-				RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/private/profil");
 				rd.forward(request, response);
 			} 
 			//sinon on retourne un code d'erreur 2

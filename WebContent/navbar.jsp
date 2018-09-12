@@ -10,6 +10,7 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>navbar</title>
 </head>
 <body>
@@ -25,9 +26,13 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">			
-					<li><a class="inv">septembre is well done yeah ... </a></li>
+					<li><a class="inv">septembre is well done </a></li>
 					<li class="nav-item"><a class="nav-link"
+<<<<<<< HEAD
 						href="index.jsp">Accueuil</a></li>
+=======
+						href="index.jsp">Accueil</a></li>
+>>>>>>> b4cceddf30369f324ca66348db72082e7d53828e
 						<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
 						
@@ -47,7 +52,7 @@
 					<c:if test="${sessionScope.user != null}">
 						<li><a class="inv">sept</a></li>
 						<li class="nav-item"><a class="nav-link"
-							href="/Groupe5_Eventech/private/profil.jsp">Profil</a></li>
+							href="/Groupe5_Eventech/private/profil">Profil</a></li>
 					</c:if>
 					<li><a class="inv">sept</a></li>
 					<li class="nav-item"><a class="nav-link"
@@ -57,7 +62,7 @@
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search"
-						placeholder="bienvenue" aria-label="Search">
+						placeholder="Bienvenue!" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
 				</form>
 				<c:if test="${sessionScope.user != null}">

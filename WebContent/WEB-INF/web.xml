@@ -5,11 +5,11 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <filter>
-        <filter-name>loginFilter</filter-name>
-        <filter-class>filter.LoginFilter</filter-class>
+    <filter-name>loginFilter</filter-name>
+    <filter-class>filter.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
-      <filter-name>loginFilter</filter-name>
-      <url-pattern>/private/*</url-pattern>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/private/*</url-pattern>
   </filter-mapping>
 </web-app>
