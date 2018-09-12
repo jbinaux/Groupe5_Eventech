@@ -15,7 +15,7 @@
 <body>
 	<div id="end">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo1.png" width="60" height="60"></a>
+			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo23.png" width="60" height="40"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,7 +27,7 @@
 				<ul class="navbar-nav mr-auto">			
 					<li><a class="inv">septembre is well done yeah ... </a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="index.jsp">Acceuil</a></li>
+						href="index.jsp">Accueuil</a></li>
 						<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
 						

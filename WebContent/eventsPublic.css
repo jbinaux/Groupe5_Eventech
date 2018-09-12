@@ -3,12 +3,14 @@
  @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
     @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
     
+    
+
     body {
 		padding: 60px 0px;
-		background-color: #fcf6f4 !important;
+		background-color: #e0e0e0/* #fcf6f4 */ !important;
 	} 
 	#logo {
-	    margin-top: -20px;
+	    margin-top: -15px;
 	}
 	#end {
 	    font-size: 1.5em !important;
@@ -19,7 +21,18 @@
 	h1 {
 	    text-shadow: 0 0 1px black !important;
 	}
-	
+	.container1 {
+	    width: 300px !important;
+	    margin: auto;
+	    border: 1px solid black;
+	    border-radius: 10px;
+	}
+	.container1 h1 {
+	    color: #C8553D;
+	}
+	#pag {
+	    font-size: 1.8em;
+	}
     .event-list {
 		list-style: none;
 		font-family: 'Lato', sans-serif;
@@ -120,7 +133,7 @@
 	}
 	.facebook a,
 	.twitter a,
-	.google-plus a {
+	.linkedin a {
 		display: block;
 		width: 100%;
 		color: rgb(0, 119, 181) !important;
@@ -129,7 +142,7 @@
 		color: rgb(79, 213, 248) !important;
 	}
 	.linkedin a {
-		color: rgb(221, 75, 57) !important;
+		color: rgb(0, 119, 181) !important;
 	}
 	.facebook:hover a {
 		color: rgb(255, 255, 255) !important;
@@ -141,7 +154,7 @@
 	}
 	.linkedin:hover a {
 		color: rgb(255, 255, 255) !important;
-		background-color: rgb(221, 75, 57) !important;
+		background-color: rgb(0, 119, 181) !important;
 	}
 
 	@media (min-width: 768px) {
