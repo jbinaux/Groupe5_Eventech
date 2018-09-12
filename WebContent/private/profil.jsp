@@ -27,10 +27,10 @@
 			<br /> <br />
 
 			<h2>
-				<strong> <c:if test="${sessionScope.user != null}">
-						<strong>${sessionScope.user.getUserNom() }
-							${sessionScope.user.getUserPrenom() }</strong>
-					</c:if>
+				<strong>
+				<c:if test="${sessionScope.user != null}">
+					${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }
+				</c:if>
 				</strong>
 			</h2>
 			<a href="/Groupe5_Eventech/private/updateUser.jsp">Modifier mes

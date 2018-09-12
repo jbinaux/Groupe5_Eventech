@@ -2,7 +2,7 @@
 /* Général ------------------------------------------------------------------------------------- */
 
 body {
-	background-image: url("/Groupe5_Eventech/img/1.jpg");
+	background-color: #fcf6f4 !important;
 }
 
 #form {
@@ -12,7 +12,7 @@ body {
 	flex-wrap: wrap;
 }
 #first {
-	background-color: rgba(0, 0, 255, 0.2); 
+	background-color: rgba(0, 0, 255, 0.1); 
 	box-shadow: 6px 6px 20px grey;
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -21,7 +21,7 @@ body {
 	font-size: 1.1em;
 }
 #second {
-	background-color: rgba(0, 0, 255, 0.2);
+	background-color: rgba(0, 0, 255, 0.1);
 	box-shadow: 6px 6px 20px grey;
 	padding-right: 20px;
 	padding-bottom: 30px;
@@ -35,13 +35,14 @@ table {
 	
 }
 #form table tr td h2 {
-	color: lime;
+	color: #C8553D;
 	font-size: 1.2em;
 	text-align: center;
 	padding-bottom: 50px;
+	text-shadow: 0 0 1px black !important;
 }
 #form table tr td p {
-	color: aqua;
+	color: black;
 }
 
 

@@ -28,12 +28,14 @@ public class UpdateUserServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		try {
+			//cree user
 			UserController user = (UserController)request.getSession().getAttribute("user");
 			user.setUserDomaineActivite(request.getParameter("domaineActivite"));
 			user.setUserMail(request.getParameter("email"));
 			user.setUserNom(request.getParameter("nom"));
 			user.setUserPrenom(request.getParameter("prenom"));
 			
+			//update la base de donnee
 			if(user.updateUser() == 0)
 			{
 				request.setAttribute("error", 1);
