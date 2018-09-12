@@ -8,14 +8,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css"
 	href="/Groupe5_Eventech/private/profil.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>profil</title>
 </head>
 <body>
+
 	<jsp:include page="../navbar.jsp"></jsp:include>
+	
 	<br />
 	<br />
 	<br />
 	<br />
+	<br />
+	<br />
+	
 	<div id="section">
 		<div id="column1">
 			<div id="photo">
@@ -23,23 +29,25 @@
 					height="250">
 			</div>
 
-
-			<br /> <br />
+			<br /> 
+			<br />
 
 			<h2>
-				<strong>
-				<c:if test="${sessionScope.user != null}">
+				<strong> <c:if test="${sessionScope.user != null}">
 					${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }
 				</c:if>
 				</strong>
 			</h2>
-			<a href="/Groupe5_Eventech/private/updateUser.jsp">Modifier mes
-				informations</a>
-			<p>blabla-blabla</p>
-			<p>blabla-blabla</p>
-			<p>blabla-blabla</p>
-			<p>blabla-blabla</p>
 
+			<p>Vos informations ici, vos informations ici.</p>
+			<p>Vos informations ici, vos informations ici.</p>
+			<p>Vos informations ici, vos informations ici.</p>
+			<p>Vos informations ici, vos informations ici.</p>
+			<p>Vos informations ici, vos informations ici.</p>
+
+			<form action="/Groupe5_Eventech/private/updateUser.jsp">
+				<input type="submit" value="Modifier mes informations">
+			</form>
 
 		</div>
 
@@ -72,10 +80,14 @@
 
 	</div>
 
-
 	<br />
 	<br />
-
+	<br />
+	<br />
+	<br />
+	<br />
+	
 	<jsp:include page="../footer.html"></jsp:include>
+	
 </body>
 </html>

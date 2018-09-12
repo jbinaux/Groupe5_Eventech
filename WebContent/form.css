@@ -1,7 +1,14 @@
 @charset "ISO-8859-1";
 /* Général ------------------------------------------------------------------------------------- */
 
+/* Déclaration de la police */
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
 body {
+	font-family: 'Roboto', sans-serif;  
 	background-color: #fcf6f4 !important;
 }
 
@@ -11,6 +18,7 @@ body {
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+
 #first {
 	background-color: rgba(0, 0, 255, 0.1); 
 	box-shadow: 6px 6px 20px grey;
@@ -20,6 +28,7 @@ body {
 	border-radius: 20px;
 	font-size: 1.1em;
 }
+
 #second {
 	background-color: rgba(0, 0, 255, 0.1);
 	box-shadow: 6px 6px 20px grey;
@@ -29,21 +38,21 @@ body {
 	border-radius: 20px;
 	font-size: 1.1em;
 }
+
 table {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	
 }
-#form table tr td h2 {
+
+table tr td h2 {
 	color: #C8553D;
 	font-size: 1.2em;
 	text-align: center;
 	padding-bottom: 50px;
 	text-shadow: 0 0 1px black !important;
 }
-#form table tr td p {
+
+table tr td p {
 	color: black;
 }
-
-
-

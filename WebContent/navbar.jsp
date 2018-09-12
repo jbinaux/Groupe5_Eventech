@@ -10,6 +10,7 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>navbar</title>
 </head>
 <body>
@@ -57,7 +58,7 @@
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search"
-						placeholder="bienvenue" aria-label="Search">
+						placeholder="Bienvenue!" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
 				</form>
 				<c:if test="${sessionScope.user != null}">
