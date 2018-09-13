@@ -27,7 +27,7 @@
 				<ul class="navbar-nav mr-auto">			
 					<li><a class="inv">septembre is well done yeah ... </a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="index.jsp">Accueuil</a></li>
+						href="index.jsp">Accueil</a></li>
 						<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
 						
@@ -57,7 +57,7 @@
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search"
-						placeholder="bienvenue" aria-label="Search">
+						placeholder="Bienvenue!" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
 				</form>
 				<c:if test="${sessionScope.user != null}">

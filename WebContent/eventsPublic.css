@@ -7,7 +7,7 @@
 
     body {
 		padding: 60px 0px;
-		background-color: #e0e0e0/* #fcf6f4 */ !important;
+		background-color: /* #e0e0e0 */ #fcf6f4  !important;
 	} 
 	#logo {
 	    margin-top: -15px;

@@ -56,7 +56,7 @@
 			<br />
 
 			<h2>
-				<strong>Evènements créés</strong>
+				<strong>Evénements créés</strong>
 			</h2>
 
 			<br />
