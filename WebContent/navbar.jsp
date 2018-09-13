@@ -15,7 +15,8 @@
 <body>
 	<div id="end">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo23.png" width="60" height="60"></a>
+			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img
+				id="logo" src="img/logo23.png" width="60" height="60"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -24,16 +25,15 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">			
+				<ul class="navbar-nav mr-auto">
 					<li><a class="inv">septembre is well done yeah ... </a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="index.jsp">Accueil</a></li>
-						<c:if test="${sessionScope.user == null}">
+					<li class="nav-item"><a class="nav-link" href="index.jsp">Accueil</a></li>
+					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
-						
+
 					</c:if>
-					
-					
+
+
 					<li class="nav-item"><a class="nav-link"
 						href="eventsPublic.jsp">Evénements</a></li>
 					<c:if test="${sessionScope.user == null}">
@@ -41,6 +41,8 @@
 						<li class="nav-item"><a class="nav-link"
 							href="/Groupe5_Eventech/connect.jsp">Connection</a></li>
 					</c:if>
+					
+					
 					<li><a class="inv">sept</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/Groupe5_Eventech/contact.jsp">Contact</a></li>
@@ -52,7 +54,7 @@
 					<li><a class="inv">sept</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>
-									
+
 
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
