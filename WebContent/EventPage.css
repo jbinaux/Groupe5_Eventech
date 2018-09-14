@@ -1,20 +1,19 @@
-@font-face {
-    font-family: 'Calibri';
-    src: url('fonts/Calibri.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Calibri.woff') format('woff'),
-    url('fonts/Calibri.ttf')  format('truetype'),
-    url('fonts/Calibri.svg#Calibri') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
 body {
     color: #2f2f2f;
     font-family: 'Calibri';
+    background-color: #fcf6f4 !important;
+    
 }
 /* Nav bar*/
 #end{
-	font-size:1.5em !important;
+	font-size:1em !important;
+	text-indent:10px;
+
 }
 .inv {
 	opacity: 0 !important;
@@ -22,7 +21,10 @@ body {
 img {
     vertical-align: baseline;
 }
-
+h1 {
+    text-shadow: 0 0 1px black !important;
+	}
+	
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
@@ -63,52 +65,28 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Button
 --------------------------------------------------------------*/
+.btn-outline-success {
+    color: #28a745;
+    background-color: transparent;
+    background-image: none;
+    border-color: #28a745;
+}
 .btn {
-    padding: 16px 46px;
-    border: 2px solid #9a24c1;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1;
-    color: #232127;
-}
-
-.btn.gradient {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojQUEwMEZGOyIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM1ODE2ODc7IiAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IGZpbGw9InVybCgjZ3JhZGllbnQpIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIiAvPjwvc3ZnPg==);
-    background-image: -webkit-gradient(linear, left top, 270deg, color-stop(0%, #AA00FF), color-stop(100%, #581687));
-    background-image: -moz-linear-gradient(270deg,#AA00FF 0%,#581687 100%);
-    background-image: -webkit-linear-gradient(270deg,#AA00FF 0%,#581687 100%);
-    background-image: -o-linear-gradient(270deg,#AA00FF 0%,#581687 100%);
-    background-image: -ms-linear-gradient(270deg,#AA00FF 0%,#581687 100%);
-    background-image: linear-gradient(270deg,#AA00FF 0%,#581687 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position:relative;
-    display:inline-block;
-}
-
-.btn.dark-purple {
-    background: #9a24c1;
-    color: #fff;
-}
-
-.btn.dark {
-    background: #231e23;
-    border-color: transparent;
-    color: #fff;
-}
-
-.btn.gradient-bg {
-    padding: 18px 46px;
-    border: 0;
-    background: -moz-linear-gradient(180deg, rgba(171,0,229,1) 0%, rgba(88,20,121,1) 100%); /* ff3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(88,20,121,1)), color-stop(100%, rgba(171,0,229,1))); /* safari4+,chrome */
-    background: -webkit-linear-gradient(180deg, rgba(171,0,229,1) 0%, rgba(88,20,121,1) 100%); /* safari5.1+,chrome10+ */
-    background: -o-linear-gradient(180deg, rgba(171,0,229,1) 0%, rgba(88,20,121,1) 100%); /* opera 11.10+ */
-    background: -ms-linear-gradient(180deg, rgba(171,0,229,1) 0%, rgba(88,20,121,1) 100%); /* ie10+ */
-    background: linear-gradient(270deg, rgba(171,0,229,1) 0%, rgba(88,20,121,1) 100%); /* w3c */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#581479', endColorstr='#ab00e5',GradientType=1 ); /* ie6-9 */
-    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -269,7 +247,8 @@ a:hover, a:active {
 .page-header .entry-title {
     font-size: 42px;
     font-weight: bold;
-    color: #fff;
+    color: #C8553D;
+  
 }
 
 @media screen and (min-width: 576px){
@@ -279,6 +258,7 @@ a:hover, a:active {
 
     .page-header .entry-title {
         font-size: 52px;
+        
     }
 }
 
@@ -290,6 +270,7 @@ a:hover, a:active {
 
     .page-header .entry-title {
         font-size: 72px;
+        
     }
 
 }
@@ -401,7 +382,7 @@ a:hover, a:active {
 
 .upcoming-events-list .entry-header .event-date-time {
     font-size: 16px;
-    color: #9a28d7;
+    color: /*#9a28d7;*/ #F28F3B;
 }
 
 .upcoming-events-list .entry-header .event-speaker {
@@ -574,7 +555,7 @@ ul.tabs-nav .tab-nav.active {
 .single-event-page .event-content-wrap .entry-title {
     font-size: 36px;
     font-weight: bold;
-    color: /*#232127;*/ #F28F3B;
+    color: /*#232127;*/ #C8553D;
     text-decoration: none;
 }
 
@@ -597,13 +578,7 @@ ul.tabs-nav .tab-nav.active {
     color: /*#9a28d7;*/ #F28F3B;
 }
 
-.single-event-page .buy-tickets {
-    margin-top: 30px;
-}
 
-.single-event-page .buy-tickets .btn:focus {
-    background: #9a28d7;
-}
 
 .single-event-page .event-content-wrap .events-thumbnail {
     margin-top: 36px;
