@@ -33,7 +33,7 @@
 			<a href="private/updateUser.jsp">Modifier mes informations</a>
 			<p>blabla-blabla</p>
 			<c:if test="${sessionScope.user.isUserAdmin() }">
-				<a href="admin/admin.jsp">administrer le site</a>
+				<a href="admin/admin">administrer le site</a>
 			</c:if>
 			<p>blabla-blabla</p>
 			<p>blabla-blabla</p>
@@ -66,7 +66,7 @@
 			<p>blabla</p>
 			<p>blabla</p>
 			
-			<a href="private/formulaireEvenementsInternes.jsp">Créer un évènement</a>
+			<a href="/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp">Créer un évènement</a>
 		</div>
 
 

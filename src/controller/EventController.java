@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Time;
-
+import java.util.ArrayList;
 import model.Event;
 import password.Password;
 
@@ -35,10 +37,10 @@ public class EventController {
 			String pwd = password.getPassword();
 
 			cn = DriverManager.getConnection(url, user, pwd);
-			ps = cn.prepareStatement("insert into events(`id_creator`,`nom_event`"
+			ps = cn.prepareStatement("INSERT INTO events(`id_creator`,`nom_event`"
 					+ ",`lieu`,`date_event`,`heure_event`"
 					+ ",`type_event`,`description_event`,`prix`,`domaine`) "
-					+ "values(?,?,?,?,?,?,?,?,?)");
+					+ "VALUES(?,?,?,?,?,?,?,?,?)");
 			ps.setInt(1, model.getIdCreator());
 			ps.setString(2, model.getNomEvent());
 			ps.setString(3, model.getLieu());
@@ -64,6 +66,98 @@ public class EventController {
 			}
 		}
 		return 0;
+	}
+	
+	
+	/**
+	 * This methods does a select on the database where the date of the event has to be greater than the current date
+	 * 
+	 * @return an ArrayList of the upcoming events
+	 */
+	public ArrayList<Event> selectUpcomingEvents()
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		Statement st = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			st = cn.createStatement();
+			String sql = "SELECT * FROM events WHERE date_event >= CURDATE() ORDER BY date_event, heure_event";
+			ResultSet result = st.executeQuery(sql);
+
+			ArrayList<Event> listEvent = new ArrayList<Event>();
+			while(result.next())
+			{
+				Event ev = new Event();
+				
+				ev.setIdEvent(result.getInt("id_event"));
+				ev.setNomEvent(result.getString("nom_event"));
+				ev.setLieu(result.getString("lieu"));
+				ev.setDateEvent(result.getDate("date_event"));
+				ev.setHeureEvent(result.getTime("heure_event"));
+				ev.setTypeEvent(result.getString("type_event"));
+				ev.setIdCreator(result.getInt("id_creator"));
+				ev.setDescription(result.getString("description_event"));
+				ev.setNbPersonnes(result.getInt("nb_personnes"));
+				ev.setMoyenneNote(result.getDouble("moyenne_notes"));
+				ev.setPrix(result.getInt("prix"));
+				ev.setDomaine(result.getString("domaine"));
+				
+				listEvent.add(ev);
+			}
+
+			return listEvent;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+	
+	public void deleteEvent(int id)
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		PreparedStatement ps = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			String sql = "DELETE FROM eventech_db.events WHERE id_event = " + id;
+			ps = cn.prepareStatement(sql);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public int getIdEvent() {

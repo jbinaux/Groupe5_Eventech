@@ -144,7 +144,7 @@ public class UserController {
 	public boolean userExist(String email)
 	{
 		Password password = new Password();
-		String url = "jdbc:mysql://localhost/eventech_db";
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
 		String user = "root";
 		String pwd = password.getPassword();
 
@@ -184,10 +184,16 @@ public class UserController {
 		return false;
 	}
 	
+	/**
+	 * this method select users based on email, if an empty string is passed, select all users
+	 * 
+	 * @param email
+	 * @return an ArrayList of users
+	 */
 	public ArrayList<User> selectUsers(String email)
 	{
 		Password password = new Password();
-		String url = "jdbc:mysql://localhost/eventech_db";
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
 		String user = "root";
 		String pwd = password.getPassword();
 
@@ -229,6 +235,42 @@ public class UserController {
 			}
 		}
 		return null;
+	}
+	
+	/**
+	 * this method deletes a user from the database
+	 * 
+	 * @param id of user to delete
+	 */
+	public void deleteUser(int id)
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		PreparedStatement ps = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			String sql = "DELETE FROM eventech_db.users WHERE id_user = " + id;
+			ps = cn.prepareStatement(sql);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	public int getUserId() {
