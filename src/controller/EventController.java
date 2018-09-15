@@ -129,6 +129,11 @@ public class EventController {
 		return null;
 	}
 	
+	/**
+	 * delete an event from the database
+	 * 
+	 * @param id of the event to delete
+	 */
 	public void deleteEvent(int id)
 	{
 		Password password = new Password();
