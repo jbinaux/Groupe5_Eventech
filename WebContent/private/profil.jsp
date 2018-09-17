@@ -39,6 +39,9 @@
 				</strong>
 			</h2>
 
+			<c:if test="${sessionScope.user.isUserAdmin()}">
+					<a href="/Groupe5_Eventech/admin/admin">Administrer le site</a>
+			</c:if>
 			<p>${sessionScope.user.getUserMail() }</p>
 			<p>${sessionScope.user.getUserDomaineActivite() }</p>
 
