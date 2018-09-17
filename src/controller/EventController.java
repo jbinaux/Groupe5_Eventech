@@ -128,6 +128,62 @@ public class EventController {
 		}
 		return null;
 	}
+	 /**
+	  * select an event from the database
+	  * 
+	  * @param id of the event
+	  * @return the 1 if the operation is successful, or 0 if it wasn't
+	  */
+	public int retrieveEvent(int id)
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		Statement st = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			st = cn.createStatement();
+			String sql = "SELECT * FROM events WHERE id_event = " + id;
+			ResultSet result = st.executeQuery(sql);
+
+			if(result.next())
+			{	
+				model.setIdEvent(result.getInt("id_event"));
+				model.setNomEvent(result.getString("nom_event"));
+				model.setLieu(result.getString("lieu"));
+				model.setDateEvent(result.getDate("date_event"));
+				model.setHeureEvent(result.getTime("heure_event"));
+				model.setTypeEvent(result.getString("type_event"));
+				model.setIdCreator(result.getInt("id_creator"));
+				model.setDescription(result.getString("description_event"));
+				model.setNbPersonnes(result.getInt("nb_personnes"));
+				model.setMoyenneNote(result.getDouble("moyenne_notes"));
+				model.setPrix(result.getInt("prix"));
+				model.setDomaine(result.getString("domaine"));
+				return 1;
+			}
+
+			return 0;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
 	
 	/**
 	 * delete an event from the database
@@ -164,6 +220,55 @@ public class EventController {
 			}
 		}
 	}
+	
+	/**
+	 * this method update event's information in the database.
+	 * @return 0 if failed >0 otherwise
+	 */
+	public int updateEvent()
+	{
+		Connection cn = null;
+		PreparedStatement ps = null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			Password password = new Password();
+			String url = "jdbc:mysql://localhost:3306/eventech_db"
+					+ "?verifyServerCertificate=false&useSSL=true";
+			String user = "root";
+			String pwd = password.getPassword();
+
+			cn = DriverManager.getConnection(url, user, pwd);
+			ps = cn.prepareStatement("UPDATE `users` SET nom_event = ?, lieu = ?,"
+					+ " date_event = ?, heure_event = ?, description_event = ?, prix = ?, domaine = ? "
+					+ "WHERE id_event = ?;");
+			ps.setString(1, model.getNomEvent());
+			ps.setString(2, model.getLieu());
+			ps.setDate(3, model.getDateEvent());
+			ps.setTime(4, model.getHeureEvent());
+			ps.setString(5, model.getDescription());
+			ps.setDouble(6, model.getPrix());
+			ps.setString(7, model.getDomaine());
+			ps.setInt(8, model.getIdEvent());
+
+			int s = ps.executeUpdate();
+			return s;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return 0;
+	}
+	
 	
 	public int getIdEvent() {
 		return model.getIdEvent();

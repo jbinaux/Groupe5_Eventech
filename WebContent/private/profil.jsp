@@ -8,20 +8,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css"
 	href="/Groupe5_Eventech/private/profil.css" />
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
 <title>profil</title>
 </head>
 <body>
 
 	<jsp:include page="../navbar.jsp"></jsp:include>
-	
+
 	<br />
 	<br />
 	<br />
 	<br />
 	<br />
 	<br />
-	
+
 	<div id="section">
 		<div id="column1">
 			<div id="photo">
@@ -29,8 +30,7 @@
 					height="250">
 			</div>
 
-			<br /> 
-			<br />
+			<br /> <br />
 
 			<h2>
 				<strong> <c:if test="${sessionScope.user != null}">
@@ -39,7 +39,9 @@
 				</strong>
 			</h2>
 
-			<p>Vos informations ici, vos informations ici.</p>
+			<c:if test="${sessionScope.user.isUserAdmin()}">
+					<a href="/Groupe5_Eventech/admin/admin">Administrer le site</a>
+			</c:if>
 			<p>Vos informations ici, vos informations ici.</p>
 			<p>Vos informations ici, vos informations ici.</p>
 			<p>Vos informations ici, vos informations ici.</p>
@@ -86,8 +88,8 @@
 	<br />
 	<br />
 	<br />
-	
+
 	<jsp:include page="../footer.html"></jsp:include>
-	
+
 </body>
 </html>
