@@ -92,6 +92,20 @@ a:hover, a:active {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.mt-5, .my-5 {
+    margin-top: 3rem!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.text-center {
+    text-align: center!important;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -720,9 +734,12 @@ ul.tabs-nav .tab-nav.active {
     }
 
 }
-
 #foot {
-	background-color: black; 
- bottom: 0;
- width: 100% !important;
+	background-color: #F8F9FA;
+	bottom: 0;
+	width: 100% !important;
+}
+
+#basDePage {
+	text-align: center;
 }
