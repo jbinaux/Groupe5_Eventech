@@ -198,6 +198,10 @@ $('.input-group.date').datepicker({
 	<br />
 	<br />
 	<br />
+	
+	
+
+
 
 
 
@@ -205,20 +209,32 @@ $('.input-group.date').datepicker({
 		<div class="row">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 				<ul class="event-list">
+				<div class="deroul">
+ <button id="twix" class="boutonmenuprincipal">Afficher les événements par : </button>
+ <div class="deroul-child">
+ <a href="eventsPublic.jsp">  5  </a>
+ <a href="eventsPublic2.jsp">  10  </a>
+ <a href="eventsPublic3.jsp">  20  </a>
+ </div>
+ </div>
+ <br />
+ <br />
+ <br />
+	
 					<li><time datetime="2014-07-20">
-							<span class="day">4</span> <span class="month">Jan</span> <span
+							<span class="day">04</span> <span class="month">Jan</span> <span
 								class="year">2019</span> <span class="time">ALL DAY</span>
-						</time> <img alt="Independence Day"
-						src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
+						</time> <img src="imgEventPu/event91.jpg">
 						<div class="info">
-							<h2 class="title">Independence Day</h2>
-							<p class="desc">United States Holiday</p>
-							<p class="desc">EvÃ¨nement sur l'IA</p>
+							<h2 class="title">Apéro Wine Tech</h2>
+							<p class="desc">75013 Paris - 04/01/2019</p>
+							<p class="desc">Les start-up innovantes dans l'industrie du vin seront là.</p>
 							<ul>
-								<li style="width: 33%;">6 <span
-									class="glyphicon glyphicon-ok"></span></li>
+								<li><img id="ter" src="img/panda2.png" width="20" height="20"><span
+									class="glyphicon glyphicon-ok"><a style="width: 33%;">6</a></span></li>
+									
 								<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
-								<li style="width: 34%;">00.00$</li>
+								<li style="width: 34%;">00.00</li>
 							</ul>
 						</div>
 						<div class="social">
@@ -235,13 +251,13 @@ $('.input-group.date').datepicker({
 					<br />
 
 					<li><time datetime="2014-07-20 0000">
-							<span class="day">8</span> <span class="month">Fev</span> <span
+							<span class="day">08</span> <span class="month">Jan</span> <span
 								class="year">2019</span> <span class="time">12:00 AM</span>
-						</time>
+						</time><img src="imgEventPu/event78.jpg">
 						<div class="info">
-							<h2 class="title">One Piece Unlimited World Red</h2>
-							<p class="desc">PS Vita</p>
-							<p class="desc">EvÃ¨nement sur l'high tech</p>
+							<h2 class="title">Paris New Tech Meetup - Startup pitchs!</h2>
+							<p class="desc">75010 Paris - 08/01/2019</p>
+							<p class="desc">5 nouvelles start-up sur le devant</p>
 							<ul>
 								<li style="width: 33%;">89 <span
 									class="glyphicon glyphicon-ok"></span></li>
@@ -263,14 +279,14 @@ $('.input-group.date').datepicker({
 					<br />
 
 					<li><time datetime="2014-07-20 2000">
-							<span class="day">20</span> <span class="month">Mai</span> <span
+							<span class="day">20</span> <span class="month">Jan</span> <span
 								class="year">2019</span> <span class="time">8:00 PM</span>
 						</time> <img alt="My 24th Birthday!"
 						src="https://farm5.staticflickr.com/4150/5045502202_1d867c8a41_q.jpg" />
 						<div class="info">
-							<h2 class="title">Mouse0270's 24th Birthday!</h2>
-							<p class="desc">Bar Hopping in Erie, Pa.</p>
-							<p class="desc">ConfÃ©rence sur le digital</p>
+							<h2 class="title">Matinale Deep Law for Tech.</h2>
+							<p class="desc">75002 Paris - 20/01/2019</p>
+							<p class="desc">Réalisations, perspectives et enjeux</p>
 							<ul>
 								<li style="width: 33%;">789 <span
 									class="glyphicon glyphicon-ok"></span></li>
@@ -292,13 +308,13 @@ $('.input-group.date').datepicker({
 					<br />
 
 					<li><time datetime="2014-07-31 1600">
-							<span class="day">31</span> <span class="month">Sep</span> <span
+							<span class="day">27</span> <span class="month">Jan</span> <span
 								class="year">2019</span> <span class="time">4:00 PM</span>
-						</time>
+						</time><img src="imgEventPu/event60.jpg">
 						<div class="info">
-							<h2 class="title">Disney Junior Live On Tour!</h2>
-							<p class="desc">Pirate and Princess Adventure</p>
-							<p class="desc">Hackhaton au top</p>
+							<h2 class="title">Entreprise Tech: apprenez à développer</h2>
+							<p class="desc">75001 Paris - 27/01/2019</p>
+							<p class="desc">Ateliers divers.</p>
 							<ul>
 								<li style="width: 33%;">3 <span
 									class="glyphicon glyphicon-ok"></span></li>
@@ -320,13 +336,13 @@ $('.input-group.date').datepicker({
 						<br />
 
 					<li><time datetime="2014-07-31 1600">
-							<span class="day">12</span> <span class="month">Nov</span> <span
+							<span class="day">30</span> <span class="month">Jan</span> <span
 								class="year">2019</span> <span class="time">4:00 PM</span>
-						</time>
+						</time><img src="imgEventPu/event63.jpg">
 						<div class="info">
-							<h2 class="title">Slack Community conférence!</h2>
-							<p class="desc">Pirate and Princess Adventure</p>
-							<p class="desc">Hackhaton au top</p>
+							<h2 class="title">Grande soirée - Women in Tech for Good</h2>
+							<p class="desc">75020 Paris - 30/01/2019</p>
+							<p class="desc">Projets inspirants et novateurs</p>
 							<ul>
 								<li style="width: 33%;">35 <span
 									class="glyphicon glyphicon-ok"></span></li>
@@ -351,14 +367,14 @@ $('.input-group.date').datepicker({
 				<div id="pag">
 					<nav aria-label="Page navigation example">
 						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="#"
+							<li class="page-item"><a class="page-link" href="eventsPublic.jsp?#twix"
 								aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 									<span class="sr-only">Previous</span>
 							</a></li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#"
+							<li class="page-item"><a class="page-link" href="eventsPublic.jsp?#twix">1</a></li>
+							<li class="page-item"><a class="page-link" href="eventsPublic2.jsp?#twix">2</a></li>
+							<li class="page-item"><a class="page-link" href="eventsPublic3.jsp?#twix">3</a></li>
+							<li class="page-item"><a class="page-link" href="eventsPublic2.jsp?#twix"
 								aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span
 									class="sr-only">Next</span>
 							</a></li>

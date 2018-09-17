@@ -4,13 +4,50 @@
     @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
     
     
-
+.boutonmenuprincipal {
+background-color: #C8553D;
+border-radius: 10px;
+color: white;
+border: none;
+cursor: pointer;
+padding:10px;
+margin-top:10px;
+font-size: 15px;
+}
+.boutonmenuprincipal:hover {
+background-color: #ff4444;
+}
+.deroul {
+position: relative;
+display: inline-block;
+font-size: 15px;
+}
+.deroul-child {
+display: none;
+background-color: #C8553D;
+border-radius: 10px;
+min-width: 25px;
+text-align: center;
+}
+.deroul-child a {
+color: white;
+padding: 10px;
+text-decoration: none;
+display: block;
+}
+.deroul:hover .deroul-child {
+display: block;
+background-color: #ff4444;
+}
     body {
 		padding: 60px 0px;
 		background-color: /* #e0e0e0 */ #fcf6f4  !important;
 	} 
 	#logo {
 	    margin-top: -15px;
+	}
+	#ter {
+	    top: -10px;
 	}
 	#end {
 	    font-size: 1.5em !important;
@@ -21,6 +58,8 @@
 	h1 {
 	    text-shadow: 0 0 1px black !important;
 	}
+	
+	
 	.container1 {
 	    width: 300px !important;
 	    margin: auto;
@@ -51,7 +90,7 @@
 		display: inline-block;
 		width: 100%;
 		color: rgb(255, 255, 255);
-		background-color: #F28F3B/* rgb(197, 44, 102) */;
+		background-color: #F28F3B !important/* rgb(197, 44, 102) */;
 		padding: 5px;
 		text-align: center;
 		text-transform: uppercase;

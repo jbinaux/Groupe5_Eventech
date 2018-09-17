@@ -106,13 +106,22 @@
 						<td><p>Mot de passe :</p></td>
 						<td><input type="password" name="pwd" required></td>
 					</tr>
-
+                    
 					<tr>
 						<td><a class="inv">Mot de passe :</a></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
+					
 				</table>
+				<br />
+				<div class="form-group">
+				<p class="help-block" color="black"> Téléchargez votre photo de profil :</p>
+                    <label for="exampleInputFile">Choisir un fichier</label>
+                    <input type="file" id="exampleInputFile">
+                    
+                    </div>
 			</div>
+			
 
 		</form>
 	</div>
