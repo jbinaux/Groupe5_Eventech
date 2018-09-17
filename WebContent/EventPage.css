@@ -13,7 +13,6 @@ body {
 #end{
 	font-size:1em !important;
 	text-indent:10px;
-
 }
 .inv {
 	opacity: 0 !important;
@@ -48,6 +47,10 @@ a:hover, a:active {
     outline: 0;
     list-style: none;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 
 /*--------------------------------------------------------------
 # Flex
@@ -116,13 +119,18 @@ a:hover, a:active {
         max-height: 999px;
     }
 }
-
+/*--------------------------------------------------------------
+BOUTON J'Y VAIS ET LIKE
+--------------------------------------------------------------*/
+.hero-content .entry-footer {
+    margin-top: 125px;
+    text-align: center;
+    
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 
-.hero-slider {
-}
 
 .hero-content {
     padding-top: 150px;
@@ -248,7 +256,6 @@ a:hover, a:active {
     font-size: 42px;
     font-weight: bold;
     color: #C8553D;
-  
 }
 
 @media screen and (min-width: 576px){
@@ -282,6 +289,34 @@ a:hover, a:active {
     }
 
 }
+
+
+
+
+/*******************
+BOUTON J'Y VAIS et LIKE
+*********************/
+
+.btn-white {
+    color: #fff;
+    background-color: #F28F3B;
+}
+
+.btnjyvais {
+    border: 0;
+    border-radius: 0;
+    padding: 6px 28px;
+    text-transform: uppercase;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+}
 /*
 .events-page-header {
     background-image: url("img/events-page-header-bg.jpg");
@@ -290,6 +325,7 @@ a:hover, a:active {
 .single-event-page-header {
     background-image: url("img/heads.jpg");
 }
+
 /*
 .events-news-page-header {
     background-image: url("img/events-news-bg.jpg");
@@ -654,6 +690,7 @@ ul.tabs-nav .tab-nav.active {
 
 .single-event-page .upcoming-events-header {
     margin: 0 -2px;
+    
 }
 
 @media screen and (min-width: 768px) {

@@ -26,7 +26,8 @@
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">			
+				<ul class="navbar-nav mr-auto">
+				<li><a class="inv">septembre is well done yeah ... </a></li>			
 					<li class="nav-item"><a class="nav-link"
 						href="index.jsp">Accueil</a></li>
 						<c:if test="${sessionScope.user == null}">
@@ -62,7 +63,8 @@
 			</div>
 		</nav>
 	</div>
-	
+
+
 	
 <body class="single-event-page">
 <header class="site-header">
@@ -106,19 +108,31 @@
         <div class="col-12 single-event visible">
             <div class="event-content-wrap">
                 <header class="entry-header flex flex-wrap justify-content-between align-items-end">
+                    
                     <div class="single-event-heading">
                         <h2 class="entry-title">Nom et Année de l'événement</h2>
 
                         <div class="event-location"><a href="#">Adresse de l'événement</a></div>
 
                         <div class="event-date">Date et Heure de l'événement</div>
+                        
+                        <a class="btn btn-white" data-scroll="" href="#jyvais">J'y vais</a>
+                        
                     </div>
+                    
 
-                  
+    
+<div class="liker ">
+                    <div class="entry-footer">
+                        <a href="#" class="btn">J'y vais</a>
+                        <a href="#" class="btn current">LIKE</a>
+                    </div>
+        </div>
+                        
                 </header>
 
                 <figure class="events-thumbnail">
-                    <img src="img/summer.jpg" alt="">
+                    <img src="img/work11.jpg" alt="">
                 </figure>
             </div>
         </div>
