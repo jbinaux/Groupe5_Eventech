@@ -17,7 +17,7 @@
 </head>
 <div id="end">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo23.png" width="60" height="60"></a>
+			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo23.png" width="60" height="40"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -116,19 +116,23 @@
 
                         <div class="event-date">Date et Heure de l'événement</div>
                         
-                        <a class="btn btn-white" data-scroll="" href="#jyvais">J'y vais</a>
-                        
+                       <!--   <a class="btn btn-white" data-scroll="" href="#jyvais">J'y vais</a>
+                        -->
                     </div>
+   
                     
-
-    
+<!--  
 <div class="liker ">
                     <div class="entry-footer">
                         <a href="#" class="btn">J'y vais</a>
                         <a href="#" class="btn current">LIKE</a>
                     </div>
         </div>
-                        
+   -->   
+   <div class="btn-container mt-5">
+                                    <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" class="btn btn-white btn-circle btn-translate--hover px-4 mr-lg-4">J'y Vais</a>
+                                    <a href="./docs/plugins.html" target="_blank" class="btn btn-warning btn-circle btn-translate--hover px-4">LIKE</a>
+                                </div>                  
                 </header>
 
                 <figure class="events-thumbnail">
@@ -137,6 +141,13 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
 
     <div class="row">
         <div class="col-12">
@@ -278,22 +289,18 @@
 </div>
 
 <div id="foot">
-<footer>
-<br />
-<br />
-<br />
-  <center><p>Posted by: G5</p>
-  <p>Contact information: <a href="mailto:someone@example.com">
-  g5@example.com</a>.</p></center>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-</footer>
-</div>
+		<footer>
+			<br /> <br /> <br />
+			<div id="basDePage">
+				<p>Conception web: Groupe 5</p>
+				<p>
+					Nous contacter: <a href="client.simplon@gmail.com"
+						style="color: #F28F3B;"> client.simplon@gmail.com</a>
+				</p>
+			</div>
+			<br /> <br /> <br /> <br /> <br /> <br /> <br />
+		</footer>
+	</div>
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
