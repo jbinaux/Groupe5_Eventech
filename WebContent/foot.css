@@ -10,6 +10,10 @@ body {
 	width: 100% !important;
 }
 
+a:link {
+	color: #F28F3B;
+}
+
 #basDePage {
 	text-align: center;
 }

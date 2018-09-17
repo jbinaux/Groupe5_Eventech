@@ -29,11 +29,11 @@
 	<div id="section">
 		<div id="column1">
 			<div id="photo">
-				<img src="/Groupe5_Eventech/img/votre-photo-ici.jpg" width="250"
-					height="250">
+				<img src="/Groupe5_Eventech/img/user-profile-icon.png" width="256"
+					height="256">
 			</div>
 
-			<br /> <br />
+			<br /> <br />   
 
 			<h2>
 				<strong> <c:if test="${sessionScope.user != null}">
@@ -45,10 +45,8 @@
 			<c:if test="${sessionScope.user.isUserAdmin()}">
 				<a href="/Groupe5_Eventech/admin/admin">Administrer le site</a>
 			</c:if>
-			<p>Vos informations ici, vos informations ici.</p>
-			<p>Vos informations ici, vos informations ici.</p>
-			<p>Vos informations ici, vos informations ici.</p>
-			<p>Vos informations ici, vos informations ici.</p>
+			<p>${sessionScope.user.getUserMail() }</p>
+			<p>${sessionScope.user.getUserDomaineActivite() }</p>
 
 			<form action="/Groupe5_Eventech/private/updateUser.jsp">
 				<input type="submit" value="Modifier mes informations">
@@ -61,7 +59,7 @@
 			<br />
 
 			<h2>
-				<strong>Evénements créés</strong>
+				<strong>Evénements créés:</strong>
 			</h2>
 
 			<br />
@@ -107,6 +105,17 @@
 				<input type="submit" value="Créer un évènement">
 			</form>
 
+		</div>
+
+		<div id="column3">
+
+			<br />
+
+			<h2>
+				<strong>RdV Evénements:</strong>
+			</h2>
+
+			<br />
 		</div>
 
 	</div>
