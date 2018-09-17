@@ -12,10 +12,10 @@
 <title>header</title>
 </head>
 <body>
+
 	<jsp:include page="navbar.jsp"></jsp:include>
 
 	<div id="header"></div>
-
-
+    
 </body>
 </html>

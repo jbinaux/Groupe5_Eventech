@@ -26,7 +26,7 @@
 			<h2>
 				<strong> 
 				<c:if test="${sessionScope.user != null}">
-					<strong>${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }</strong>
+					${sessionScope.user.getUserNom() } ${sessionScope.user.getUserPrenom() }
 				</c:if>
 				</strong>
 			</h2>
@@ -47,26 +47,23 @@
 				<strong>{STATUT}</strong>
 			</h2>
 
-			<br /> <br />
+			<br />
 
-			<p>On sait depuis longtemps que travailler avec du texte lisible
-				et contenant du sens est source de distractions, et empêche de se
-				concentrer sur la mise en page elle-même.</p>
-			<p>L'avantage du Lorem Ipsum sur un texte générique comme 'Du
-				texte. Du texte. Du texte.' est qu'il possède une distribution de
-				lettres plus ou moins normale, et en tout cas comparable avec celle
-				du français standard.</p>
-			<p>De nombreuses suites logicielles de mise en page ou éditeurs
-				de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et
-				une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux
-				sites qui n'en sont encore qu'à leur phase de construction.
-				Plusieurs versions sont apparues avec le temps, parfois par
-				accident, souvent intentionnellement (histoire d'y rajouter de
-				petits clins d'oeil, voire des phrases embarassantes).</p>
-			<p>blabla</p>
-			<p>blabla</p>
-			
-			<a href="/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp">Créer un évènement</a>
+			<ul>
+				<c:if test="${Events.size() > 0}">
+					<c:forEach var="i" begin="0" end="${Events.size() -1}">
+						<li>${Events.get(i).getNomEvent()}</li>
+					</c:forEach>
+				</c:if>
+			</ul>
+
+			<br />
+
+			<form
+				action="/Groupe5_Eventech/private/formulaireEvenementsInternes.jsp">
+				<input type="submit" value="Créer un évènement">
+			</form>
+
 		</div>
 
 

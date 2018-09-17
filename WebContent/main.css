@@ -1,11 +1,18 @@
 @charset "ISO-8859-1";
 
-#end {	
- position: fixed;
- top: 0;
- width: 100%;
- z-index: 1;
+/* Déclaration de la police */
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto');
 }
+
+#end {	
+ position: fixed !important; 
+ top: 0 !important;
+ width: 100% !important;
+ z-index: 1 !important;
+}
+
 #header
 {
   height: 600px;
@@ -14,6 +21,21 @@
   background-size: cover;
   background-position: center;
 }
+
 .inv {
 	opacity: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+}
+
+.align-items-center {
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+.d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
 }

@@ -1,8 +1,15 @@
 @charset "ISO-8859-1";
 /* Général ------------------------------------------------------------------------------------- */
 
+/* Déclaration de la police */
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
 body {
-	background-image: url("/Groupe5_Eventech/img/1.jpg");
+	font-family: 'Roboto', sans-serif;  
+	background-color: #fcf6f4 !important;
 }
 
 #form {
@@ -11,8 +18,9 @@ body {
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+
 #first {
-	background-color: rgba(0, 0, 255, 0.2); 
+	background-color: rgba(0, 0, 255, 0.1); 
 	box-shadow: 6px 6px 20px grey;
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -20,8 +28,12 @@ body {
 	border-radius: 20px;
 	font-size: 1.1em;
 }
+.form-group {
+	color: black;
+}
+
 #second {
-	background-color: rgba(0, 0, 255, 0.2);
+	background-color: rgba(0, 0, 255, 0.1);
 	box-shadow: 6px 6px 20px grey;
 	padding-right: 20px;
 	padding-bottom: 30px;
@@ -29,20 +41,21 @@ body {
 	border-radius: 20px;
 	font-size: 1.1em;
 }
+
 table {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	
 }
-#form table tr td h2 {
-	color: lime;
+
+table tr td h2 {
+	color: #C8553D;
 	font-size: 1.2em;
 	text-align: center;
 	padding-bottom: 50px;
-}
-#form table tr td p {
-	color: aqua;
+	text-shadow: 0 0 1px black !important;
 }
 
-
-
+table tr td p {
+	color: black;
+}

@@ -1,8 +1,15 @@
 @charset "ISO-8859-1";
 
 body {
-	color: white;
+	color: grey;
 }
+
 #foot {
-	background-color: black;
+	background-color: #F8F9FA;
+	bottom: 0;
+	width: 100% !important;
+}
+
+#basDePage {
+	text-align: center;
 }

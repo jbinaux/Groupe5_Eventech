@@ -6,8 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="form.css" />
-
-
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>connection</title>
 </head>
 <body>
@@ -23,9 +22,10 @@
 	<br />
 	<br />
 	<c:choose>
-		<c:when test="${error == 1}"><p>Mauvais email</p></c:when>
-		<c:when test="${error == 2}"><p>Mauvais mot de passe</p></c:when>
-		<c:when test="${error == 3}"><p>Remplissez correctement les information et réessayez.</p></c:when>
+		<c:when test="${error == 1}"><p>Mauvais email.</p></c:when>
+		<c:when test="${error == 2}"><p>Mauvais mot de passe.</p></c:when>
+		<c:when test="${error == 3}"><p>Remplissez correctement les informations et réessayez.</p></c:when>
+		<c:when test="${error == 4}"><p>Cet email existe déjà!</p></c:when>
 	</c:choose>
 
 	<div id="form">
@@ -53,7 +53,7 @@
 					</tr>
 
 					<tr>
-						<td><a class="inv"><p>Mot de passe :</p></a></td>
+						<td><a class="inv">Mot de passe :</a></td>
 
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
@@ -99,20 +99,29 @@
 
 					<tr>
 						<td><p>Email:</p></td>
-						<td><input type="text" name="email" required></td>
+						<td><input type="email" name="email" required></td>
 					</tr>
 
 					<tr>
 						<td><p>Mot de passe :</p></td>
 						<td><input type="password" name="pwd" required></td>
 					</tr>
-
+                    
 					<tr>
-						<td><a class="inv"><p>Mot de passe :</p></a></td>
+						<td><a class="inv">Mot de passe :</a></td>
 						<td><input type="submit" value="Envoyer"></td>
 					</tr>
+					
 				</table>
+				<br />
+				<div class="form-group">
+				<p class="help-block" color="black"> Téléchargez votre photo de profil :</p>
+                    <label for="exampleInputFile">Choisir un fichier</label>
+                    <input type="file" id="exampleInputFile">
+                    
+                    </div>
 			</div>
+			
 
 		</form>
 	</div>
