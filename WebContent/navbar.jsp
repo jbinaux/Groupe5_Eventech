@@ -15,8 +15,12 @@
 <body>
 	<div id="end">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
 			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img
 				id="logo" src="img/logo23.png" width="60" height="60"></a>
+
+			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo23.png" width="60" height="40"></a>
+
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -32,7 +36,7 @@
 						<li><a class="inv">sept</a></li>
 
 					</c:if>
-
+  
 
 					<li class="nav-item"><a class="nav-link"
 						href="eventsPublic.jsp">Evénements</a></li>
