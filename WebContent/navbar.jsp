@@ -17,7 +17,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 
-			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo23.png" width="60" height="40"></a>
+			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="/Groupe5_Eventech/img/logo23.png" width="60" height="40"></a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
@@ -30,13 +30,12 @@
 				<ul class="navbar-nav mr-auto">
 					<li><a class="inv">septembre is well done yeah ... </a></li>
 					
-					<li class="nav-item"><a class="nav-link" href="index.jsp">Accueil</a></li>
+					<li class="nav-item"><a class="nav-link" href="/Groupe5_Eventech/index.jsp">Accueil</a></li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
-  
-
+					</c:if>
 					<li class="nav-item"><a class="nav-link"
-						href="eventsPublic.jsp">Evénements</a></li>
+						href="/Groupe5_Eventech/eventsPublic.jsp">Evénements</a></li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
 						<li class="nav-item"><a class="nav-link"
@@ -57,7 +56,7 @@
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search"
-						placeholder="bienvenue" aria-label="Search">
+						placeholder="Bienvenue !" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
 				</form>
 				<c:if test="${sessionScope.user != null}">
