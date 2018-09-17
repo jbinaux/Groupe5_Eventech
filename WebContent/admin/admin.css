@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+.section
+{
+	position: relative;
+	top: 100px;
+}
+
+img.icon
+{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
