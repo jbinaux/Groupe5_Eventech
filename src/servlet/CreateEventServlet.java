@@ -60,18 +60,18 @@ public class CreateEventServlet extends HttpServlet {
 			
 			//si l'operation a reussi, dispatch vers le profil, sinon retourne sur la page avec code d'erreur 1
 			if (s > 0) {
-				RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/private/profil");
 				rd.forward(request, response);
 			} else {
 				request.setAttribute("error", 1);
-				RequestDispatcher rd = request.getRequestDispatcher("/private/updateUser.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/private/formulaireEvenementsInternes.jsp");
 				rd.forward(request, response);
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("error", 1);
-			RequestDispatcher rd = request.getRequestDispatcher("/private/updateUser.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/private/formulaireEvenementsInternes.jsp");
 			rd.forward(request, response);
 		}
 
