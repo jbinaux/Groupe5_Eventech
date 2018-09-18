@@ -44,7 +44,7 @@ public class EventsPublicServlet extends HttpServlet {
 		// on attribue un nom à listeEvents dans la request
 		request.setAttribute("events", listeEvents);
 		// Redirectioon vers la page et on lui donne les attributs de la request
-		RequestDispatcher rd = request.getRequestDispatcher("/EventPage.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/eventsPublic2.jsp");
 		rd.forward(request, response);
 	}
 

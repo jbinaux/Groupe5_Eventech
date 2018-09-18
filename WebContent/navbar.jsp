@@ -6,15 +6,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet"
-<<<<<<< HEAD
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css"/>
-=======
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
->>>>>>> f59436b0270fe3c6221243c42e4e43167324e0fe
+
 <title>navbar</title>
 </head>
 <body>
@@ -40,7 +36,7 @@
 						<li><a class="inv">sept</a></li>
 					</c:if>
 					<li class="nav-item"><a class="nav-link"
-						href="/Groupe5_Eventech/eventsPublic.jsp">Evénements</a></li>
+						href="/Groupe5_Eventech/EventsPublicServlet">Evénements</a></li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
 						<li class="nav-item"><a class="nav-link"
@@ -48,11 +44,8 @@
 					</c:if>
 					<li><a class="inv">sept</a></li>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-  ...
+ 
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="#">More options</a>
-    <ul class="dropdown-menu">
-      ...
     </ul>
   </li>
 </ul>
