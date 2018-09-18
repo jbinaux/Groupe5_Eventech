@@ -70,7 +70,7 @@
 						<li><time datetime="2014-07-20">
 								<span class="day">04</span> <span class="month">Jan</span> <span
 									class="year">2019</span> <span class="time">ALL DAY</span>
-							</time> <img src="imgEventPu/event91.jpg">
+							</time> <a href="/Groupe5_Eventech/EventPageServlet?id=${Events.get(i).getIdEvent() }"><img src="imgEventPu/event91.jpg"></a>
 							<div class="info">
 								<h2 class="title">${Events.get(i).getNomEvent()}</h2>
 								<p class="desc">${Events.get(i).getLieuEvent()}  - ${Events.get(i).getDateEvent()}</p>
