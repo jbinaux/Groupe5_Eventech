@@ -25,7 +25,7 @@
 					href="/Groupe5_Eventech/index.jsp">Accueil</a></li>
 				<c:if test="${sessionScope.user == null}"></c:if>
 				<li class="nav-item"><a class="nav-link"
-					href="/Groupe5_Eventech/eventsPublic.jsp">Evénements</a></li>
+					href="/Groupe5_Eventech/EventsPublicServlet">Evénements</a></li>
 				<c:if test="${sessionScope.user == null}"></c:if>
 				<li class="nav-item"><a class="nav-link"
 					href="/Groupe5_Eventech/connect.jsp">Connection</a></li>

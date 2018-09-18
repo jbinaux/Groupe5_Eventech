@@ -17,6 +17,9 @@ public class Event {
 	double moyenneNote;
 	double prix;
 	String domaine;
+	String month;
+	String day;
+	String year;
 	
 	public int getIdEvent() {
 		return idEvent;
@@ -89,5 +92,23 @@ public class Event {
 	}
 	public void setDomaine(String domaine) {
 		this.domaine = domaine;
+	}
+	public String getMonth() {
+		return month;
+	}
+	public void setMonth(String month) {
+		this.month = month;
+	}
+	public String getDay() {
+		return day;
+	}
+	public void setDay(String day) {
+		this.day = day;
+	}
+	public String getYear() {
+		return year;
+	}
+	public void setYear(String year) {
+		this.year = year;
 	}
 }
