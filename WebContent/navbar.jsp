@@ -9,7 +9,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css"/>
 <title>navbar</title>
 </head>
 <body>
@@ -42,6 +42,15 @@
 							href="/Groupe5_Eventech/connect.jsp">Connection</a></li>
 					</c:if>
 					<li><a class="inv">sept</a></li>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+  ...
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="#">More options</a>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </li>
+</ul>
 					<li class="nav-item"><a class="nav-link"
 						href="/Groupe5_Eventech/contact.jsp">Contact</a></li>
 					<c:if test="${sessionScope.user != null}">

@@ -31,12 +31,12 @@
 	<br />
 	<br />
 
-	<center>
+	
 		<h1>
 			<strong><font size="80" color="#C8553D"> EVENEMENTS A
 					VENIR </font></strong>
 		</h1>
-	</center>
+	
 
 	<br />
 	<br />
