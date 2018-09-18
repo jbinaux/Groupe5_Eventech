@@ -145,11 +145,11 @@
 					<br />
 					<br />
 					
-					<c:foreach var="i" begin="0" end="${events.size() -1 }">
+					<c:forEach var="i" begin="0" end="${events.size() -1 }">
 					<li><time datetime="2014-07-20">
 							<span class="day">10</span> <span class="month">Fev</span> <span
 								class="year">2020</span> <span class="time">ALL DAY</span>
-						</time> <a href="/groupe5_Eventech/EventPageServlet?id="${events.get(i).getIdEvent()}><img src="imgEventPu/event61.jpg"></a>
+						</time> <a href="EventPageServlet?id=${events.get(i).getIdEvent()}"><img src="imgEventPu/event61.jpg"></a>
 						<div class="info">
 							<h2 class="title">${events.get(i).getNomEvent() }</h2>
 							<p class="desc">${events.get(i).getLieu() }</p>
@@ -175,7 +175,7 @@
 						</div></li>
 
 					<br />
-					</c:foreach>
+					</c:forEach>
 
 
 				</ul>

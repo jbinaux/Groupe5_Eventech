@@ -51,10 +51,7 @@ background-color: #ff4444;
 	#ter {
 	    top: -10px;
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> f59436b0270fe3c6221243c42e4e43167324e0fe
+
 	#foot {
 	    font-size: 1.5em !important;
 	}
@@ -118,7 +115,7 @@ background-color: #ff4444;
 		font-weight: 900;
 		line-height: 1;
 	}
-	.event-list > li > img {
+	.event-list > li > a > img {
 		width: 100%;
 	}
 	.event-list > li > .info {
@@ -209,11 +206,11 @@ background-color: #ff4444;
 			padding: 0px;
 		}
 		.event-list > li > time,
-		.event-list > li > img  {
+		.event-list > li > a > img  {
 			display: inline-block;
 		}
 		.event-list > li > time,
-		.event-list > li > img {
+		.event-list > li > a > img {
 			width: 120px;
 			float: left;
 		}
@@ -222,7 +219,7 @@ background-color: #ff4444;
 			overflow: hidden;
 		}
 		.event-list > li > time,
-		.event-list > li > img {
+		.event-list > li > a > img {
 			width: 120px;
 			height: 120px;
 			padding: 0px;
