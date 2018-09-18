@@ -1,6 +1,6 @@
-@charset "ISO-8859-1";
+@charset "utf-8";
 
-/* Déclaration de la police */
+/* DÃ©claration de la police */
 @font-face {
 	font-family: 'Roboto', sans-serif;
 	src: url('https://fonts.googleapis.com/css?family=Roboto');

@@ -4,18 +4,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset=utf-8>
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/form.css" />
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>Formulaire Evénements Internes</title>
 </head>
 <body>
 
-	<jsp:include page="../navbar.jsp"></jsp:include>
+	<jsp:include page="/navbarDropdown.jsp"></jsp:include>
 
 	<br />
 	<br />
-	<br />
+	<br />  
 	<br />
 	<br />
 	<br />

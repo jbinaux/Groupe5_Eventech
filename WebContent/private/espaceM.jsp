@@ -1,21 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset=utf-8>
 <title>espace membres</title>
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/form.css" />
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 
-	<jsp:include page="../navbar.jsp"></jsp:include>
+	<jsp:include page="/navbarDropdown.jsp"></jsp:include>
 
 	<br />
 	<br />
 	<br />
-	<br />
+	<br />  
 	<br />
 	<br />
 	<br />
@@ -27,7 +27,7 @@
 				<table>
 					<tr>
 						<td><h2>
-								<strong>POUR ACCÉDER A NOTRE ESPACE PRIVÉ :</strong>
+								<strong>POUR ACCÃ‰DER A NOTRE ESPACE PRIVÃ‰ :</strong>
 							</h2></td>
 					</tr>
 
