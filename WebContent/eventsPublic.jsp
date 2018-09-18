@@ -36,10 +36,11 @@
 
 	<br />
 	<br />
-	<br />
-	<br />
-
+	
+	
+    <div id="gauche" class="fixgauche"> 
 	<div id="cal">
+	
 		<div class="header">
 			<span class="left button" id="prev"> &lang; </span> <span
 				class="left hook"></span> <span class="month-year" id="label">
@@ -107,10 +108,11 @@
 			</table>
 		</div>
 	</div>
+     </div> 
      
      
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="calendar.js"></script>
 	<script>
 		var cal = CALENDAR();
@@ -118,11 +120,21 @@
 		cal.init();
 	</script>
 
-
+<script type="text/javascript">
+	$(function(){
+	$(window).scroll(
+	function () {//Au scroll dans la fenetre on déclenche la fonction
+	if ($(this).scrollTop() > 500 ) { //si on a défini de plus de 187 px du haut vers le bas
+	$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" à <div id="gauche">
+	} else {
+	$('#gauche').removeClass("fixgauche");//sinon on retire la classe "fixgauche" à <div id="gauche">
+						}
+					}
+				);			 
+			});
+		</script>
 	<br />
-	<br />
-	<br />
-	<br />
+	
 
 
 
@@ -130,11 +142,9 @@
 		<div class="row">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 				<ul class="event-list">
-
-
 					<div class="deroul">
 						<button id="twix" class="boutonmenuprincipal">Afficher
-							les événements par :</button>
+							les événements par : </button>
 						<div class="deroul-child">
 							<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
 								10 </a> <a href="eventsPublic3.jsp"> 20 </a>
@@ -315,6 +325,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 
 
 	<br />
