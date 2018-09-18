@@ -14,154 +14,7 @@
 
 <link rel="stylesheet" type="text/css" href="eventsPublic.css" />
 
- <title>événement</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
-    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
-<style>
-.datepicker-dropdown {
-  top: 0;
-  left: 0;
-  padding: 4px;
-  background-color: #2C6E8E;
-  border-radius: 10px;
-}
-.datepicker table {
-  margin: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-}
-
-.datepicker table tr td,
-.datepicker table tr th {
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
-  border: none;
-  color: black;
-}
-
-.datepicker table tr td.day:hover,
-.datepicker table tr td.focused {
-  background: #555555;
-  cursor: pointer;
-  width: 20px;
-}
-.datepicker table tr td.old,
-.datepicker table tr td.new {
-  color: #FF8000;
-}
-
-.datepicker table tr td.today {
-  color: black;
-  background-color: #FFA953;
-  border-color: #FFB76F;
-}
-.datepicker table tr td.today:hover {
-  color: #FFFFFF;
-  background-color: #884400;
-  border-color: #f59e00;
-}
-.datepicker table tr td.active:active,
-.datepicker table tr td.active.highlighted:active,
-.datepicker table tr td.active.active,
-.datepicker table tr td.active.highlighted.active,
-.open > .dropdown-toggle.datepicker table tr td.active,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted {
-  color: #ffffff;
-  background-color: #419841;
-  border-color: #285e8e;
-}
-
-
-.datepicker table tr td.active:active:hover,
-.datepicker table tr td.active.highlighted:active:hover,
-.datepicker table tr td.active.active:hover,
-.datepicker table tr td.active.highlighted.active:hover,
-.open > .dropdown-toggle.datepicker table tr td.active:hover,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted:hover,
-.datepicker table tr td.active:active:focus,
-.datepicker table tr td.active.highlighted:active:focus,
-.datepicker table tr td.active.active:focus,
-.datepicker table tr td.active.highlighted.active:focus,
-.open > .dropdown-toggle.datepicker table tr td.active:focus,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted:focus,
-.datepicker table tr td.active:active.focus,
-.datepicker table tr td.active.highlighted:active.focus,
-.datepicker table tr td.active.active.focus,
-.datepicker table tr td.active.highlighted.active.focus,
-.open > .dropdown-toggle.datepicker table tr td.active.focus,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted.focus {
-  color: black;
-  background-color: orange;
-  border-color: #193c5a;
-}
-.datepicker table tr td.active:active,
-.datepicker table tr td.active.highlighted:active,
-.datepicker table tr td.active.active,
-.datepicker table tr td.active.highlighted.active,
-.open > .dropdown-toggle.datepicker table tr td.active,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted {
-  color: #ffffff;
-  background-color: #3071a9;
-  border-color: #285e8e;
-}
-.datepicker table tr td.active:active:hover,
-.datepicker table tr td.active.highlighted:active:hover,
-.datepicker table tr td.active.active:hover,
-.datepicker table tr td.active.highlighted.active:hover,
-.open > .dropdown-toggle.datepicker table tr td.active:hover,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted:hover,
-.datepicker table tr td.active:active:focus,
-.datepicker table tr td.active.highlighted:active:focus,
-.datepicker table tr td.active.active:focus,
-.datepicker table tr td.active.highlighted.active:focus,
-.open > .dropdown-toggle.datepicker table tr td.active:focus,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted:focus,
-.datepicker table tr td.active:active.focus,
-.datepicker table tr td.active.highlighted:active.focus,
-.datepicker table tr td.active.active.focus,
-.datepicker table tr td.active.highlighted.active.focus,
-.open > .dropdown-toggle.datepicker table tr td.active.focus,
-.open > .dropdown-toggle.datepicker table tr td.active.highlighted.focus {
-  color: #ffffff;
-  background-color: #285e8e;
-  border-color: #193c5a;
-}
-.datepicker .datepicker-switch {
-  width: 145px;
-  
-}
-.datepicker .datepicker-switch:hover,
-.datepicker .prev:hover,
-.datepicker .next:hover,
-.datepicker tfoot tr th:hover {
-  background: #50A2C9;
-}
-</style>
-
-<script type='text/javascript'>
-$(function(){
-$('.input-group.date').datepicker({
-    orientation: "auto left",
-    forceParse: false,
-    autoclose: true,
-    todayHighlight: true,
-    toggleActive: true
-});
-});
-
-</script>
-
+<title>événement</title>
 
 </head>
 <body>
@@ -174,27 +27,98 @@ $('.input-group.date').datepicker({
 	<br />
 	<br />
 
-	<center>
-		<h1>
-			<strong><font size="80" color="#C8553D"> EVENEMENTS A
-					VENIR </font></strong>
-		</h1>
-	</center>
+
+	<h1>
+		<strong><font size="80" color="#C8553D"> EVENEMENTS A
+				VENIR </font></strong>
+	</h1>
+
 
 	<br />
 	<br />
 	<br />
 	<br />
 
-<div class="container1">
-<center><h1>Une date particulière ?</h1></center>
-<div class="input-group date">
-  <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-</div>
-</div>
+	<div id="cal">
+		<div class="header">
+			<span class="left button" id="prev"> &lang; </span> <span
+				class="left hook"></span> <span class="month-year" id="label">
+				Septembre 2018 </span> <span class="right hook" id=""></span> <span
+				class="right button" id="next"> &rang; </span>
+		</div>
+		<table id="days">
+			<tr>
+				<td>dim</td>
+				<td>lun</td>
+				<td>mar</td>
+				<td>mer</td>
+				<td>jeu</td>
+				<td>ven</td>
+				<td>sam</td>
+			</tr>
+		</table>
+		<div id="cal-frame">
+			<table class="curr">
+				<tr>
+					<td class="nil"></td>
+					<td class="nil"></td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td class="today">11</td>
+					<td>12</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+				</tr>
+				<tr>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td class="nil"></td>
+					<td class="nil"></td>
+					<td class="nil"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="calendar.js"></script>
+	<script>
+		var cal = CALENDAR();
+
+		cal.init();
+	</script>
 
 
-<br />
+	<br />
 	<br />
 	<br />
 	<br />
@@ -205,17 +129,17 @@ $('.input-group.date').datepicker({
 		<div class="row">
 			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
 				<ul class="event-list">
-				<div class="deroul">
- <button id="twix" class="boutonmenuprincipal">Afficher les événements par : </button>
- <div class="deroul-child">
- <a href="eventsPublic.jsp">  5  </a>
- <a href="eventsPublic2.jsp">  10  </a>
- <a href="eventsPublic3.jsp">  20  </a>
- </div>
- </div>
- <br />
- <br />
- <br />
+					<div class="deroul">
+						<button id="twix" class="boutonmenuprincipal">Afficher
+							les événements par :</button>
+						<div class="deroul-child">
+							<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
+								10 </a> <a href="eventsPublic3.jsp"> 20 </a>
+						</div>
+					</div>
+					<br />
+					<br />
+					<br />
 					<li><time datetime="2014-07-20">
 							<span class="day">07</span> <span class="month">Mar</span> <span
 								class="year">2020</span> <span class="time">ALL DAY</span>
@@ -225,9 +149,10 @@ $('.input-group.date').datepicker({
 							<p class="desc">United States Holiday</p>
 							<p class="desc">Evénement sur l'IA</p>
 							<ul>
-								<li><img id="ter" src="img/panda2.png" width="20" height="20"><span
-									class="glyphicon glyphicon-ok"><a style="width: 33%;">6</a></span></li>
-									
+								<li><img id="ter" src="img/panda2.png" width="20"
+									height="20"><span class="glyphicon glyphicon-ok"><a
+										style="width: 33%;">6</a></span></li>
+
 								<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
 								<li style="width: 34%;">00.00</li>
 							</ul>
@@ -248,8 +173,7 @@ $('.input-group.date').datepicker({
 					<li><time datetime="2014-07-20 0000">
 							<span class="day">15</span> <span class="month">Mar</span> <span
 								class="year">2019</span> <span class="time">12:00 AM</span>
-						</time>
-						<img src="imgEventPu/event69.jpg">
+						</time> <img src="imgEventPu/event69.jpg">
 						<div class="info">
 							<h2 class="title">One Piece Unlimited World Red</h2>
 							<p class="desc">PS Vita</p>
@@ -305,8 +229,7 @@ $('.input-group.date').datepicker({
 					<li><time datetime="2014-07-31 1600">
 							<span class="day">09</span> <span class="month">Avr</span> <span
 								class="year">2019</span> <span class="time">4:00 PM</span>
-						</time>
-						<img src="imgEventPu/event71.jpg">
+						</time> <img src="imgEventPu/event71.jpg">
 						<div class="info">
 							<h2 class="title">Disney Junior Live On Tour!</h2>
 							<p class="desc">Pirate and Princess Adventure</p>
@@ -328,14 +251,13 @@ $('.input-group.date').datepicker({
 									href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
 							</ul>
 						</div></li>
-						
-						<br />
+
+					<br />
 
 					<li><time datetime="2014-07-31 1600">
 							<span class="day">17</span> <span class="month">Avr</span> <span
 								class="year">2019</span> <span class="time">4:00 PM</span>
-						</time>
-						<img src="imgEventPu/event72.jpg">
+						</time> <img src="imgEventPu/event72.jpg">
 						<div class="info">
 							<h2 class="title">Slack Community conférence!</h2>
 							<p class="desc">Pirate and Princess Adventure</p>
@@ -358,22 +280,25 @@ $('.input-group.date').datepicker({
 							</ul>
 						</div></li>
 				</ul>
-                
-                <br />             
-                
+
+				<br />
+
 				<div id="pag">
 					<nav aria-label="Page navigation example">
 						<ul class="pagination">
-							<li class="page-item"><a class="page-link" href="eventsPublic2.jsp?#twix"
-								aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
-									<span class="sr-only">Previous</span>
+							<li class="page-item"><a class="page-link"
+								href="eventsPublic2.jsp?#twix" aria-label="Previous"> <span
+									aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
 							</a></li>
-							<li class="page-item"><a class="page-link" href="eventsPublic.jsp?#twix">1</a></li>
-							<li class="page-item"><a class="page-link" href="eventsPublic2.jsp?#twix">2</a></li>
-							<li class="page-item"><a class="page-link" href="eventsPublic3.jsp?#twix">3</a></li>
-							<li class="page-item"><a class="page-link" href="eventsPublic3.jsp?#twix"
-								aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span
-									class="sr-only">Next</span>
+							<li class="page-item"><a class="page-link"
+								href="eventsPublic.jsp?#twix">1</a></li>
+							<li class="page-item"><a class="page-link"
+								href="eventsPublic2.jsp?#twix">2</a></li>
+							<li class="page-item"><a class="page-link"
+								href="eventsPublic3.jsp?#twix">3</a></li>
+							<li class="page-item"><a class="page-link"
+								href="eventsPublic3.jsp?#twix" aria-label="Next"> <span
+									aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
 							</a></li>
 						</ul>
 					</nav>

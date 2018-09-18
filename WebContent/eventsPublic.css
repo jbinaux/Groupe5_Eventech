@@ -2,6 +2,9 @@
 
  @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
     @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+    /*color red #C8553D
+    color orange #F28F3B
+    background color #fcf6f4*/
     
     
 .boutonmenuprincipal {
@@ -49,14 +52,13 @@ background-color: #ff4444;
 	#ter {
 	    top: -10px;
 	}
-	#end {
-	    font-size: 1.5em !important;
-	}
+
 	#foot {
 	    font-size: 1.5em !important;
 	}
 	h1 {
 	    text-shadow: 0 0 1px black !important;
+	    text-align: center;
 	}
 	
 	
@@ -114,7 +116,7 @@ background-color: #ff4444;
 		font-weight: 900;
 		line-height: 1;
 	}
-	.event-list > li > img {
+	.event-list > li > a > img {
 		width: 100%;
 	}
 	.event-list > li > .info {
@@ -205,11 +207,11 @@ background-color: #ff4444;
 			padding: 0px;
 		}
 		.event-list > li > time,
-		.event-list > li > img  {
+		.event-list > li > a > img  {
 			display: inline-block;
 		}
 		.event-list > li > time,
-		.event-list > li > img {
+		.event-list > li > a > img {
 			width: 120px;
 			float: left;
 		}
@@ -218,7 +220,7 @@ background-color: #ff4444;
 			overflow: hidden;
 		}
 		.event-list > li > time,
-		.event-list > li > img {
+		.event-list > li > a > img {
 			width: 120px;
 			height: 120px;
 			padding: 0px;
