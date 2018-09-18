@@ -44,6 +44,7 @@
 						href="/Groupe5_Eventech/contact.jsp">Contact</a></li>
 					<c:if test="${sessionScope.user != null}">
 					
+					
 						<li class="nav-item"><a class="nav-link"
 							href="/Groupe5_Eventech/private/profil.jsp">Profil</a></li>
 					</c:if>
@@ -95,7 +96,7 @@
             <div class="row">
                 <div class="col-12">
                     <header class="entry-header">
-                        <h1 class="entry-title"><center>(CATEGORIE EVENEMENT)</center></h1>
+                        <h1 class="entry-title"><center>${event.getDomaineEvent() }</center></h1>
                     </header>
                 </div>
             </div>
@@ -110,11 +111,11 @@
                 <header class="entry-header flex flex-wrap justify-content-between align-items-end">
                     
                     <div class="single-event-heading">
-                        <h2 class="entry-title">Nom et Année de l'événement</h2>
+                        <h2 class="entry-title">${event.getNomEvent() } et Année de l'événement</h2>
 
-                        <div class="event-location"><a href="#">Adresse de l'événement</a></div>
+                        <div class="event-location"><a href="#">${event.getLieuEvent() }</a></div>
 
-                        <div class="event-date">Date et Heure de l'événement</div>
+                        <div class="event-date">${event.getDateEvent() } ${event.getHeureEvent() }</div>
                         
                        <!--   <a class="btn btn-white" data-scroll="" href="#jyvais">J'y vais</a>
                         -->
@@ -130,8 +131,13 @@
         </div>
    -->   
    <div class="btn-container mt-5">
-                                    <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" class="btn btn-white btn-circle btn-translate--hover px-4 mr-lg-4">J'y Vais</a>
-                                    <a href="./docs/plugins.html" target="_blank" class="btn btn-warning btn-circle btn-translate--hover px-4">LIKE</a>
+                       <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" 
+                       class="btn btn-white btn-circle btn-translate--hover px-4 mr-lg-4">J'y Vais</a>
+                       <a href="./docs/plugins.html" target="_blank" 
+                       class="btn btn-warning btn-circle btn-translate--hover px-4">
+                       <input type="image" name="toto" value="toto" src="img/panda2.png" width="auto" height="25" >
+                       </a>
+                                
                                 </div>                  
                 </header>
 
@@ -141,9 +147,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 
 
@@ -202,7 +205,7 @@
            
         </div>
     </div>
-
+<!-- 
     <div class="row">
         <div class="col-12">
             <div class="upcoming-events">
@@ -218,7 +221,8 @@
 
                         <div class="entry-meta">
                             <div class="event-date">
-                                25<span>Octobre</span>
+                                25<span>Octobre</span> <span class="time">08h00</span>
+                                
                             </div>
                         </div>
 
@@ -242,7 +246,7 @@
 
                         <div class="entry-meta">
                             <div class="event-date">
-                                27<span>Octobre</span>
+                                27<span>Octobre</span><span class="time">18h00</span>
                             </div>
                         </div>
 
@@ -266,7 +270,7 @@
 
                         <div class="entry-meta">
                             <div class="event-date">
-                                29<span>Octobre</span>
+                                29<span>Octobre</span><span class="time">18h30</span>
                             </div>
                         </div>
 
@@ -276,6 +280,7 @@
                             <div class="event-date-time">29 Octobre 2018, de 18h30 à 20h30</div>
 
                             <div class="event-speaker">Speackers: Maria Williams, Luis Smith, James Doe</div>
+                            
                         </header>
 
                         <footer class="entry-footer">
@@ -287,6 +292,188 @@
         </div>
     </div>
 </div>
+-->
+  <div class="col-12">
+            <div class="upcoming-events">
+                <div class="upcoming-events-header">
+                    <h4>Evénement à venir</h4>
+                </div>
+<div class="container">
+		<div class="row">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+						<ul class="event-list">
+		
+ <br />
+ <br />
+ <br />
+	
+					<li><time datetime="2014-07-20">
+							<span class="day">04</span> <span class="month">Jan</span> <span
+								class="year">2019</span> <span class="time">ALL DAY</span>
+						</time> <img src="imgEventPu/event91.jpg">
+						<div class="info">
+							<h2 class="title">Apéro Wine Tech</h2>
+							<p class="desc">75013 Paris - 04/01/2019</p>
+							<p class="desc">Les start-up innovantes dans l'industrie du vin seront là.</p>
+							<ul>
+								<li><img id="ter" src="img/panda2.png" width="20" height="20"><span
+									class="glyphicon glyphicon-ok"><a style="width: 33%;">6</a></span></li>
+									
+								<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
+								<li style="width: 34%;">00.00</li>
+							</ul>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width: 33%;"><a
+									href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+										class="fa fa-twitter"></span></a></li>
+								<li class="linkedin" style="width: 33%;"><a
+									href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div></li>
+
+					<br />
+
+					<li><time datetime="2014-07-20 0000">
+							<span class="day">08</span> <span class="month">Jan</span> <span
+								class="year">2019</span> <span class="time">12:00 AM</span>
+						</time><img src="imgEventPu/event78.jpg">
+						<div class="info">
+							<h2 class="title">Paris New Tech Meetup - Startup pitchs!</h2>
+							<p class="desc">75010 Paris - 08/01/2019</p>
+							<p class="desc">5 nouvelles start-up sur le devant</p>
+							<ul>
+								<li style="width: 33%;">89 <span
+									class="glyphicon glyphicon-ok"></span></li>
+								<li style="width: 33%;">526 <span class="fa fa-envelope"></span></li>
+								<li style="width: 34%;">29.99$</li>
+							</ul>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width: 33%;"><a
+									href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+										class="fa fa-twitter"></span></a></li>
+								<li class="linkedin" style="width: 33%;"><a
+									href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div></li>
+
+					<br />
+
+					<li><time datetime="2014-07-20 2000">
+							<span class="day">20</span> <span class="month">Jan</span> <span
+								class="year">2019</span> <span class="time">8:00 PM</span>
+						</time> <img alt="My 24th Birthday!"
+						src="https://farm5.staticflickr.com/4150/5045502202_1d867c8a41_q.jpg" />
+						<div class="info">
+							<h2 class="title">Matinale Deep Law for Tech.</h2>
+							<p class="desc">75002 Paris - 20/01/2019</p>
+							<p class="desc">Réalisations, perspectives et enjeux</p>
+							<ul>
+								<li style="width: 33%;">789 <span
+									class="glyphicon glyphicon-ok"></span></li>
+								<li style="width: 33%;">221 <span class="fa fa-envelope"></span></li>
+								<li style="width: 34%;">59.99$</li>
+							</ul>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width: 33%;"><a
+									href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+										class="fa fa-twitter"></span></a></li>
+								<li class="linkedin" style="width: 33%;"><a
+									href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div></li>
+
+					<br />
+
+					<li><time datetime="2014-07-31 1600">
+							<span class="day">27</span> <span class="month">Jan</span> <span
+								class="year">2019</span> <span class="time">4:00 PM</span>
+						</time><img src="imgEventPu/event60.jpg">
+						<div class="info">
+							<h2 class="title">Entreprise Tech: apprenez à développer</h2>
+							<p class="desc">75001 Paris - 27/01/2019</p>
+							<p class="desc">Ateliers divers.</p>
+							<ul>
+								<li style="width: 33%;">3 <span
+									class="glyphicon glyphicon-ok"></span></li>
+								<li style="width: 33%;">12 <span class="fa fa-envelope"></span></li>
+								<li style="width: 34%;">00.00$</li>
+							</ul>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width: 33%;"><a
+									href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+										class="fa fa-twitter"></span></a></li>
+								<li class="linkedin" style="width: 33%;"><a
+									href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div></li>
+						
+						<br />
+
+					<li><time datetime="2014-07-31 1600">
+							<span class="day">30</span> <span class="month">Jan</span> <span
+								class="year">2019</span> <span class="time">4:00 PM</span>
+						</time><img src="imgEventPu/event63.jpg">
+						<div class="info">
+							<h2 class="title">Grande soirée - Women in Tech for Good</h2>
+							<p class="desc">75020 Paris - 30/01/2019</p>
+							<p class="desc">Projets inspirants et novateurs</p>
+							<ul>
+								<li style="width: 33%;">35 <span
+									class="glyphicon glyphicon-ok"></span></li>
+								<li style="width: 33%;">123 <span class="fa fa-envelope"></span></li>
+								<li style="width: 34%;">00.00$</li>
+							</ul>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width: 33%;"><a
+									href="#facebook"><span class="fa fa-facebook"></span></a></li>
+								<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+										class="fa fa-twitter"></span></a></li>
+								<li class="linkedin" style="width: 33%;"><a
+									href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+							</ul>
+						</div></li>
+				</ul>
+                
+                <br />             
+                
+			
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div id="foot">
 		<footer>
