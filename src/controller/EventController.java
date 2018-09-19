@@ -238,7 +238,7 @@ public class EventController {
 			String pwd = password.getPassword();
 
 			cn = DriverManager.getConnection(url, user, pwd);
-			ps = cn.prepareStatement("UPDATE `users` SET nom_event = ?, lieu = ?,"
+			ps = cn.prepareStatement("UPDATE `events` SET nom_event = ?, lieu = ?,"
 					+ " date_event = ?, heure_event = ?, description_event = ?, prix = ?, domaine = ? "
 					+ "WHERE id_event = ?;");
 			ps.setString(1, model.getNomEvent());

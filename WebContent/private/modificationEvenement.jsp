@@ -36,11 +36,11 @@
 	<br />
 	<br />
 
-	<c:if test="${requestScope.error == 1}">
+	<c:if test="${error == 1}">
 		<p>désolé, une erreure est apparue</p>
 	</c:if>
 
-	<form action="/Groupe5_Eventech/UpdateEventServlet" method="post">
+	<form action="/Groupe5_Eventech/UpdateEventServlet?id=${event.getIdEvent() }" method="post">
 		<div id="form">
 			<div id="first">
 				<table>
@@ -85,7 +85,7 @@
 					</tr>
 					<tr>
 						<td><p>Domaine:</p></td>
-						<td><select name="domaineActivite">
+						<td><select name="domaine">
 								<c:choose>
 									<c:when
 										test="${event.getDomaineEvent().equals(\"Marketing\") }">
@@ -152,7 +152,7 @@
 	<br />
 	<br />
 
-	<jsp:include page="../footer.html"></jsp:include>
+	<jsp:include page="/footer.html"></jsp:include>
 
 </body>
 </html>

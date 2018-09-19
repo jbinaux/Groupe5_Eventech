@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +70,9 @@
 		</div>
 	</header>
 	<!-- .site-header -->
-
+<c:if test="${event.getEventIdCreator() == sessionScope.user.getUserId()}">
+	<a href="InitUpdateEventServlet?id=${event.getIdEvent() }">Modifier cet Ã‰vÃ©nement</a>
+</c:if>
 	<div class="container">
 		<div class="row">
 			<div class="col-12 single-event visible">
@@ -76,7 +81,7 @@
 						class="entry-header flex flex-wrap justify-content-between align-items-end">
 
 						<div class="single-event-heading">
-							<h2 class="entry-title">${event.getNomEvent() } et Année de l'événement</h2>
+							<h2 class="entry-title">${event.getNomEvent() } ${event.getYear() }</h2>
 
 							<div class="event-location">
 								<a href="#">${event.getLieuEvent() }</a>
@@ -129,7 +134,7 @@
 							class="tab-nav flex justify-content-center align-items-center active"
 							data-target="#tab_details">Infos Transport</li>
 						<li class="tab-nav flex justify-content-center align-items-center"
-							data-target="#tab_venue">Détails événement</li>
+							data-target="#tab_venue">DÃ©tails Ã©vÃ©nement</li>
 						<li class="tab-nav flex justify-content-center align-items-center"
 							data-target="#tab_organizers">Autres</li>
 					</ul>
@@ -195,7 +200,7 @@
 			<div class="col-12">
 				<div class="upcoming-events">
 					<div class="upcoming-events-header">
-						<h4>Evénement à venir</h4>
+						<h4>EvÃ©nement Ã  venir</h4>
 					</div>
 
 					<div class="upcoming-events-list">
@@ -213,11 +218,11 @@
 
 							<header class="entry-header">
 								<h3 class="entry-title">
-									<a href="#">Blockchain Conférence</a>
+									<a href="#">Blockchain ConfÃ©rence</a>
 								</h3>
 
-								<div class="event-date-time">25 Octobre 2018, à 8h00 - 30
-									Octobre 2018, à 16h00</div>
+								<div class="event-date-time">25 Octobre 2018, Ã  8h00 - 30
+									Octobre 2018, Ã  16h00</div>
 
 								<div class="event-speaker">Speackers: Maria Williams, Luis
 									Rodrigues, James Doe</div>
@@ -240,10 +245,10 @@
 
 							<header class="entry-header">
 								<h3 class="entry-title">
-									<a href="#">Conférence Bitcoin</a>
+									<a href="#">ConfÃ©rence Bitcoin</a>
 								</h3>
 
-								<div class="event-date-time">27 Octobre 2018, de 18h00 à
+								<div class="event-date-time">27 Octobre 2018, de 18h00 Ã 
 									20h00</div>
 
 								<div class="event-speaker">Speackers: Maria Williams, Luis
@@ -270,7 +275,7 @@
 									<a href="#">Meet Up Simplon</a>
 								</h3>
 
-								<div class="event-date-time">29 Octobre 2018, de 18h30 à
+								<div class="event-date-time">29 Octobre 2018, de 18h30 Ã 
 									20h30</div>
 
 								<div class="event-speaker">Speackers: Maria Williams, Luis
