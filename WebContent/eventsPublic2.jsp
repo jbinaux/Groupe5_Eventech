@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="UTF-8">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -23,7 +23,7 @@
 <link rel="stylesheet" type="text/css" href="eventsPublic.css" />
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 
-<title>événement</title>
+<title>Ã©vÃ©nement</title>
 
 
 
@@ -144,7 +144,7 @@
 				<ul class="event-list">
 					<div class="deroul">
 						<button id="twix" class="boutonmenuprincipal">Afficher
-							les événements par :</button>
+							les Ã©vÃ©nements par :</button>
 						<div class="deroul-child">
 							<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
 								10 </a> <a href="eventsPublic3.jsp"> 20 </a>
