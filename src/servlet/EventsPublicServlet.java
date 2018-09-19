@@ -35,15 +35,29 @@ public class EventsPublicServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		// créer une arrayList de type Event nommee listeEvents pour les events
+		// crï¿½er une arrayList de type Event nommee listeEvents pour les events
 		ArrayList<Event> listeEvents = new ArrayList<Event>();
-		// on créée un controleur pour avoir accès à sa méthode
+		// on crï¿½ï¿½e un controleur pour avoir accï¿½s ï¿½ sa mï¿½thode
 		EventController control = new EventController();
-		// on récupère les events à venir dans la BDD
+		
+		int nb = 5;
+		int page = 1;
+		if(request.getParameter("nb") != null)
+		{
+			nb = Integer.parseInt(request.getParameter("nb"));
+		}
+		if(request.getParameter("page") != null)
+		{
+			page = Integer.parseInt(request.getParameter("page"));
+		}
+		
+		// on rï¿½cupï¿½re les events ï¿½ venir dans la BDD
 		listeEvents = control.selectUpcomingEvents();
-		// on attribue un nom à listeEvents dans la request
+		// on attribue un nom ï¿½ listeEvents dans la request
 		request.setAttribute("events", listeEvents);
-		// Redirectioon vers la page et on lui donne les attributs de la request
+		request.setAttribute("nb", nb);
+		request.setAttribute("page", page);
+		// Redirection vers la page et on lui donne les attributs de la request
 		RequestDispatcher rd = request.getRequestDispatcher("/eventsPublic2.jsp");
 		rd.forward(request, response);
 	}

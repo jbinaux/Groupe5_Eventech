@@ -21,7 +21,8 @@
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="eventsPublic.css" />
-<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script type='text/javascript'
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 
 <title>événement</title>
 
@@ -146,44 +147,49 @@
 						<button id="twix" class="boutonmenuprincipal">Afficher
 							les événements par :</button>
 						<div class="deroul-child">
-							<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
-								10 </a> <a href="eventsPublic3.jsp"> 20 </a>
+							<a href="EventsPublicServlet?nb=5&page=1"> 5 </a> <a
+								href="EventsPublicServlet?nb=10&page=1"> 10 </a> <a
+								href="EventsPublicServlet?nb=20&page=1"> 20 </a>
 						</div>
 					</div>
 					<br />
 					<br />
 					<br />
-					
-					<c:forEach var="i" begin="0" end="${events.size() -1 }">
-					<li><time datetime="2014-07-20">
-							<span class="day">10</span> <span class="month">Fev</span> <span
-								class="year">2020</span> <span class="time">ALL DAY</span>
-						</time> <a href="EventPageServlet?id=${events.get(i).getIdEvent()}"><img src="imgEventPu/event61.jpg"></a>
-						<div class="info">
-							<h2 class="title">${events.get(i).getNomEvent() }</h2>
-							<p class="desc">${events.get(i).getLieu() }</p>
-							<p class="desc">${events.get(i).getDescription() }</p>
-							<ul>
-								<li><img id="ter" src="img/panda2.png" width="20"
-									height="20"><span class="glyphicon glyphicon-ok"><a
-										style="width: 33%;">6</a></span></li>
 
-								<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
-								<li style="width: 34%;">00.00</li>
-							</ul>
-						</div>
-						<div class="social">
-							<ul>
-								<li class="facebook" style="width: 33%;"><a
-									href="#facebook"><span class="fa fa-facebook"></span></a></li>
-								<li class="twitter" style="width: 34%;"><a href="#twitter"><span
-										class="fa fa-twitter"></span></a></li>
-								<li class="linkedin" style="width: 33%;"><a
-									href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
-							</ul>
-						</div></li>
+					<c:forEach var="i" begin="${nb * (page - 1)}"
+						end="${events.size() -1 < nb * page ? events.size() - 1 : (nb * page) - 1}">
+						<li><time datetime="${events.get(i).getDateEvent() }">
+								<span class="day">${events.get(i).getDay()}</span> <span
+									class="month">${events.get(i).getMonth()}</span> <span
+									class="year">${events.get(i).getYear()}</span> <span
+									class="time">ALL DAY</span>
+							</time> <a href="EventPageServlet?id=${events.get(i).getIdEvent()}"><img
+								src="imgEventPu/event61.jpg"></a>
+							<div class="info">
+								<h2 class="title">${events.get(i).getNomEvent() }</h2>
+								<p class="desc">${events.get(i).getLieu() }</p>
+								<p class="desc">${events.get(i).getDescription() }</p>
+								<ul>
+									<li><img id="ter" src="img/panda2.png" width="20"
+										height="20"><span class="glyphicon glyphicon-ok"><a
+											style="width: 33%;">6</a></span></li>
 
-					<br />
+									<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
+									<li style="width: 34%;">00.00</li>
+								</ul>
+							</div>
+							<div class="social">
+								<ul>
+									<li class="facebook" style="width: 33%;"><a
+										href="#facebook"><span class="fa fa-facebook"></span></a></li>
+									<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+											class="fa fa-twitter"></span></a></li>
+									<li class="linkedin" style="width: 33%;"><a
+										href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+								</ul>
+							</div></li>
+
+						<br />
 					</c:forEach>
 
 
@@ -194,20 +200,22 @@
 				<div id="pag">
 					<nav aria-label="Page navigation example">
 						<ul class="pagination">
+						<c:if test="${page > 1}">
 							<li class="page-item"><a class="page-link"
-								href="eventsPublic.jsp?#twix" aria-label="Previous"> <span
+								href="EventsPublicServlet?nb=${nb}&page=${page - 1}" aria-label="Previous"> <span
 									aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
 							</a></li>
+							</c:if>
+							<c:forEach var="i" begin="1" end="${(events.size() / nb) + 1}">
 							<li class="page-item"><a class="page-link"
-								href="eventsPublic.jsp?#twix">1</a></li>
+								href="EventsPublicServlet?nb=${nb}&page=${i}">${i}</a></li>
+							</c:forEach>
+							<c:if test="${page < (events.size() / nb)}">
 							<li class="page-item"><a class="page-link"
-								href="eventsPublic2.jsp?#twix">2</a></li>
-							<li class="page-item"><a class="page-link"
-								href="eventsPublic3.jsp?#twix">3</a></li>
-							<li class="page-item"><a class="page-link"
-								href="eventsPublic3.jsp?#twix" aria-label="Next"> <span
+								href="EventsPublicServlet?nb=${nb}&page=${page + 1}" aria-label="Next"> <span
 									aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
 							</a></li>
+							</c:if>
 						</ul>
 					</nav>
 				</div>

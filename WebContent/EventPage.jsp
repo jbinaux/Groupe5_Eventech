@@ -58,7 +58,7 @@
 					<div class="col-12">
 						<header class="entry-header">
 							<h1 class="entry-title">
-								<center>(CATEGORIE EVENEMENT)</center>
+								<center>${event.getDomaineEvent() }</center>
 							</h1>
 						</header>
 					</div>
@@ -76,13 +76,13 @@
 						class="entry-header flex flex-wrap justify-content-between align-items-end">
 
 						<div class="single-event-heading">
-							<h2 class="entry-title">Nom et Année de l'événement</h2>
+							<h2 class="entry-title">${event.getNomEvent() } et Année de l'événement</h2>
 
 							<div class="event-location">
-								<a href="#">Adresse de l'événement</a>
+								<a href="#">${event.getLieuEvent() }</a>
 							</div>
 
-							<div class="event-date">Date et Heure de l'événement</div>
+							<div class="event-date">${event.getDateEvent() } ${event.getHeureEvent() }</div>
 
 							<!--   <a class="btn btn-white" data-scroll="" href="#jyvais">J'y vais</a>
                         -->
@@ -99,10 +99,10 @@
    -->
 						<div class="btn-container mt-5">
 							<a
-								href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/"
+								href=""
 								target="_blank"
 								class="btn btn-white btn-circle btn-translate--hover px-4 mr-lg-4">J'y
-								Vais</a> <a href="./docs/plugins.html" target="_blank"
+								Vais</a> <a href="" target="_blank"
 								class="btn btn-warning btn-circle btn-translate--hover px-4">LIKE</a>
 						</div>
 					</header>
@@ -140,7 +140,7 @@
 								<div class="single-event-details">
 									<div class="single-event-details-row">
 										<label>Adresse:</label>
-										<p>(Adresse complète)</p>
+										<p>${event.getLieuEvent() }</p>
 									</div>
 
 									<div class="single-event-details-row">
