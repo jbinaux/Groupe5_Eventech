@@ -34,7 +34,7 @@
 					<li class="nav-item"><a class="nav-link" href="/Groupe5_Eventech/index.jsp">Accueil</a></li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
-					</c:if>
+					</c:if> 
 					<li class="nav-item"><a class="nav-link"
 						href="/Groupe5_Eventech/EventsPublicServlet">Evénements</a></li>
 					<c:if test="${sessionScope.user == null}">

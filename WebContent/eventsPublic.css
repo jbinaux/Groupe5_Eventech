@@ -1,4 +1,4 @@
-@charset "ISO-8859-1";
+@charset "utf-8";
 
  @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
     @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
@@ -42,8 +42,8 @@ display: block;
 background-color: #ff4444;
 }
     body {
-		padding: 60px 0px;
-		background-color: #fcf6f4  !important;
+		padding: 0px 0px;
+		background-color: /* #e0e0e0 */ #fcf6f4  !important;
 	} 
 	.fixgauche{
 				z-index: 9999;
