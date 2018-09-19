@@ -131,7 +131,7 @@
 				<ul class="event-list">
 					<div class="deroul">
 						<button id="twix" class="boutonmenuprincipal">Afficher
-							les événements par :</button>
+							les événements par : </button>
 						<div class="deroul-child">
 							<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
 								10 </a> <a href="eventsPublic3.jsp"> 20 </a>

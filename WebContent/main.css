@@ -6,13 +6,16 @@
 	src: url('https://fonts.googleapis.com/css?family=Roboto');
 }
 
-#end {	
+/* #end {	
  position: fixed !important; 
  top: 0 !important;
  width: 100% !important;
  z-index: 1 !important; 
+} */
+.navi {
+	top: 0;
+	z-index: 1;
 }
-
 #header
 {
   height: 600px;

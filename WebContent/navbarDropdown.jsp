@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 </head>
 <body>
+    
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img
 			id="logo" src="/Groupe5_Eventech/img/logo23.png" width="60"
@@ -18,7 +18,6 @@
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link"
@@ -59,5 +58,7 @@
 			</c:if>
 		</div>
 	</nav>
+	
+	
 </body>
 </html>
