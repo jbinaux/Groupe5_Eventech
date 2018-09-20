@@ -79,7 +79,8 @@ public class SelectEventCreated extends HttpServlet {
 				ec.setMoyenneNoteEvent(result.getDouble("moyenne_notes"));
 				ec.setPrixEvent(result.getDouble("prix"));
 				ec.setDomaineEvent(result.getString("domaine"));
-
+				ec.cutDate(ec.getModel());
+				
 				evenementsCrees.add(ec);
 
 			}

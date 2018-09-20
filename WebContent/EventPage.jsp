@@ -84,7 +84,7 @@
                 <header class="entry-header flex flex-wrap justify-content-between align-items-end">
                     
                     <div class="single-event-heading">
-                        <h2 class="entry-title">${event.getNomEvent() } et Ann�e de l'�v�nement</h2>
+                        <h2 class="entry-title">${event.getNomEvent() } ${event.getYear()}</h2>
 
                         <div class="event-location"><a href="#">${event.getLieuEvent() }</a></div>
 
@@ -104,8 +104,12 @@
         </div>
    -->   
    <div class="btn-container mt-5">
-                       <a href="https://themes.getbootstrap.com/product/purpose-website-ui-kit/" target="_blank" 
-                       class="btn btn-white btn-circle btn-translate--hover px-4 mr-lg-4">J'y Vais</a>
+   		<c:if test="${sub == false}">
+    		<a href="SubscriptionServlet?eventId=${event.getIdEvent()}" class="btn btn-warning px-4 mr-lg-4">J'y vais</a>
+        </c:if>
+        <c:if test="${sub == true}">
+        <a href="SubscriptionServlet?eventId=${event.getIdEvent()}" class="btn btn-warning px-4 mr-lg-4">Je n'y vais plus</a>
+        </c:if>
                        <a href="./docs/plugins.html" target="_blank" 
                        class="btn btn-warning btn-circle btn-translate--hover px-4">
                        <input type="image" name="toto" value="toto" src="img/panda2.png" width="auto" height="25" >
@@ -190,7 +194,7 @@
                             <div class="single-event-details">
                                 <div class="single-event-details-row">
                                     <label>Adresse:</label>
-                                    <p>(Adresse compl�te)</p>
+                                    <p>${event.getLieuEvent() }</p>
                                 </div>
 
                                 <div class="single-event-details-row">
@@ -205,7 +209,7 @@
                             </div>
 
                             <div class="single-event-map">
-                                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=university of san francisco&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=${event.getLieuEvent() }&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             </div>
                         </div>
                     </div>
@@ -319,7 +323,7 @@
   <div class="col-12">
             <div class="upcoming-events">
                 <div class="upcoming-events-header">
-                    <h4>Ev�nement � venir</h4>
+                    <h4>Evénement à venir</h4>
                 </div>
 <div class="container">
 		<div class="row">
@@ -481,45 +485,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br /> <br /> <br />
 
-
-
-<div id="foot">
-		<footer>
-			<br /> <br /> <br />
-			<div id="basDePage">
-				<p>Conception web: Groupe 5</p>
-				<p>
-					Nous contacter: <a href="client.simplon@gmail.com"
-						style="color: #F28F3B;"> client.simplon@gmail.com</a>
-				</p>
-			</div>
-			<br /> <br /> <br /> <br /> <br /> <br /> <br />
-		</footer>
-	</div>
-
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="js/jquery.collapsible.min.js"></script>
-<script type="text/javascript" src="js/swiper.min.js"></script>
-<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
-<script type="text/javascript" src="js/circle-progress.min.js"></script>
-<script type="text/javascript" src="js/jquery.countTo.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
-
-
+<jsp:include page="footer.html"></jsp:include>
 </body></html>

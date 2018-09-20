@@ -50,7 +50,7 @@
 		<div class="col-9">
 			<div class="container">
 				<div class="row">
-					<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+					<div class="[ col-xs-12 col-sm-offset-2 col-sm-10 ]">
 						<ul class="event-list">
 							<div class="deroul">
 								<button id="twix" class="boutonmenuprincipal">Afficher
@@ -81,11 +81,9 @@
 								<p class="desc">${events.get(i).getDescription() }</p>
 								<ul>
 									<li><img id="ter" src="img/panda2.png" width="20"
-										height="20"><span class="glyphicon glyphicon-ok"><a
+										height="20"><span><a
 											style="width: 33%;">6</a></span></li>
-
-									<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
-									<li style="width: 34%;">00.00</li>
+									<li style="width: 34%;">${events.get(i).getPrix() }</li>
 								</ul>
 							</div>
 							<div class="social">

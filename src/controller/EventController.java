@@ -275,29 +275,29 @@ public class EventController {
 		String monthString = null;
 		switch (month) 
 		{
-			case 1: monthString = "Jan";
+			case 0: monthString = "Jan";
 			break;
-			case 2: monthString = "Fev";
+			case 1: monthString = "Fev";
 			break;
-			case 3: monthString = "Mars";
+			case 2: monthString = "Mars";
 			break;
-			case 4: monthString = "Avr";
+			case 3: monthString = "Avr";
 			break;
-			case 5: monthString = "Mai";
+			case 4: monthString = "Mai";
 			break;
-			case 6: monthString = "Juin";
+			case 5: monthString = "Juin";
 			break;
-			case 7: monthString = "Juil";
+			case 6: monthString = "Juil";
 			break;
-			case 8: monthString = "Aout";
+			case 7: monthString = "Aout";
 			break;
-			case 9: monthString = "Sept";
+			case 8: monthString = "Sept";
 			break;
-			case 10: monthString = "Oct";
+			case 9: monthString = "Oct";
 			break;
-			case 11: monthString = "Nov";
+			case 10: monthString = "Nov";
 			break;
-			case 12: monthString = "Dec";
+			case 11: monthString = "Dec";
 			break;
 		}
 		event.setMonth(monthString);
@@ -423,5 +423,13 @@ public class EventController {
 
 	public void setYear(String year) {
 		model.setYear(year);
+	}
+
+	public Event getModel() {
+		return model;
+	}
+
+	public void setModel(Event model) {
+		this.model = model;
 	}
 }

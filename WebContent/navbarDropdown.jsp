@@ -39,9 +39,7 @@
 					aria-expanded="false"> Contact</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="/Groupe5_Eventech/contact.jsp">Contact</a>
-						<c:if test="${sessionScope.user != null}">
-							<a class="dropdown-item" href="#">Contact Pro</a>
-						</c:if>
+						<a class="dropdown-item" href="#">Contact Pro</a>
 					</div></li>
 				<li class="nav-item"><a class="nav-link"
 					href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>
