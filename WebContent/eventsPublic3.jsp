@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="UTF-8">
 <link
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
@@ -14,7 +14,7 @@
 
 <link rel="stylesheet" type="text/css" href="eventsPublic.css" />
 
-<title>événement</title>
+<title>Ã©vÃ©nement</title>
 
 </head>
 <body>
@@ -131,7 +131,7 @@
 				<ul class="event-list">
 					<div class="deroul">
 						<button id="twix" class="boutonmenuprincipal">Afficher
-							les événements par : </button>
+							les Ã©vÃ©nements par :</button>
 						<div class="deroul-child">
 							<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
 								10 </a> <a href="eventsPublic3.jsp"> 20 </a>
@@ -147,7 +147,7 @@
 						<div class="info">
 							<h2 class="title">Independence Day</h2>
 							<p class="desc">United States Holiday</p>
-							<p class="desc">Evénement sur l'IA</p>
+							<p class="desc">EvÃ©nement sur l'IA</p>
 							<ul>
 								<li><img id="ter" src="img/panda2.png" width="20"
 									height="20"><span class="glyphicon glyphicon-ok"><a
@@ -177,7 +177,7 @@
 						<div class="info">
 							<h2 class="title">One Piece Unlimited World Red</h2>
 							<p class="desc">PS Vita</p>
-							<p class="desc">Evénement sur l'high tech</p>
+							<p class="desc">EvÃ©nement sur l'high tech</p>
 							<ul>
 								<li style="width: 33%;">89 <span
 									class="glyphicon glyphicon-ok"></span></li>
@@ -205,7 +205,7 @@
 						<div class="info">
 							<h2 class="title">Mouse0270's 24th Birthday!</h2>
 							<p class="desc">Bar Hopping in Erie, Pa.</p>
-							<p class="desc">Conférence sur le digital</p>
+							<p class="desc">ConfÃ©rence sur le digital</p>
 							<ul>
 								<li style="width: 33%;">789 <span
 									class="glyphicon glyphicon-ok"></span></li>
@@ -259,7 +259,7 @@
 								class="year">2019</span> <span class="time">4:00 PM</span>
 						</time> <img src="imgEventPu/event72.jpg">
 						<div class="info">
-							<h2 class="title">Slack Community conférence!</h2>
+							<h2 class="title">Slack Community confÃ©rence!</h2>
 							<p class="desc">Pirate and Princess Adventure</p>
 							<p class="desc">Hackhaton au top</p>
 							<ul>

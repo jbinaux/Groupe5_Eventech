@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="UTF-8">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -24,7 +24,7 @@
 <script type='text/javascript'
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 
-<title>événement</title>
+<title>Ã©vÃ©nement</title>
 
 </head>
 <body>
@@ -54,7 +54,7 @@
 						<ul class="event-list">
 							<div class="deroul">
 								<button id="twix" class="boutonmenuprincipal">Afficher
-									les événements par :</button>
+									les ï¿½vï¿½nements par :</button>
 								<div class="deroul-child">
 									<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
 										10 </a> <a href="eventsPublic3.jsp"> 20 </a>
@@ -65,61 +65,67 @@
 							<br />
 							<br />
 
-							<c:forEach var="i" begin="0" end="${events.size() -1 }">
-								<li><time datetime="2014-07-20">
-										<span class="day">10</span> <span class="month">Fev</span> <span
-											class="year">2020</span> <span class="time">ALL DAY</span>
-									</time> <a href="EventPageServlet?id=${events.get(i).getIdEvent()}"><img
-										src="imgEventPu/event61.jpg"></a>
-									<div class="info">
-										<h2 class="title">${events.get(i).getNomEvent() }</h2>
-										<p class="desc">${events.get(i).getLieu() }</p>
-										<p class="desc">${events.get(i).getDescription() }</p>
-										<ul>
-											<li><img id="ter" src="img/iconeFav7.png" width="25"
-												height="25"><span class="glyphicon glyphicon-ok"><a
-													style="width: 33%;"></a></span></li>
+							<c:forEach var="i" begin="${nb * (page - 1)}"
+						end="${events.size() -1 < nb * page ? events.size() - 1 : (nb * page) - 1}">
+						<li><time datetime="${events.get(i).getDateEvent() }">
+								<span class="day">${events.get(i).getDay()}</span> <span
+									class="month">${events.get(i).getMonth()}</span> <span
+									class="year">${events.get(i).getYear()}</span> <span
+									class="time">ALL DAY</span>
+							</time> <a href="EventPageServlet?id=${events.get(i).getIdEvent()}"><img
+								src="imgEventPu/event61.jpg"></a>
+							<div class="info">
+								<h2 class="title">${events.get(i).getNomEvent() }</h2>
+								<p class="desc">${events.get(i).getLieu() }</p>
+								<p class="desc">${events.get(i).getDescription() }</p>
+								<ul>
+									<li><img id="ter" src="img/panda2.png" width="20"
+										height="20"><span class="glyphicon glyphicon-ok"><a
+											style="width: 33%;">6</a></span></li>
 
-											
-											<li style="width: 34%;">00.00$</li>
-										</ul>
-									</div>
-									<div class="social">
-										<ul>
-											<li class="facebook" style="width: 33%;"><a
-												href="#facebook"><span class="fa fa-facebook"></span></a></li>
-											<li class="twitter" style="width: 34%;"><a
-												href="#twitter"><span class="fa fa-twitter"></span></a></li>
-											<li class="linkedin" style="width: 33%;"><a
-												href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
-										</ul>
-									</div></li>
-								<br />
-							</c:forEach>
+									<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
+									<li style="width: 34%;">00.00</li>
+								</ul>
+							</div>
+							<div class="social">
+								<ul>
+									<li class="facebook" style="width: 33%;"><a
+										href="#facebook"><span class="fa fa-facebook"></span></a></li>
+									<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+											class="fa fa-twitter"></span></a></li>
+									<li class="linkedin" style="width: 33%;"><a
+										href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+								</ul>
+							</div></li>
+
+						<br />
+					</c:forEach>
 						</ul>
 
 						<br />
 
 						<div id="pag">
-							<nav aria-label="Page navigation example">
-								<ul class="pagination">
-									<li class="page-item"><a class="page-link"
-										href="eventsPublic.jsp?#twix" aria-label="Previous"> <span
-											aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
-									</a></li>
-									<li class="page-item"><a class="page-link"
-										href="eventsPublic.jsp?#twix">1</a></li>
-									<li class="page-item"><a class="page-link"
-										href="eventsPublic2.jsp?#twix">2</a></li>
-									<li class="page-item"><a class="page-link"
-										href="eventsPublic3.jsp?#twix">3</a></li>
-									<li class="page-item"><a class="page-link"
-										href="eventsPublic3.jsp?#twix" aria-label="Next"> <span
-											aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
-									</a></li>
-								</ul>
-							</nav>
-						</div>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination">
+						<c:if test="${page > 1}">
+							<li class="page-item"><a class="page-link"
+								href="EventsPublicServlet?nb=${nb}&page=${page - 1}" aria-label="Previous"> <span
+									aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
+							</a></li>
+							</c:if>
+							<c:forEach var="i" begin="1" end="${(events.size() / nb) + 1}">
+							<li class="page-item"><a class="page-link"
+								href="EventsPublicServlet?nb=${nb}&page=${i}">${i}</a></li>
+							</c:forEach>
+							<c:if test="${page < (events.size() / nb)}">
+							<li class="page-item"><a class="page-link"
+								href="EventsPublicServlet?nb=${nb}&page=${page + 1}" aria-label="Next"> <span
+									aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
+							</a></li>
+							</c:if>
+						</ul>
+					</nav>
+				</div>
 
 					</div>
 				</div>
@@ -212,11 +218,11 @@
 
 		<script type="text/javascript">
 			$(function() {
-				$(window).scroll(function() { //Au scroll dans la fenetre on déclenche la fonction
-					if (($(this).scrollTop() > 500) && ($(this).scrollTop() < pag) ) { //si on a défini de plus de '' px du haut vers le bas
-						$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" à <div id="gauche">
+				$(window).scroll(function() { //Au scroll dans la fenetre on dï¿½clenche la fonction
+					if (($(this).scrollTop() > 500) && ($(this).scrollTop() < pag) ) { //si on a dï¿½fini de plus de '' px du haut vers le bas
+						$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" ï¿½ <div id="gauche">
 					} else {				
-						$('#gauche').removeClass("fixgauche"); //sinon on retire la classe "fixgauche" à <div id="gauche">
+						$('#gauche').removeClass("fixgauche"); //sinon on retire la classe "fixgauche" ï¿½ <div id="gauche">
 					}
 				});
 			});
