@@ -19,6 +19,7 @@ import com.mysql.jdbc.Connection;
 
 import controller.EventController;
 import controller.UserController;
+import model.Event;
 import password.Password;
 
 /**
@@ -85,6 +86,9 @@ public class SelectEventCreated extends HttpServlet {
 
 			}
 			
+			EventController control = new EventController();
+			ArrayList<Event> subsList = control.selectSubEvents(((UserController) session.getAttribute("user")).getUserId());
+			request.setAttribute("Subs", subsList);
 			request.setAttribute("Events", evenementsCrees);
 			RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
 			rd.forward(request, response);

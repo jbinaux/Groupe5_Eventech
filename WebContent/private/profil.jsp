@@ -80,7 +80,7 @@
 			<ul class="event-list">
 				<c:if test="${Events.size() > 0}">
 					<c:forEach var="i" begin="0" end="${Events.size() -1}">
-						<li><time datetime="2014-07-20">
+						<li><time datetime="${Events.get(i).getDateEvent()}">
 								<span class="day">${Events.get(i).getDay()}</span> <span class="month">${Events.get(i).getMonth()}</span> <span
 									class="year">${Events.get(i).getYear()}</span> <span class="time">ALL DAY</span>
 							</time> <a href="/Groupe5_Eventech/EventPageServlet?id=${Events.get(i).getIdEvent() }"><img src="/Groupe5_Eventech/imgEventPu/event91.jpg"></a>
@@ -127,6 +127,38 @@
 			</h2>
 
 			<br />
+			
+			<ul class="event-list">
+				<c:if test="${Subs.size() > 0}">
+					<c:forEach var="i" begin="0" end="${Subs.size() -1}">
+						<li><time datetime="${Subs.get(i).getDateEvent()}">
+								<span class="day">${Subs.get(i).getDay()}</span> <span class="month">${Subs.get(i).getMonth()}</span> <span
+									class="year">${Subs.get(i).getYear()}</span> <span class="time">ALL DAY</span>
+							</time> <a href="/Groupe5_Eventech/EventPageServlet?id=${Subs.get(i).getIdEvent() }"><img src="/Groupe5_Eventech/imgEventPu/event91.jpg"></a>
+							<div class="info">
+								<h2 class="title">${Subs.get(i).getNomEvent()}</h2>
+								<p class="desc">${Subs.get(i).getLieu()}  - ${Subs.get(i).getDateEvent()}</p>
+								<p class="desc">${Subs.get(i).getDescription()} </p>
+								<ul>
+									<li><img id="ter" src="/Groupe5_Eventech/img/panda2.png" width="20"
+										height="20"><span><a
+											style="width: 33%;">6</a></span></li>
+									<li style="width: 34%;">${Subs.get(i).getPrix()}</li>
+								</ul>
+							</div>
+							<div class="social">
+								<ul>
+									<li class="facebook" style="width: 33%;"><a
+										href="#facebook"><span class="fa fa-facebook"></span></a></li>
+									<li class="twitter" style="width: 34%;"><a href="#twitter"><span
+											class="fa fa-twitter"></span></a></li>
+									<li class="linkedin" style="width: 33%;"><a
+										href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+								</ul>
+							</div></li>
+					</c:forEach>
+				</c:if>
+			</ul>
 		</div>
 
 	</div>

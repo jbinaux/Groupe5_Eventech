@@ -304,6 +304,61 @@ public class EventController {
 		event.setYear(String.valueOf(cal.get(Calendar.YEAR)));
 	}
 
+	public ArrayList<Event> selectSubEvents(int userId) {
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		Statement st = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			cn = DriverManager.getConnection(url, user, pwd);
+			st = cn.createStatement();
+			String sql = "SELECT * FROM events INNER JOIN subscriptions ON events.id_event = "
+					+ "subscriptions.id_event WHERE subscriptions.id_user =" + userId;
+			ResultSet result = st.executeQuery(sql);
+
+			ArrayList<Event> listEvent = new ArrayList<Event>();
+			while (result.next()) {
+				Event ev = new Event();
+
+				ev.setIdEvent(result.getInt("id_event"));
+				ev.setNomEvent(result.getString("nom_event"));
+				ev.setLieu(result.getString("lieu"));
+				ev.setDateEvent(result.getDate("date_event"));
+				ev.setHeureEvent(result.getTime("heure_event"));
+				ev.setTypeEvent(result.getString("type_event"));
+				ev.setIdCreator(result.getInt("id_creator"));
+				ev.setDescription(result.getString("description_event"));
+				ev.setNbPersonnes(result.getInt("nb_personnes"));
+				ev.setMoyenneNote(result.getDouble("moyenne_notes"));
+				ev.setPrix(result.getInt("prix"));
+				ev.setDomaine(result.getString("domaine"));
+				cutDate(ev);
+
+				listEvent.add(ev);
+			}
+
+			return listEvent;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+	
 	public int getIdEvent() {
 		return model.getIdEvent();
 	}
