@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<jsp:include page="navbar.jsp"></jsp:include>
+<jsp:include page="navbarDropdown.jsp"></jsp:include>
 
 
 

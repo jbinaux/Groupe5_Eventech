@@ -1,5 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Page Evenement</title>
 
@@ -11,6 +14,18 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
 
     <!-- Social bar -->
 
@@ -23,59 +38,9 @@
     
     <link rel="stylesheet" href="EventPage.css">
 </head>
-<div id="end">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="img/logo23.png" width="60" height="40"></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-				<li><a class="inv">septembre is well done yeah ... </a></li>			
-					<li class="nav-item"><a class="nav-link"
-						href="index.jsp">Accueil</a></li>
-						<c:if test="${sessionScope.user == null}">
-					</c:if>
-					
-					
-					<li class="nav-item"><a class="nav-link"
-						href="eventsPublic.jsp">Evénements</a></li>
-					<c:if test="${sessionScope.user == null}">
-						<li class="nav-item"><a class="nav-link"
-							href="/Groupe5_Eventech/connect.jsp">Connection</a></li>
-					</c:if>
-					<li class="nav-item"><a class="nav-link"
-						href="/Groupe5_Eventech/contact.jsp">Contact</a></li>
-					<c:if test="${sessionScope.user != null}">
-					
-					
-						<li class="nav-item"><a class="nav-link"
-							href="/Groupe5_Eventech/private/profil.jsp">Profil</a></li>
-					</c:if>
-					
-					<li class="nav-item"><a class="nav-link"
-						href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>
-				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search"
-						placeholder="Bienvenue!" aria-label="Search">
-					
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-				</form>
-				<c:if test="${sessionScope.user != null}">
-					
-				</c:if>
-			</div>
-		</nav>
-	</div>
-
-
 	
 <body class="single-event-page">
+<jsp:include page="/navbarDropdown.jsp"></jsp:include>
 <header class="site-header">
     <div class="header-bar">
         <div class="container-fluid">
@@ -119,7 +84,7 @@
                 <header class="entry-header flex flex-wrap justify-content-between align-items-end">
                     
                     <div class="single-event-heading">
-                        <h2 class="entry-title">${event.getNomEvent() } et Année de l'événement</h2>
+                        <h2 class="entry-title">${event.getNomEvent() } et Annï¿½e de l'ï¿½vï¿½nement</h2>
 
                         <div class="event-location"><a href="#">${event.getLieuEvent() }</a></div>
 
@@ -215,7 +180,7 @@
             <div class="tabs">
                 <ul class="tabs-nav flex">
                     <li class="tab-nav flex justify-content-center align-items-center active" data-target="#tab_details">Infos Transport</li>
-                    <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_venue">Détails événement</li>
+                    <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_venue">Dï¿½tails ï¿½vï¿½nement</li>
                     <li class="tab-nav flex justify-content-center align-items-center" data-target="#tab_organizers">Autres</li>
                 </ul>
 
@@ -225,7 +190,7 @@
                             <div class="single-event-details">
                                 <div class="single-event-details-row">
                                     <label>Adresse:</label>
-                                    <p>(Adresse complète)</p>
+                                    <p>(Adresse complï¿½te)</p>
                                 </div>
 
                                 <div class="single-event-details-row">
@@ -268,7 +233,7 @@
         <div class="col-12">
             <div class="upcoming-events">
                 <div class="upcoming-events-header">
-                    <h4>Evénement à venir</h4>
+                    <h4>Evï¿½nement ï¿½ venir</h4>
                 </div>
 
                 <div class="upcoming-events-list">
@@ -285,9 +250,9 @@
                         </div>
 
                         <header class="entry-header">
-                            <h3 class="entry-title"><a href="#">Blockchain Conférence</a></h3>
+                            <h3 class="entry-title"><a href="#">Blockchain Confï¿½rence</a></h3>
 
-                            <div class="event-date-time">25 Octobre 2018, à 8h00 - 30 Octobre 2018, à 16h00 </div>
+                            <div class="event-date-time">25 Octobre 2018, ï¿½ 8h00 - 30 Octobre 2018, ï¿½ 16h00 </div>
 
                             <div class="event-speaker">Speackers: Maria Williams, Luis Rodrigues, James Doe</div>
                         </header>
@@ -309,9 +274,9 @@
                         </div>
 
                         <header class="entry-header">
-                            <h3 class="entry-title"><a href="#">Conférence Bitcoin</a></h3>
+                            <h3 class="entry-title"><a href="#">Confï¿½rence Bitcoin</a></h3>
 
-                            <div class="event-date-time">27 Octobre 2018, de 18h00 à 20h00</div>
+                            <div class="event-date-time">27 Octobre 2018, de 18h00 ï¿½ 20h00</div>
 
                             <div class="event-speaker">Speackers: Maria Williams, Luis Smith, James Doe</div>
                         </header>
@@ -335,7 +300,7 @@
                         <header class="entry-header">
                             <h3 class="entry-title"><a href="#">Meet Up Simplon</a></h3>
 
-                            <div class="event-date-time">29 Octobre 2018, de 18h30 à 20h30</div>
+                            <div class="event-date-time">29 Octobre 2018, de 18h30 ï¿½ 20h30</div>
 
                             <div class="event-speaker">Speackers: Maria Williams, Luis Smith, James Doe</div>
                             
@@ -354,7 +319,7 @@
   <div class="col-12">
             <div class="upcoming-events">
                 <div class="upcoming-events-header">
-                    <h4>Evénement à venir</h4>
+                    <h4>Evï¿½nement ï¿½ venir</h4>
                 </div>
 <div class="container">
 		<div class="row">
@@ -370,9 +335,9 @@
 								class="year">2019</span> <span class="time">ALL DAY</span>
 						</time> <img src="imgEventPu/event91.jpg">
 						<div class="info">
-							<h2 class="title">Apéro Wine Tech</h2>
+							<h2 class="title">Apï¿½ro Wine Tech</h2>
 							<p class="desc">75013 Paris - 04/01/2019</p>
-							<p class="desc">Les start-up innovantes dans l'industrie du vin seront là.</p>
+							<p class="desc">Les start-up innovantes dans l'industrie du vin seront lï¿½.</p>
 							<ul>
 								<li><img id="ter" src="img/panda2.png" width="20" height="20"><span
 									class="glyphicon glyphicon-ok"><a style="width: 33%;">6</a></span></li>
@@ -430,7 +395,7 @@
 						<div class="info">
 							<h2 class="title">Matinale Deep Law for Tech.</h2>
 							<p class="desc">75002 Paris - 20/01/2019</p>
-							<p class="desc">Réalisations, perspectives et enjeux</p>
+							<p class="desc">Rï¿½alisations, perspectives et enjeux</p>
 							<ul>
 								<li style="width: 33%;">789 <span
 									class="glyphicon glyphicon-ok"></span></li>
@@ -456,7 +421,7 @@
 								class="year">2019</span> <span class="time">4:00 PM</span>
 						</time><img src="imgEventPu/event60.jpg">
 						<div class="info">
-							<h2 class="title">Entreprise Tech: apprenez à développer</h2>
+							<h2 class="title">Entreprise Tech: apprenez ï¿½ dï¿½velopper</h2>
 							<p class="desc">75001 Paris - 27/01/2019</p>
 							<p class="desc">Ateliers divers.</p>
 							<ul>
@@ -484,7 +449,7 @@
 								class="year">2019</span> <span class="time">4:00 PM</span>
 						</time><img src="imgEventPu/event63.jpg">
 						<div class="info">
-							<h2 class="title">Grande soirée - Women in Tech for Good</h2>
+							<h2 class="title">Grande soirï¿½e - Women in Tech for Good</h2>
 							<p class="desc">75020 Paris - 30/01/2019</p>
 							<p class="desc">Projets inspirants et novateurs</p>
 							<ul>

@@ -6,13 +6,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css"/>
+
 <title>navbar</title>
 </head>
 <body>
-	<div id="end">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
 
 			<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img id="logo" src="/Groupe5_Eventech/img/logo23.png" width="60" height="40"></a>
@@ -31,15 +34,21 @@
 					<li class="nav-item"><a class="nav-link" href="/Groupe5_Eventech/index.jsp">Accueil</a></li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
-					</c:if>
+					</c:if> 
 					<li class="nav-item"><a class="nav-link"
-						href="/Groupe5_Eventech/eventsPublic.jsp">Evénements</a></li>
+						href="/Groupe5_Eventech/EventsPublicServlet">Evénements</a></li>
 					<c:if test="${sessionScope.user == null}">
 						<li><a class="inv">sept</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/Groupe5_Eventech/connect.jsp">Connection</a></li>
 					</c:if>
 					<li><a class="inv">sept</a></li>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+ 
+  <li class="dropdown-submenu">
+    </ul>
+  </li>
+</ul>
 					<li class="nav-item"><a class="nav-link"
 						href="/Groupe5_Eventech/contact.jsp">Contact</a></li>
 					<c:if test="${sessionScope.user != null}">
@@ -65,6 +74,6 @@
 				</c:if>
 			</div>
 		</nav>
-	</div>
+	
 </body>
 </html>

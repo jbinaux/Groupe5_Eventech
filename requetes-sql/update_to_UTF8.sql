@@ -1,0 +1,5 @@
+ALTER DATABASE eventech_db CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER TABLE `comment` CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE `events` CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE `subscriptions` CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE `users` CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
