@@ -109,7 +109,7 @@
 	<br />
 	<br />
 
-	<jsp:include page="../footer.html"></jsp:include>
-	    <script src="DateTime.js" type="text/javascript"></script>
+	<jsp:include page="/footer.html"></jsp:include>
+	<script src="/Groupe5_Eventech/private/DateTime.js" type="text/javascript"></script>
 </body>
 </html>

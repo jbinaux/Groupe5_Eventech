@@ -54,10 +54,11 @@
 						<ul class="event-list">
 							<div class="deroul">
 								<button id="twix" class="boutonmenuprincipal">Afficher
-									les �v�nements par :</button>
+									les événements par :</button>
 								<div class="deroul-child">
-									<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
-										10 </a> <a href="eventsPublic3.jsp"> 20 </a>
+									<a href="EventsPublicServlet?nb=5&page=1"> 5 </a> <a
+								href="EventsPublicServlet?nb=10&page=1"> 10 </a> <a
+								href="EventsPublicServlet?nb=20&page=1"> 20 </a>
 								</div>
 							</div>
 
