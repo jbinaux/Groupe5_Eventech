@@ -432,7 +432,7 @@ h1 {
 	line-height:26px;
 	text-transform:uppercase;
 	font-size:90%;
-	color:#d57d6b/* #9e9e9e */;
+	color:#d57d6b;
 }
 #cal #days td:not(:last-child) {
 	border-right:1px solid #fff;
