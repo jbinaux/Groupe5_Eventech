@@ -746,6 +746,77 @@ ul.tabs-nav .tab-nav.active {
 	text-align: center;
 }
 
+
+
+
+/*
+
+.icon-set{
+    background: #237f52;
+   
+}
+
+.fa {
+    color: #fff;
+}
+
+.nav > .facebook > a:hover {
+    background: #3b5998 !important;
+}
+
+.twitter > a:hover {
+    background: #55acee !important;
+}
+
+
+.nav > .linkedin > a:hover {
+    background: #0077b5 !important;
+}
+
+.row > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# SOCIAL BAR
+--------------------------------------------------------------*/
+
+
+
+.icon-set{
+    background: #F28F3B;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:10px;
+}
+
+.fa {
+    color: #fff;
+}
+
+.facebook > a:hover {
+    background: #3b5998 !important;
+}
+
+.twitter > a:hover {
+    background: #55acee !important;
+}
+
+
+
+.linkedin > a:hover {
+    background: #0077b5 !important;
+}
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # EVENEMENT A VENIR
 --------------------------------------------------------------*/

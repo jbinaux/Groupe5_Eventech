@@ -12,7 +12,15 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 
-    <!-- Styles -->
+    <!-- Social bar -->
+
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!-- Styles -->
+    
+    
     <link rel="stylesheet" href="EventPage.css">
 </head>
 <div id="end">
@@ -147,6 +155,56 @@
             </div>
         </div>
     </div>
+
+
+
+
+<!-- 
+<nav class="nav icon-set">
+  <div class="row">
+  <div class="col">
+        <li class="facebook"><a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a></li></div>
+        <div class="col"><li class="twitter"><a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter fa-lg"></i></a></li></div>
+       <div class="col"> <li class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a></li></div>
+      
+  </div>
+</nav>
+   --> 
+
+    
+    <nav class="nav icon-set">
+     <div class="row">
+    	<div class= "col" class="facebook"><a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a></div>
+    	<div class="col" class="twitter"><a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter fa-lg"></i></a></div>
+        <div class="col" class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a></div>
+    
+    </div>
+    </nav>
+
+ <!-- 
+<nav class="icon-set">
+  <div class="row">
+        <div class="col" class="facebook"><a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook fa-lg"></i></a></div>
+        <div class="col" class="twitter"><a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter fa-lg"></i></a></div>
+        <div class="col" class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-linkedin fa-lg"></i></a></div>
+ 		<div class="col"></div>
+ 		 		<div class="col"></div>
+ 		 		<div class="col"></div>
+ 		 		<div class="col"></div>
+ 		 		<div class="col"></div>
+ 		 		<div class="col"></div>
+ 		 		<div class="col"></div>
+ 		
+  </div>
+</nav>
+
+-->
+
+
+
+
+
+
 
 
 
@@ -471,7 +529,7 @@
 
 
 
-
+<br /> <br /> <br />
 
 
 
