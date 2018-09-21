@@ -25,6 +25,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 
 <title>événement</title>
+ 
 
 </head>
 <body>
@@ -220,7 +221,7 @@
 		<script type="text/javascript">
 			$(function() {
 				$(window).scroll(function() { //Au scroll dans la fenetre on d�clenche la fonction
-					if (($(this).scrollTop() > 500) && ($(this).scrollTop() < pag) ) { //si on a d�fini de plus de '' px du haut vers le bas
+					if ($(this).scrollTop() > 860 ) { //si on a d�fini de plus de '' px du haut vers le bas
 						$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" � <div id="gauche">
 					} else {				
 						$('#gauche').removeClass("fixgauche"); //sinon on retire la classe "fixgauche" � <div id="gauche">
@@ -228,7 +229,8 @@
 				});
 			});
 		</script>
-	</div>
+	</div>					
+
 
 
 	<jsp:include page="footer.html"></jsp:include>

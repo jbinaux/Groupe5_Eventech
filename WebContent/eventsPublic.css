@@ -64,9 +64,9 @@ body {
 .fixgauche {
 	z-index: 9999;
 	position: fixed;
-	top: 300px;
+	top: 20px;
 	/* Mise en forme */
-	right: 80px;
+	right: -2px; 
 }
 
 #logo {
@@ -99,6 +99,7 @@ h1 {
 
 #pag {
 	font-size: 1em !important;
+	padding-left: 100px; 
 }
 
 /* *** FIN REGLAGES GENERAUX *** */
@@ -110,8 +111,8 @@ h1 {
 	font-family: 'Lato', sans-serif;
 	color: black;
 	margin: 0px;
-	padding: 0px;
-	/* padding-right: 50px; */
+	padding: 0px; 
+    padding-left: 100px;
 }
 
 .event-list>li {
@@ -167,6 +168,7 @@ h1 {
 	padding-top: 5px;
 	text-align: center;
 	background-color: #EDBBB4;
+	padding-right: 150px;
 }
 
 .event-list>li>.info>.title {
@@ -334,6 +336,8 @@ h1 {
 	box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
 	-webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
+	margin-right: 100px; 
+	
 }
 
 #cal .header {
