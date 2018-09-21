@@ -22,7 +22,12 @@
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/form.css" />
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js"
+	type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css"
+	rel="stylesheet" type="text/css" />
 <title>Modification</title>
 </head>
 <body>
@@ -40,7 +45,9 @@
 		<p>désolé, une erreure est apparue</p>
 	</c:if>
 
-	<form action="/Groupe5_Eventech/UpdateEventServlet?id=${event.getIdEvent() }" method="post">
+	<form
+		action="/Groupe5_Eventech/UpdateEventServlet?id=${event.getIdEvent() }"
+		method="post">
 		<div id="form">
 			<div id="first">
 				<table>
@@ -65,12 +72,12 @@
 					</tr>
 					<tr>
 						<td><p>Date:</p></td>
-						<td><input type="text" name="date"
+						<td><input id="datepicker" type="date" name="date"
 							value="${event.getDateEvent()}" required></td>
 					</tr>
 					<tr>
 						<td><p>Heure:</p></td>
-						<td><input type="text" name="heure"
+						<td><input id="timepicker" type="time" name="heure"
 							value="${event.getHeureEvent()}" required></td>
 					</tr>
 					<tr>
@@ -111,16 +118,14 @@
 										<option>Réseau</option>
 										<option>Autre</option>
 									</c:when>
-									<c:when
-										test="${event.getDomaineEvent().equals(\"Réseau\") }">
+									<c:when test="${event.getDomaineEvent().equals(\"Réseau\") }">
 										<option>Marketing</option>
 										<option>Communication</option>
 										<option>Développement</option>
 										<option selected="selected">Réseau</option>
 										<option>Autre</option>
 									</c:when>
-									<c:when
-										test="${event.getDomaineEvent().equals(\"Autre\") }">
+									<c:when test="${event.getDomaineEvent().equals(\"Autre\") }">
 										<option>Marketing</option>
 										<option>Communication</option>
 										<option>Développement</option>
@@ -152,7 +157,8 @@
 	<br />
 	<br />
 
-	<jsp:include page="/footer.html"></jsp:include>
 
+	<jsp:include page="/footer.html"></jsp:include>
+	<script src="/Groupe5_Eventech/private/DateTime.js" type="text/javascript"></script>
 </body>
 </html>

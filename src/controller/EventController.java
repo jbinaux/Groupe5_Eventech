@@ -275,35 +275,90 @@ public class EventController {
 		String monthString = null;
 		switch (month) 
 		{
-			case 1: monthString = "Jan";
+			case 0: monthString = "Jan";
 			break;
-			case 2: monthString = "Fev";
+			case 1: monthString = "Fev";
 			break;
-			case 3: monthString = "Mars";
+			case 2: monthString = "Mars";
 			break;
-			case 4: monthString = "Avr";
+			case 3: monthString = "Avr";
 			break;
-			case 5: monthString = "Mai";
+			case 4: monthString = "Mai";
 			break;
-			case 6: monthString = "Juin";
+			case 5: monthString = "Juin";
 			break;
-			case 7: monthString = "Juil";
+			case 6: monthString = "Juil";
 			break;
-			case 8: monthString = "Aout";
+			case 7: monthString = "Aout";
 			break;
-			case 9: monthString = "Sept";
+			case 8: monthString = "Sept";
 			break;
-			case 10: monthString = "Oct";
+			case 9: monthString = "Oct";
 			break;
-			case 11: monthString = "Nov";
+			case 10: monthString = "Nov";
 			break;
-			case 12: monthString = "Dec";
+			case 11: monthString = "Dec";
 			break;
 		}
 		event.setMonth(monthString);
 		event.setYear(String.valueOf(cal.get(Calendar.YEAR)));
 	}
 
+	public ArrayList<Event> selectSubEvents(int userId) {
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		Statement st = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			cn = DriverManager.getConnection(url, user, pwd);
+			st = cn.createStatement();
+			String sql = "SELECT * FROM events INNER JOIN subscriptions ON events.id_event = "
+					+ "subscriptions.id_event WHERE subscriptions.id_user =" + userId;
+			ResultSet result = st.executeQuery(sql);
+
+			ArrayList<Event> listEvent = new ArrayList<Event>();
+			while (result.next()) {
+				Event ev = new Event();
+
+				ev.setIdEvent(result.getInt("id_event"));
+				ev.setNomEvent(result.getString("nom_event"));
+				ev.setLieu(result.getString("lieu"));
+				ev.setDateEvent(result.getDate("date_event"));
+				ev.setHeureEvent(result.getTime("heure_event"));
+				ev.setTypeEvent(result.getString("type_event"));
+				ev.setIdCreator(result.getInt("id_creator"));
+				ev.setDescription(result.getString("description_event"));
+				ev.setNbPersonnes(result.getInt("nb_personnes"));
+				ev.setMoyenneNote(result.getDouble("moyenne_notes"));
+				ev.setPrix(result.getInt("prix"));
+				ev.setDomaine(result.getString("domaine"));
+				cutDate(ev);
+
+				listEvent.add(ev);
+			}
+
+			return listEvent;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+	
 	public int getIdEvent() {
 		return model.getIdEvent();
 	}
@@ -423,5 +478,13 @@ public class EventController {
 
 	public void setYear(String year) {
 		model.setYear(year);
+	}
+
+	public Event getModel() {
+		return model;
+	}
+
+	public void setModel(Event model) {
+		this.model = model;
 	}
 }

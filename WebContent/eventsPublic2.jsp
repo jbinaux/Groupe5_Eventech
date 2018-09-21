@@ -26,137 +26,47 @@
 
 <title>événement</title>
 
-
-
-
-
 </head>
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="/header.jsp"></jsp:include>
 
-
 	<br />
 	<br />
 	<br />
 	<br />
-
 
 	<h1>
 		<strong><font size="80" color="#C8553D"> EVENEMENTS A
 				VENIR </font></strong>
 	</h1>
 
-
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<div id="cal">
-		<div class="header">
-			<span class="left button" id="prev"> &lang; </span> <span
-				class="left hook"></span> <span class="month-year" id="label">
-				Septembre 2018 </span> <span class="right hook" id=""></span> <span
-				class="right button" id="next"> &rang; </span>
-		</div>
-		<table id="days">
-			<tr>
-				<td>dim</td>
-				<td>lun</td>
-				<td>mar</td>
-				<td>mer</td>
-				<td>jeu</td>
-				<td>ven</td>
-				<td>sam</td>
-			</tr>
-		</table>
-		<div id="cal-frame">
-			<table class="curr">
-				<tr>
-					<td class="nil"></td>
-					<td class="nil"></td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
-					<td>10</td>
-					<td>11</td>
-					<td>12</td>
-				</tr>
-				<tr>
-					<td>13</td>
-					<td>14</td>
-					<td>15</td>
-					<td>16</td>
-					<td>17</td>
-					<td>18</td>
-					<td>19</td>
-				</tr>
-				<tr>
-					<td>20</td>
-					<td>21</td>
-					<td>22</td>
-					<td>23</td>
-					<td>24</td>
-					<td>25</td>
-					<td>26</td>
-				</tr>
-				<tr>
-					<td>27</td>
-					<td>28</td>
-					<td>29</td>
-					<td>30</td>
-					<td class="nil"></td>
-					<td class="nil"></td>
-					<td class="nil"></td>
-				</tr>
-			</table>
-		</div>
-	</div>
-
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script src="calendar.js"></script>
-	<script>
-		var cal = CALENDAR();
-
-		cal.init();
-	</script>
-
-
-	<br />
 	<br />
 	<br />
 	<br />
 
+	<div class="row">
 
-
-	<div class="container">
-		<div class="row">
-			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-				<ul class="event-list">
-					<div class="deroul">
-						<button id="twix" class="boutonmenuprincipal">Afficher
-							les événements par :</button>
-						<div class="deroul-child">
-							<a href="EventsPublicServlet?nb=5&page=1"> 5 </a> <a
+		<div class="col-9">
+			<div class="container">
+				<div class="row">
+					<div class="[ col-xs-12 col-sm-offset-2 col-sm-10 ]">
+						<ul class="event-list">
+							<div class="deroul">
+								<button id="twix" class="boutonmenuprincipal">Afficher
+									les événements par :</button>
+								<div class="deroul-child">
+									<a href="EventsPublicServlet?nb=5&page=1"> 5 </a> <a
 								href="EventsPublicServlet?nb=10&page=1"> 10 </a> <a
 								href="EventsPublicServlet?nb=20&page=1"> 20 </a>
-						</div>
-					</div>
-					<br />
-					<br />
-					<br />
+								</div>
+							</div>
 
-					<c:forEach var="i" begin="${nb * (page - 1)}"
+							<br />
+							<br />
+							<br />
+
+							<c:forEach var="i" begin="${nb * (page - 1)}"
 						end="${events.size() -1 < nb * page ? events.size() - 1 : (nb * page) - 1}">
 						<li><time datetime="${events.get(i).getDateEvent() }">
 								<span class="day">${events.get(i).getDay()}</span> <span
@@ -171,11 +81,9 @@
 								<p class="desc">${events.get(i).getDescription() }</p>
 								<ul>
 									<li><img id="ter" src="img/panda2.png" width="20"
-										height="20"><span class="glyphicon glyphicon-ok"><a
+										height="20"><span><a
 											style="width: 33%;">6</a></span></li>
-
-									<li style="width: 33%;">76 <span class="fa fa-envelope"></span></li>
-									<li style="width: 34%;">00.00</li>
+									<li style="width: 34%;">${events.get(i).getPrix() }</li>
 								</ul>
 							</div>
 							<div class="social">
@@ -191,13 +99,11 @@
 
 						<br />
 					</c:forEach>
+						</ul>
 
+						<br />
 
-				</ul>
-
-				<br />
-
-				<div id="pag">
+						<div id="pag">
 					<nav aria-label="Page navigation example">
 						<ul class="pagination">
 						<c:if test="${page > 1}">
@@ -220,16 +126,108 @@
 					</nav>
 				</div>
 
+					</div>
+				</div>
+				<br /> <br /> <br /> <br /> <br />
 			</div>
 		</div>
+
+		<div class="col-3">
+			<div id="gauche" class="fixgauche">
+				<div id="cal">
+					<div class="header">
+						<span class="left button" id="prev"> &lang; </span> <span
+							class="left hook"></span> <span class="month-year" id="label">
+							Septembre 2018 </span> <span class="right hook" id=""></span> <span
+							class="right button" id="next"> &rang; </span>
+					</div>
+					<table id="days">
+						<tr>
+							<td>dim</td>
+							<td>lun</td>
+							<td>mar</td>
+							<td>mer</td>
+							<td>jeu</td>
+							<td>ven</td>
+							<td>sam</td>
+						</tr>
+					</table>
+					<div id="cal-frame">
+						<table class="curr">
+							<tr>
+								<td class="nil"></td>
+								<td class="nil"></td>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>7</td>
+								<td>8</td>
+								<td>9</td>
+								<td>10</td>
+								<td>11</td>
+								<td>12</td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td>14</td>
+								<td>15</td>
+								<td>16</td>
+								<td>17</td>
+								<td>18</td>
+								<td class="today">19</td>
+							</tr>
+							<tr>
+								<td>20</td>
+								<td>21</td>
+								<td>22</td>
+								<td>23</td>
+								<td>24</td>
+								<td>25</td>
+								<td>26</td>
+							</tr>
+							<tr>
+								<td>27</td>
+								<td>28</td>
+								<td>29</td>
+								<td>30</td>
+								<td class="nil"></td>
+								<td class="nil"></td>
+								<td class="nil"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="calendar.js"></script>
+		<script>
+			var cal = CALENDAR();
+
+			cal.init();
+		</script>
+
+		<script type="text/javascript">
+			$(function() {
+				$(window).scroll(function() { //Au scroll dans la fenetre on d�clenche la fonction
+					if (($(this).scrollTop() > 500) && ($(this).scrollTop() < pag) ) { //si on a d�fini de plus de '' px du haut vers le bas
+						$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" � <div id="gauche">
+					} else {				
+						$('#gauche').removeClass("fixgauche"); //sinon on retire la classe "fixgauche" � <div id="gauche">
+					}
+				});
+			});
+		</script>
 	</div>
 
-
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
 
 	<jsp:include page="footer.html"></jsp:include>
 </body>

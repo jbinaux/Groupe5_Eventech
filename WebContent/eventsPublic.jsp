@@ -21,12 +21,13 @@
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="eventsPublic.css" />
-<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
- <title>événement</title>
+<script type='text/javascript'
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<title>événement</title>
 </head>
 <body>
 
-	<jsp:include page="/header.jsp"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
 
 	<br />
@@ -41,81 +42,81 @@
 
 	<br />
 	<br />
-	
-	
-    <div id="gauche" class="fixgauche"> 
-	<div id="cal">
-	
-		<div class="header">
-			<span class="left button" id="prev"> &lang; </span> <span
-				class="left hook"></span> <span class="month-year" id="label">
-				Septembre 2018 </span> <span class="right hook" id=""></span> <span
-				class="right button" id="next"> &rang; </span>
-		</div>
-		<table id="days">
-			<tr>
-				<td>dim</td>
-				<td>lun</td>
-				<td>mar</td>
-				<td>mer</td>
-				<td>jeu</td>
-				<td>ven</td>
-				<td>sam</td>
-			</tr>
-		</table>
-		<div id="cal-frame">
-			<table class="curr">
+
+
+	<div id="gauche" class="fixgauche">
+		<div id="cal">
+
+			<div class="header">
+				<span class="left button" id="prev"> &lang; </span> <span
+					class="left hook"></span> <span class="month-year" id="label">
+					Septembre 2018 </span> <span class="right hook" id=""></span> <span
+					class="right button" id="next"> &rang; </span>
+			</div>
+			<table id="days">
 				<tr>
-					<td class="nil"></td>
-					<td class="nil"></td>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>7</td>
-					<td>8</td>
-					<td>9</td>
-					<td>10</td>
-					<td>11</td>
-					<td>12</td>
-				</tr>
-				<tr>
-					<td>13</td>
-					<td>14</td>
-					<td>15</td>
-					<td>16</td>
-					<td>17</td>
-					<td class="today">18</td>
-					<td>19</td>
-				</tr>
-				<tr>
-					<td>20</td>
-					<td>21</td>
-					<td>22</td>
-					<td>23</td>
-					<td>24</td>
-					<td>25</td>
-					<td>26</td>
-				</tr>
-				<tr>
-					<td>27</td>
-					<td>28</td>
-					<td>29</td>
-					<td>30</td>
-					<td class="nil"></td>
-					<td class="nil"></td>
-					<td class="nil"></td>
+					<td>dim</td>
+					<td>lun</td>
+					<td>mar</td>
+					<td>mer</td>
+					<td>jeu</td>
+					<td>ven</td>
+					<td>sam</td>
 				</tr>
 			</table>
+			<div id="cal-frame">
+				<table class="curr">
+					<tr>
+						<td class="nil"></td>
+						<td class="nil"></td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td>14</td>
+						<td>15</td>
+						<td>16</td>
+						<td>17</td>
+						<td>18</td>
+						<td class="today">19</td>
+					</tr>
+					<tr>
+						<td>20</td>
+						<td>21</td>
+						<td>22</td>
+						<td>23</td>
+						<td>24</td>
+						<td>25</td>
+						<td>26</td>
+					</tr>
+					<tr>
+						<td>27</td>
+						<td>28</td>
+						<td>29</td>
+						<td>30</td>
+						<td class="nil"></td>
+						<td class="nil"></td>
+						<td class="nil"></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
-     </div> 
-     
-     
+
+
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="calendar.js"></script>
@@ -125,21 +126,19 @@
 		cal.init();
 	</script>
 
-<script type="text/javascript">
-	$(function(){
-	$(window).scroll(
-	function () {//Au scroll dans la fenetre on déclenche la fonction
-	if ($(this).scrollTop() > 500 ) { //si on a défini de plus de 187 px du haut vers le bas
-	$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" à <div id="gauche">
-	} else {
-	$('#gauche').removeClass("fixgauche");//sinon on retire la classe "fixgauche" à <div id="gauche">
-						}
-					}
-				);			 
+	<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {//Au scroll dans la fenetre on déclenche la fonction
+				if ($(this).scrollTop() > 500) { //si on a défini de plus de 187 px du haut vers le bas
+					$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" à <div id="gauche">
+				} else {
+					$('#gauche').removeClass("fixgauche");//sinon on retire la classe "fixgauche" à <div id="gauche">
+				}
 			});
-		</script>
+		});
+	</script>
 	<br />
-	
+
 
 
 
@@ -149,7 +148,7 @@
 				<ul class="event-list">
 					<div class="deroul">
 						<button id="twix" class="boutonmenuprincipal">Afficher
-							les événements par : </button>
+							les événements par :</button>
 						<div class="deroul-child">
 							<a href="eventsPublic.jsp"> 5 </a> <a href="eventsPublic2.jsp">
 								10 </a> <a href="eventsPublic3.jsp"> 20 </a>
@@ -330,8 +329,8 @@
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 
 
 	<br />

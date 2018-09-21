@@ -14,7 +14,7 @@
 <title>navbar</title>
 </head>
 <body>
-	<div id="end">
+	
 		<nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
 
@@ -74,6 +74,6 @@
 				</c:if>
 			</div>
 		</nav>
-	</div>
+	
 </body>
 </html>
