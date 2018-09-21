@@ -29,6 +29,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	width: 100%;
+	background-color: #fcf6f4 !important;
 }
 
 .align-items-center {

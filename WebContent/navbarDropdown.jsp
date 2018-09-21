@@ -33,7 +33,7 @@
 				<c:if test="${sessionScope.user != null}">
 				<li class="nav-item"><a class="nav-link"
 					href="/Groupe5_Eventech/private/profil">Profil</a></li>
-				</c:if>
+				</c:if>  
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -45,7 +45,7 @@
 						</c:if>
 					</div></li>
 				<li class="nav-item"><a class="nav-link"
-					href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>
+					href="/Groupe5_Eventech/private/espaceM.jsp">Espace membres</a></li>  
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search"
