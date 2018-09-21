@@ -8,6 +8,7 @@
 
 </head>
 <body>
+<div id="end">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img
 			id="logo" src="/Groupe5_Eventech/img/logo23.png" width="60"
@@ -59,5 +60,6 @@
 			</c:if>
 		</div>
 	</nav>
+	</div>
 </body>
 </html>
