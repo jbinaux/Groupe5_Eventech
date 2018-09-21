@@ -19,6 +19,7 @@ import com.mysql.jdbc.Connection;
 
 import controller.EventController;
 import controller.UserController;
+import model.Event;
 import password.Password;
 
 /**
@@ -79,11 +80,15 @@ public class SelectEventCreated extends HttpServlet {
 				ec.setMoyenneNoteEvent(result.getDouble("moyenne_notes"));
 				ec.setPrixEvent(result.getDouble("prix"));
 				ec.setDomaineEvent(result.getString("domaine"));
-
+				ec.cutDate(ec.getModel());
+				
 				evenementsCrees.add(ec);
 
 			}
 			
+			EventController control = new EventController();
+			ArrayList<Event> subsList = control.selectSubEvents(((UserController) session.getAttribute("user")).getUserId());
+			request.setAttribute("Subs", subsList);
 			request.setAttribute("Events", evenementsCrees);
 			RequestDispatcher rd = request.getRequestDispatcher("/private/profil.jsp");
 			rd.forward(request, response);
