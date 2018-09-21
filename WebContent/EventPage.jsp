@@ -113,7 +113,7 @@
                        <a href="./docs/plugins.html" target="_blank" 
                        class="btn btn-warning btn-circle btn-translate--hover px-4">
                        <input type="image" name="toto" value="toto" src="img/panda2.png" width="auto" height="25" >
-                       </a>
+                       </a><span>Il reste 18 places</span>
                                 
                                 </div>                  
                 </header>
@@ -483,7 +483,90 @@
 		</div>
 	</div>
 
+<!-- ZONE COMMENTAIRES -->
 
+				<!-- 				<div class="comments">
+					<div class="row">
+						<div class="col-md-12">
+							<h3>2 Commentaires</h3>
+							<div class="cmnt-clipboard">
+								<span class="btn-clipboard">Repondre</span>
+							</div>
+							<div class="well">
+								<div class="row">
+									<div class="col-md-2">
+										<img src="assets/img/commenter1.jpg"
+											class="img-responsive center-block">
+									</div>
+									<div class="col-md-10">
+										<p class="comment-info">
+											<strong>Reena Scot</strong> <span>22 april 2015</span>
+										</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and
+											typesetting industry. Lorem Ipsum has been the industry's
+											standard dummy text ever since they 1500s.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="cmnt-clipboard">
+								<span class="btn-clipboard">Reply</span>
+							</div>
+							<div class="well">
+								<div class="row">
+									<div class="col-md-2">
+										<img src="assets/img/commenter2.jpg"
+											class="img-responsive center-block">
+									</div>
+									<div class="col-md-10">
+										<p class="comment-info">
+											<strong>David Martin</strong> <span>22 april 2015</span>
+										</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and
+											typesetting industry. Lorem Ipsum has been the industry's
+											standard dummy text ever since they 1500s.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="comment-post">
+					<h3>Poster un commentaire</h3>
+					<form method="post">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<input name="name" class="form-control" id="name"
+										required="required" placeholder="Nom / Prénom" type="text">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<input name="email" class="form-control" id="email"
+										required="required" placeholder="Adresse E-Mail" type="email">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<input name="website" class="form-control" id="subject"
+										required="required"
+										placeholder="Entrez le MP si possible niveau technique"
+										type="url">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<textarea name="message" type="text" class="form-control"
+									id="message" rows="8" required="required"
+									placeholder="Type here message"></textarea>
+							</div>
+						</div>
+
+						<button type="submit" id="submit" name="submit"
+							class="btn btn-black">Poster un commentaire</button>
+					</form>
+				</div>
+-->
 
 <br /> <br /> <br />
 
