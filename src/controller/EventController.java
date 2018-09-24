@@ -487,4 +487,10 @@ public class EventController {
 	public void setModel(Event model) {
 		this.model = model;
 	}
+	public int getCapacite() {
+		return model.getCapacite();
+	}
+	public void setCapacite(int capacite) {
+		model.setCapacite(capacite);
+	}
 }

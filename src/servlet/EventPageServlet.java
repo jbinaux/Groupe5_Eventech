@@ -71,7 +71,9 @@ public class EventPageServlet extends HttpServlet {
 			}
 		}
 
-		// Redirectioon vers la page et on lui donne les attributs de la request
+		SubscriptionController sub = new SubscriptionController();
+		request.setAttribute("inscrits", sub.numberOfSubs(eventId));
+		// Redirection vers la page et on lui donne les attributs de la request
 		RequestDispatcher rd = request.getRequestDispatcher("/EventPage.jsp");
 		rd.forward(request, response);
 	}

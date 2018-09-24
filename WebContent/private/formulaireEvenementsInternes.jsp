@@ -85,6 +85,10 @@
 						<td><input type="double" name="prix" required></td>
 					</tr>
 					<tr>
+						<td><p>Capacité:</p></td>
+						<td><input type="int" name="capacite" required></td>
+					</tr>
+					<tr>
 						<td><p>Domaine d'activité:</p></td>
 						<td><select name="domaineActivite">
 								<option>Marketing</option>

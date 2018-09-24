@@ -17,6 +17,7 @@ public class Event {
 	double moyenneNote;
 	double prix;
 	String domaine;
+	int capacite;
 	String month;
 	String day;
 	String year;
@@ -110,5 +111,11 @@ public class Event {
 	}
 	public void setYear(String year) {
 		this.year = year;
+	}
+	public int getCapacite() {
+		return capacite;
+	}
+	public void setCapacite(int capacite) {
+		this.capacite = capacite;
 	}
 }

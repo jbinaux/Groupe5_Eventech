@@ -124,7 +124,7 @@
 								src="img/panda2.png" width="auto" height="25">
 
 							</a></br>
-							<span>Il reste 18 places</span>
+							<span>Il reste ${event.getCapacite() - inscrits} places</span>
 
 						</div>
 					</header>
