@@ -54,6 +54,7 @@ public class CreateEventServlet extends HttpServlet {
 			event.setLieuEvent(request.getParameter("lieu"));
 			event.setNomEvent(request.getParameter("nomEvent"));
 			event.setPrixEvent(Double.parseDouble(request.getParameter("prix")));
+			event.setCapacite(Integer.parseInt(request.getParameter("capacite")));
 			
 			//appelle la methode d'insertion de l'event dans la base de donnee
 			int s = event.insertEvent();

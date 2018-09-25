@@ -26,7 +26,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
 
 <title>événement</title>
- 
+
 
 </head>
 <body>
@@ -59,8 +59,8 @@
 									les événements par :</button>
 								<div class="deroul-child">
 									<a href="EventsPublicServlet?nb=5&page=1"> 5 </a> <a
-								href="EventsPublicServlet?nb=10&page=1"> 10 </a> <a
-								href="EventsPublicServlet?nb=20&page=1"> 20 </a>
+										href="EventsPublicServlet?nb=10&page=1"> 10 </a> <a
+										href="EventsPublicServlet?nb=20&page=1"> 20 </a>
 								</div>
 							</div>
 
@@ -69,64 +69,65 @@
 							<br />
 
 							<c:forEach var="i" begin="${nb * (page - 1)}"
-						end="${events.size() -1 < nb * page ? events.size() - 1 : (nb * page) - 1}">
-						<li><time datetime="${events.get(i).getDateEvent() }">
-								<span class="day">${events.get(i).getDay()}</span> <span
-									class="month">${events.get(i).getMonth()}</span> <span
-									class="year">${events.get(i).getYear()}</span> <span
-									class="time">ALL DAY</span>
-							</time> <a href="EventPageServlet?id=${events.get(i).getIdEvent()}"><img
-								src="imgEventPu/event61.jpg"></a>
-							<div class="info">
-								<h2 class="title">${events.get(i).getNomEvent() }</h2>
-								<p class="desc">${events.get(i).getLieu() }</p>
-								<p class="desc">${events.get(i).getDescription() }</p>
-								<ul>
-									<li><img id="ter" src="img/panda2.png" width="20"
-										height="20"><span><a
-											style="width: 33%;">6</a></span></li>
-									<li style="width: 34%;">${events.get(i).getPrix() }</li>
-								</ul>
-							</div>
-							<div class="social">
-								<ul>
-									<li class="facebook" style="width: 33%;"><a
-										href="#facebook"><span class="fa fa-facebook"></span></a></li>
-									<li class="twitter" style="width: 34%;"><a href="#twitter"><span
-											class="fa fa-twitter"></span></a></li>
-									<li class="linkedin" style="width: 33%;"><a
-										href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
-								</ul>
-							</div></li>
+								end="${events.size() -1 < nb * page ? events.size() - 1 : (nb * page) - 1}">
+								<li><time datetime="${events.get(i).getDateEvent() }">
+										<span class="day">${events.get(i).getDay()}</span> <span
+											class="month">${events.get(i).getMonth()}</span> <span
+											class="year">${events.get(i).getYear()}</span> <span
+											class="time">ALL DAY</span>
+									</time> <a href="EventPageServlet?id=${events.get(i).getIdEvent()}"><img
+										src="imgEventPu/event61.jpg"></a>
+									<div class="info">
+										<h2 class="title">${events.get(i).getNomEvent() }</h2>
+										<p class="desc">${events.get(i).getLieu() }</p>
+										<p class="desc">${events.get(i).getDescription() }</p>
+										<ul>
+											<li><img id="ter" src="img/panda2.png" width="20"
+												height="20"><span><a style="width: 33%;">6</a></span></li>
+											<li style="width: 34%;">${events.get(i).getPrix() }</li>
+										</ul>
+									</div>
+									<div class="social">
+										<ul>
+											<li class="facebook" style="width: 33%;"><a
+												href="#facebook"><span class="fa fa-facebook"></span></a></li>
+											<li class="twitter" style="width: 34%;"><a
+												href="#twitter"><span class="fa fa-twitter"></span></a></li>
+											<li class="linkedin" style="width: 33%;"><a
+												href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+										</ul>
+									</div></li>
 
-						<br />
-					</c:forEach>
+								<br />
+							</c:forEach>
 						</ul>
 
 						<br />
 
 						<div id="pag">
-					<nav aria-label="Page navigation example">
-						<ul class="pagination">
-						<c:if test="${page > 1}">
-							<li class="page-item"><a class="page-link"
-								href="EventsPublicServlet?nb=${nb}&page=${page - 1}" aria-label="Previous"> <span
-									aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span>
-							</a></li>
-							</c:if>
-							<c:forEach var="i" begin="1" end="${(events.size() / nb) + 1}">
-							<li class="page-item"><a class="page-link"
-								href="EventsPublicServlet?nb=${nb}&page=${i}">${i}</a></li>
-							</c:forEach>
-							<c:if test="${page < (events.size() / nb)}">
-							<li class="page-item"><a class="page-link"
-								href="EventsPublicServlet?nb=${nb}&page=${page + 1}" aria-label="Next"> <span
-									aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span>
-							</a></li>
-							</c:if>
-						</ul>
-					</nav>
-				</div>
+							<nav aria-label="Page navigation example">
+								<ul class="pagination">
+									<c:if test="${page > 1}">
+										<li class="page-item"><a class="page-link"
+											href="EventsPublicServlet?nb=${nb}&page=${page - 1}"
+											aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+												<span class="sr-only">Previous</span>
+										</a></li>
+									</c:if>
+									<c:forEach var="i" begin="1" end="${(events.size() / nb) + 1}">
+										<li class="page-item"><a class="page-link"
+											href="EventsPublicServlet?nb=${nb}&page=${i}">${i}</a></li>
+									</c:forEach>
+									<c:if test="${page < (events.size() / nb)}">
+										<li class="page-item"><a class="page-link"
+											href="EventsPublicServlet?nb=${nb}&page=${page + 1}"
+											aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+												<span class="sr-only">Next</span>
+										</a></li>
+									</c:if>
+								</ul>
+							</nav>
+						</div>
 
 					</div>
 				</div>
@@ -209,7 +210,8 @@
 
 
 		<script
-			src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+		</script>
 		<script src="calendar.js"></script>
 		<script>
 			var cal = CALENDAR();
@@ -220,15 +222,15 @@
 		<script type="text/javascript">
 			$(function() {
 				$(window).scroll(function() { //Au scroll dans la fenetre on d�clenche la fonction
-					if ($(this).scrollTop() > 860 ) { //si on a d�fini de plus de '' px du haut vers le bas
+					if ($(this).scrollTop() > 860) { //si on a d�fini de plus de '' px du haut vers le bas
 						$('#gauche').addClass("fixgauche"); //on ajoute la classe "fixgauche" � <div id="gauche">
-					} else {				
+					} else {
 						$('#gauche').removeClass("fixgauche"); //sinon on retire la classe "fixgauche" � <div id="gauche">
 					}
 				});
 			});
 		</script>
-	</div>					
+	</div>
 
 
 
