@@ -112,7 +112,7 @@ h1 {
 	color: black;
 	margin: 0px;
 	padding: 0px; 
-    padding-left: 100px;
+    padding-left: 0px;
 }
 
 .event-list>li {

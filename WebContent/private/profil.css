@@ -24,10 +24,6 @@ body {
 	width: 33.33%;
 }
 
-#photo {
-	display: flex;
-	justify-content: space-around;  
-}
 
 #column2 {
 	padding-left: 50px;
