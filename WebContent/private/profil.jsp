@@ -58,7 +58,7 @@
 			<p>${sessionScope.user.getUserMail() }</p>
 			<p>${sessionScope.user.getUserDomaineActivite() }</p>
 
-			<a href="/Groupe5_Eventech/private/updateUser.jsp" class="btn btn-warning">Modifier mes</br>informations</a>
+			<a href="/Groupe5_Eventech/private/updateUser.jsp" class="btn btn-warning orange">Modifier mes</br>informations</a>
 			
 
 		</div>

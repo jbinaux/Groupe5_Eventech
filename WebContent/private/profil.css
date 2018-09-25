@@ -29,3 +29,14 @@ body h2 {
 	padding-bottom: 50px;
 	text-shadow: 0 0 1px black !important;
 }
+
+.btn.orange
+{
+	background-color: #F28F3B;
+	color: white;
+}
+
+.btn.orange:hover
+{
+	color: black;
+}
