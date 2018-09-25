@@ -67,7 +67,7 @@
 				<form action="LoginUserServlet">
 					<br>
 					<h2>
-						<strong>POUR VOUS IDENTIFIER</strong>
+						<br> <br> <strong>POUR VOUS IDENTIFIER</strong>
 					</h2>
 					<br> <label for="validationDefaultUsername">Email</label>
 					<div class="input-group">
@@ -106,8 +106,8 @@
 			<div class="col">
 				<form action="RegisterUserServlet">
 					<br>
-					<h2>
-						<strong>POUR VOUS INSCRIRE</strong>
+					<h2>  
+						<br> <br> <strong>POUR VOUS INSCRIRE</strong>
 					</h2>
 					<br> <label for="validationDefaultUsername">Nom</label>
 					<div class="input-group">

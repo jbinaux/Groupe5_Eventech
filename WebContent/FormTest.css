@@ -12,4 +12,25 @@ body {
 
 #V {
 	background-color: #F28F3B;
-}     
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button {
+	color: white;
+	background-color: #F28F3B;
+}
+
+.gj-datepicker-bootstrap [role="right-icon"] button:hover {
+	color: black;
+	background-color: #F28F3B;
+}
+
+.gj-timepicker-bootstrap [role="right-icon"] button {
+	color: white;
+	background-color: #F28F3B;
+	border: 1px solid #ced4da;
+}
+
+.gj-timepicker-bootstrap [role="right-icon"] button:hover {
+	color: black;
+	background-color: #F28F3B;
+}
