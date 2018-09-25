@@ -18,25 +18,6 @@ body {
 	color: black;
 }
 
-#column1 {
-	padding-left: 50px;
-	padding-right: 50px;
-	width: 33.33%;
-}
-
-
-#column2 {
-	padding-left: 50px;
-	padding-right: 50px;
-	width: 33.33%;
-}
-
-#column3 {
-	padding-left: 50px;
-	padding-right: 50px;
-	width: 33.33%;
-}
-
 #section p {
 	color: black;
 }

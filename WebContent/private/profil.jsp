@@ -40,7 +40,7 @@
 	<br />
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-2 align-self-center text-center">
+		<div class="col-lg-2 text-center">
 				<img src="/Groupe5_Eventech/img/user-profile-icon.png" class="img-fluid align-self-center">
 
 			<br /> <br />   
