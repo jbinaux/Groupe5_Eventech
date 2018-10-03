@@ -38,7 +38,8 @@
 	integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
-<link rel="stylesheet" type="text/css" href="FormTest.css" />
+<link rel="stylesheet" type="text/css"
+	href="/Groupe5_Eventech/FormTest.css" />
 <link href="https://fonts.googleapis.com/css?family=Roboto"
 	rel="stylesheet">
 </head>
@@ -62,13 +63,14 @@
 	</c:choose>
 
 	<div class="container">
-		<div class="row">
-			<div class="col"></div>
-			<div class="col-8">
+		<div class="row justify-content-center">
+			<div class="col-6">
 				<form action="LoginUserServlet">
 					<br>
 					<h2>
-						<strong>POUR ACCÉDER A NOTRE ESPACE PRIVÉ</strong>
+						<br> <br> <strong>POUR ACCÉDER A NOTRE<br>
+							ESPACE PRIVÉ
+						</strong>
 					</h2>
 					<br> <label for="validationDefaultUsername">Email</label>
 					<div class="input-group">
@@ -105,7 +107,6 @@
 				</form>
 				<br>
 			</div>
-			<div class="col"></div>  
 		</div>
 	</div>
 

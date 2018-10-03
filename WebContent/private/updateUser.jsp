@@ -1,11 +1,11 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset=utf-8>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modification</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -21,51 +21,75 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/form.css" />
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<title>Modification</title>
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css"
+	integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css"
+	integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/regular.css"
+	integrity="sha384-ZlNfXjxAqKFWCwMwQFGhmMh3i89dWDnaFU2/VZg9CvsMGA7hXHQsPIqS+JIAmgEq"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css"
+	integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
+<link rel="stylesheet" type="text/css"
+	href="/Groupe5_Eventech/FormTest.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
 </head>
 <body>
 
 	<jsp:include page="/navbarDropdown.jsp"></jsp:include>
 
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-
 	<c:if test="${requestScope.error == 1}">
-		<p>désolé, une erreure est apparue</p>
+		<p>Désolé, une erreure est apparue!</p>
 	</c:if>
 
-	<form action="/Groupe5_Eventech/UpdateUserServlet" method="post">
-		<div id="form">
-			<div id="first">
-				<table>
-					<tr>
-						<td><h2>
-								<strong>POUR MODIFIER VOS INFORMATIONS :</strong>
-							</h2></td>
-					</tr>
-
-					<br />
-					<br />
-
-					<tr>
-						<td><p>Nom:</p></td>
-						<td><input type="text" name="nom"
-							value="${sessionScope.user.getUserNom() }" required></td>
-					</tr>
-					<tr>
-						<td><p>Prénom:</p></td>
-						<td><input type="text" name="prenom"
-							value="${sessionScope.user.getUserPrenom() }" required></td>
-					</tr>
-					<tr>
-						<td><p>Domaine d'activité:</p></td>
-						<td><select name="domaineActivite">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-6">
+				<form action="/Groupe5_Eventech/UpdateUserServlet" method="post">
+					<br>
+					<h2>
+						<br> <br> <strong>POUR MODIFIER VOS
+							INFORMATIONS </strong>
+					</h2>
+					<br> <label for="validationDefaultUsername">Nom</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="fas fa-user"></i></span>
+						</div>
+						<input type="text" name="nom"
+							value="${sessionScope.user.getUserNom() }" required
+							class="form-control" id="validationDefaultUsername"
+							aria-describedby="inputGroupPrepend2">
+					</div>
+					<br> <label for="validationDefaultUsername">Prénom</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="far fa-user"></i></span>
+						</div>
+						<input type="text" name="prenom"
+							value="${sessionScope.user.getUserPrenom() }" required
+							class="form-control" id="validationDefaultUsername"
+							aria-describedby="inputGroupPrepend2">
+					</div>
+					<br> <label for="validationDefaultUsername">Domaine
+						d'activité</label>
+					<div class="form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="fas fa-briefcase"></i></span> <select class="custom-select"
+								name="domaineActivite" required>
+								<option selected>Choisir un domaine</option>
 								<c:choose>
 									<c:when
 										test="${sessionScope.user.getUserDomaineActivite().equals(\"Marketing\") }">
@@ -115,29 +139,38 @@
 										<option>Autre</option>
 									</c:otherwise>
 								</c:choose>
-						</select> <br /></td>
-					</tr>
-					<tr>
-						<td><p>Email:</p></td>
-						<td><input type="text" name="email"
-							value="${sessionScope.user.getUserMail() }" required></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Envoyer"></td>
-					</tr>
-				</table>
+							</select>
+						</div>
+					</div>
+					<br> <label for="validationDefaultUsername">Email</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="fas fa-envelope"></i></span>
+						</div>
+						<input type="text" name="email"
+							value="${sessionScope.user.getUserMail() }" required
+							class="form-control" id="validationDefaultUsername"
+							aria-describedby="inputGroupPrepend2">
+					</div>
+					<br>
+					<div class="form-group">  
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value=""
+								id="invalidCheck2" required> <label
+								class="form-check-label" for="invalidCheck2"> Se
+								souvenir de moi </label>
+						</div>
+					</div>
+					<br>
+					<button class="btn btn-outline-light" id="V" type="submit">Valider</button>
+				</form>
+				<br>
 			</div>
 		</div>
-	</form>
+	</div>
 
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-
-	<jsp:include page="../footer.html"></jsp:include>
+	<jsp:include page="/footer.html"></jsp:include>
 
 </body>
 </html>

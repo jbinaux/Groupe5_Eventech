@@ -34,7 +34,7 @@ public class InitUpdateEventServlet extends HttpServlet {
 		EventController control = new EventController();
 		control.retrieveEvent(Integer.parseInt(request.getParameter("id")));
 		request.setAttribute("event", control);
-		RequestDispatcher rd = request.getRequestDispatcher("/private/modificationEvenement.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/private/modificationEvenement.jsp"); 
 		rd.forward(request, response);
 	}
 

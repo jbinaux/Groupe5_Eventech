@@ -157,6 +157,43 @@ public class SubscriptionController {
 		}
 	}
 	
+	public int numberOfSubs(int eventId)
+	{
+		Password password = new Password();
+		String url = "jdbc:mysql://localhost/eventech_db?verifyServerCertificate=false&useSSL=true";
+		String user = "root";
+		String pwd = password.getPassword();
+
+		Connection cn = null;
+		PreparedStatement ps = null;
+		int count = 0;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			cn = DriverManager.getConnection(url, user, pwd);
+			ps = cn.prepareStatement("SELECT * FROM eventech_db.subscriptions WHERE id_event = " + eventId);
+			ResultSet result = ps.executeQuery();
+			while(result.next())
+			{
+				count++;
+			}
+			return count;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				cn.close();
+				ps.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return count;
+	}
+	
 	public int getIdSub() {
 		return model.getIdSub();
 	}

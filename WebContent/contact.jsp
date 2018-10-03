@@ -46,13 +46,12 @@
 	<jsp:include page="/navbarDropdown.jsp"></jsp:include>
 
 	<div class="container">
-		<div class="row">
-			<div class="col"></div>
+		<div class="row justify-content-center">
 			<div class="col-8">
 				<form action="LoginUserServlet">
 					<br>
 					<h2>
-						<strong>POUR NOUS CONTACTER</strong>
+						<br> <br> <strong>POUR NOUS CONTACTER</strong>
 					</h2>
 					<br> <label for="validationDefaultUsername">Nom</label>
 					<div class="input-group">
@@ -100,8 +99,8 @@
 					</div>
 					<div class="form-group">
 						<br> <label for="exampleFormControlTextarea1">Message</label>
-						<textarea class="form-control" name="message" id="exampleFormControlTextarea1"
-							rows="3"></textarea>
+						<textarea class="form-control" name="message"
+							id="exampleFormControlTextarea1" rows="3"></textarea>
 					</div>
 					<br> <label for="validationDefaultUsername">Mot de
 						passe</label>
@@ -119,11 +118,10 @@
 				</form>
 				<br>
 			</div>
-			<div class="col"></div>
 		</div>
 	</div>
 
 	<jsp:include page="footer.html"></jsp:include>
 
 </body>
-</html>  
+</html>

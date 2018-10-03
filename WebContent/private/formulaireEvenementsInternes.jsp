@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset=utf-8>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Formulaire Evénements Internes</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -20,96 +21,139 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="eventsPublic.css" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css"
+	integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css"
+	integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/regular.css"
+	integrity="sha384-ZlNfXjxAqKFWCwMwQFGhmMh3i89dWDnaFU2/VZg9CvsMGA7hXHQsPIqS+JIAmgEq"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css"
+	integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto"
+	rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js"
+	type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css"
+	rel="stylesheet" type="text/css" />
 
-<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/form.css" />
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-
-<title>Formulaire Evénements Internes</title>
+<link rel="stylesheet" type="text/css"
+	href="/Groupe5_Eventech/FormTest.css" />
 </head>
 <body>
 	<jsp:include page="/navbarDropdown.jsp"></jsp:include>
 
-	<br />
-	<br />
-	<br />  
-	<br />
-	<br />
-	<br />
-
 	<c:if test="${error != null}">
-		<p>désolé, rentrez des informations correctes !</p>
+		<p>Désolé, rentrez des informations correctes!</p>
 	</c:if>
 
-	<form action="/Groupe5_Eventech/CreateEventServlet" method="post">
-		<div id="form">
-			<div id="first">
-				<table>
-					<tr>
-						<td><h2>
-								<strong>POUR PROPOSER UN EVENEMENT A VOS COLLABORATEURS
-									:</strong>
-							</h2></td>
-					</tr>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-6">
+				<form action="/Groupe5_Eventech/CreateEventServlet" method="post">
+					<br>
+					<h2>
+						<br> <br> <strong>POUR PROPOSER UN EVENEMENT A
+							VOS COLLABORATEUR.TRICE.S </strong>
+					</h2>
+					<br> <label for="validationDefaultUsername">Nom de
+						l'événement</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="fas fa-users"></i></span>
+						</div>
+						<input type="text" name="nomEvent" required class="form-control"
+							id="validationDefaultUsername"
+							aria-describedby="inputGroupPrepend2">
+					</div>
+					<br> <label for="validationDefaultUsername">Lieu où se
+						déroule l'événement</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="fas fa-map-marked-alt"></i></span>
+						</div>
+						<input type="text" name="lieu" class="form-control"
+							id="validationDefaultUsername"
+							aria-describedby="inputGroupPrepend2" required>
+					</div>
+					<br> <label for="validationDefaultUsername">Date
+						prévue</label>
+					<div class="input-group">
+						<div class="input-group-prepend"></div>
+						<input id="datepicker" type="date" name="dateEvent"
+							placeholder="aaaa-mm-jj" class="form-control" required>
 
-					<br />
-					<br />
-
-					<tr>
-						<td><p>Nom de l'événement:</p></td>
-						<td><input type="text" name="nomEvent" required></td>
-					</tr>
-					<tr>
-						<td><p>Lieu:</p></td>
-						<td><input type="text" name="lieu" required></td>
-					</tr>
-					<tr>
-						<td><p>Date:</p></td>
-						<td><input id="datepicker" type="date" name="dateEvent" placeholder="aaaa-mm-jj"
-							required></td>
-					</tr>
-					<tr>
-						<td><p>Heure:</p></td>
-						<td><input id="timepicker" type="time" name="heureEvent" placeholder="hh:mm"
-							required></td>
-					</tr>
-					<tr>
-						<td><p>Description de l'événement:</p></td>
-						<td><input type="text" name="descriptionEvent" required></td>
-					</tr>
-					<tr>
-						<td><p>Prix:</p></td>
-						<td><input type="double" name="prix" required></td>
-					</tr>
-					<tr>
-						<td><p>Domaine d'activité:</p></td>
-						<td><select name="domaineActivite">
-								<option>Marketing</option>
-								<option>Communication</option>
-								<option>Développement</option>
-								<option>Réseau</option>
-								<option>Autre</option>
-						</select> <br /></td>
-					</tr>
-					<tr>
-						<td><input type="submit" value="Valider"></td>
-					</tr>
-				</table>
+					</div>
+					<br> <label for="validationDefaultUsername">Heure
+						prévue</label>
+					<div class="input-group">
+						<div class="input-group-prepend"></div>
+						<input id="timepicker" type="time" name="heureEvent"
+							placeholder="hh:mm" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<br> <label for="exampleFormControlTextarea1">Description
+							de l'événement</label>
+						<textarea class="form-control" name="message"
+							id="exampleFormControlTextarea1" rows="3"></textarea>
+					</div>
+					<br> <label for="validationDefaultUsername">Prix</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="fas fa-euro-sign"></i></span>
+						</div>
+						<input type="text" name="prenom" class="form-control"
+							id="validationDefaultUsername"
+							aria-describedby="inputGroupPrepend2" required>
+					</div>
+					<br> <label for="validationDefaultUsername">Domaine
+						d'activité</label>
+					<div class="form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="inputGroupPrepend2"><i
+								class="fas fa-briefcase"></i></span> <select class="custom-select"
+								name="domaineActivite" required>
+								<option selected>Choisir un domaine</option>
+								<option value="1">Marketing</option>
+								<option value="2">Communication</option>
+								<option value="3">Développement</option>
+								<option value="4">Réseau</option>
+								<option value="5">Autre</option>
+							</select>
+						</div>
+					</div>
+					<br>
+					<button class="btn btn-outline-light" id="V" type="submit">Valider</button>
+				</form>
+				<br>
 			</div>
 		</div>
-	</form>
-
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
+	</div>
 
 	<jsp:include page="/footer.html"></jsp:include>
-	<script src="/Groupe5_Eventech/private/DateTime.js" type="text/javascript"></script>
+
+	<script>
+		$('#datepicker').datepicker({
+			uiLibrary : 'bootstrap4',
+			format : 'yyyy-mm-dd'
+		});
+
+		$('#timepicker').timepicker({
+			uiLibrary : 'bootstrap4',
+			mode : '24hr'
+		});
+	</script>
+
 </body>
 </html>

@@ -52,6 +52,7 @@
 		<div class="col">
 			<div class="container">
 				<div class="row">
+<<<<<<< HEAD
 					<div class="col-sm-12">
 						<div class="deroul">
 							<button id="twix" class="boutonmenuprincipal">Afficher
@@ -60,6 +61,18 @@
 								<a href="EventsPublicServlet?nb=5&page=1"> 5 </a> <a
 									href="EventsPublicServlet?nb=10&page=1"> 10 </a> <a
 									href="EventsPublicServlet?nb=20&page=1"> 20 </a>
+=======
+					<div class="[ col-xs-12 col-sm-offset-2 col-sm-10 ]">
+						<ul class="event-list">
+							<div class="deroul">
+								<button id="twix" class="boutonmenuprincipal">Afficher
+									les événements par :</button>
+								<div class="deroul-child">
+									<a href="EventsPublicServlet?nb=5&page=1"> 5 </a> <a
+										href="EventsPublicServlet?nb=10&page=1"> 10 </a> <a
+										href="EventsPublicServlet?nb=20&page=1"> 20 </a>
+								</div>
+>>>>>>> Feature_5
 							</div>
 						</div>
 						<br />
@@ -209,7 +222,8 @@
 
 
 		<script
-			src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+			src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
+		</script>
 		<script src="calendar.js"></script>
 		<script>
 			var cal = CALENDAR();
