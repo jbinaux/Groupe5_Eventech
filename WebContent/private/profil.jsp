@@ -22,8 +22,8 @@
 	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/eventsPublic.css" />
-<link rel="stylesheet" type="text/css"
-	href="/Groupe5_Eventech/private/profil.css" />
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/main.css" />
+<link rel="stylesheet" type="text/css" href="/Groupe5_Eventech/private/profil.css" />
 <link href="https://fonts.googleapis.com/css?family=Roboto"
 	rel="stylesheet">
 <title>profil</title>
@@ -38,14 +38,10 @@
 	<br />
 	<br />
 	<br />
-
-	<div id="section">
-		<div id="column1">
-			<div id="photo">
-				<img src="/Groupe5_Eventech/img/user-profile-icon.png" width="256"
-					height="256">
-			</div>
-
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2 text-center">
+				<img src="/Groupe5_Eventech/img/user-profile-icon.png" class="img-fluid align-self-center">
 			<br /> <br />   
 
 			<h2>
@@ -61,18 +57,17 @@
 			<p>${sessionScope.user.getUserMail() }</p>
 			<p>${sessionScope.user.getUserDomaineActivite() }</p>
 
-			<form action="/Groupe5_Eventech/private/updateUser.jsp">
-				<input type="submit" value="Modifier mes informations">
-			</form>
+			<a href="/Groupe5_Eventech/private/updateUser.jsp" class="btn ">Modifier mes</br>informations</a>
+			
 
 		</div>
 
-		<div id="column2">
+		<div class="col-lg">
 
 			<br />
 
 			<h2>
-				<strong>Evénements créés:</strong>
+				<strong>Evénements créés</strong>
 			</h2>
 
 			<br />
@@ -83,7 +78,7 @@
 						<li><time datetime="${Events.get(i).getDateEvent()}">
 								<span class="day">${Events.get(i).getDay()}</span> <span class="month">${Events.get(i).getMonth()}</span> <span
 									class="year">${Events.get(i).getYear()}</span> <span class="time">ALL DAY</span>
-							</time> <a href="/Groupe5_Eventech/EventPageServlet?id=${Events.get(i).getIdEvent() }"><img src="/Groupe5_Eventech/imgEventPu/event91.jpg"></a>
+							</time> <a href="/Groupe5_Eventech/EventPageServlet?id=${Events.get(i).getIdEvent() }"><img src="/Groupe5_Eventech/imgEventPu/event61.jpg"></a>
 							<div class="info">
 								<h2 class="title">${Events.get(i).getNomEvent()}</h2>
 								<p class="desc">${Events.get(i).getLieuEvent()}  - ${Events.get(i).getDateEvent()}</p>
@@ -118,12 +113,12 @@
 
 		</div>
 
-		<div id="column3">
+		<div class="col-lg">
 
 			<br />
 
 			<h2>
-				<strong>RdV Evénements:</strong>
+				<strong>Rendez-vous événements</strong>
 			</h2>
 
 			<br />
@@ -134,7 +129,7 @@
 						<li><time datetime="${Subs.get(i).getDateEvent()}">
 								<span class="day">${Subs.get(i).getDay()}</span> <span class="month">${Subs.get(i).getMonth()}</span> <span
 									class="year">${Subs.get(i).getYear()}</span> <span class="time">ALL DAY</span>
-							</time> <a href="/Groupe5_Eventech/EventPageServlet?id=${Subs.get(i).getIdEvent() }"><img src="/Groupe5_Eventech/imgEventPu/event91.jpg"></a>
+							</time> <a href="/Groupe5_Eventech/EventPageServlet?id=${Subs.get(i).getIdEvent() }"><img src="/Groupe5_Eventech/imgEventPu/event61.jpg"></a>
 							<div class="info">
 								<h2 class="title">${Subs.get(i).getNomEvent()}</h2>
 								<p class="desc">${Subs.get(i).getLieu()}  - ${Subs.get(i).getDateEvent()}</p>
@@ -162,7 +157,7 @@
 		</div>
 
 	</div>
-
+</div>
 	<br />
 	<br />
 	<br />
