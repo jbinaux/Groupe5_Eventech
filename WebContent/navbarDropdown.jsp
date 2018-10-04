@@ -11,7 +11,7 @@
 <div id="end">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="/Groupe5_Eventech/index.jsp"><img
-			id="logo" src="/Groupe5_Eventech/img/logo23.png" width="80"
+			id="logo" src="/Groupe5_Eventech/img/logo23.png" width="120"
 			height="60"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"

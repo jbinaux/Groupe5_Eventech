@@ -75,7 +75,7 @@
 							<span class="input-group-text" id="inputGroupPrepend2"><i
 								class="fas fa-envelope"></i></span>
 						</div>
-						<input type="text" name="email" class="form-control"
+						<input type="email" name="email" class="form-control"
 							id="validationDefaultUsername"
 							aria-describedby="inputGroupPrepend2" required>
 					</div>
@@ -94,7 +94,7 @@
 					<div class="form-group">
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value=""
-								id="invalidCheck2" required> <label
+								id="invalidCheck2" required> <label 
 								class="form-check-label" for="invalidCheck2"> Se
 								souvenir de moi </label>
 						</div>
@@ -158,7 +158,7 @@
 					<br> <label for="validationDefaultUsername">Mot de
 						passe</label>
 					<div class="input-group">
-						<div class="input-group-prepend">
+						<div class="input-group-prepend">  
 							<span class="input-group-text" id="inputGroupPrepend2"><i
 								class="fas fa-key"></i></span>
 						</div>
